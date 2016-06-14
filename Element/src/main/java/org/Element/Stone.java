@@ -1,9 +1,9 @@
 package org.Element;
 
 
-public class STONE extends Element{
+public class Stone extends Element{
 
-		public STONE() {
+		public Stone() {
 			super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "bone.png"));
 		}
 }

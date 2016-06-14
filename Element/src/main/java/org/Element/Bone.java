@@ -1,5 +1,5 @@
 package org.Element;
 
-public class BONE {
+public class Bone {
 
 }

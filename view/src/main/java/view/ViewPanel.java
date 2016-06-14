@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 import org.Element.Element;
-import org.Element.STONE;
+import org.Element.Stone;
 
 /**
  * The Class ViewPanel.
@@ -78,7 +78,7 @@ class ViewPanel extends JPanel implements Observer {
 	protected void paintComponent(final Graphics graphics) {
 		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
 		int i = 0;
-		for(String line : this.getViewFrame().getModel().getMap().split("\n")){
+		for(String line : this.getViewFrame().getModel().getMap().toString().split("\n")){
 			graphics.drawString(line, 10, 20 + graphics.getFontMetrics().getHeight() * i);
 			i++;
 				for (int j =0; j < 12; j++){
@@ -108,7 +108,7 @@ class ViewPanel extends JPanel implements Observer {
 				for (int x = 0; x < map.get(y).length(); x++) {
 					switch(map.get(y).charAt(x)){
 						case 'P' :
-							addElement(new STONE(), x, y);
+							addElement(new Stone(), x, y);
 						break;
 			}
 				}	

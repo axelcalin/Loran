@@ -1,6 +1,9 @@
 package contract;
 
+import java.util.List;
 import java.util.Observable;
+
+import org.Element.Element;
 
 /**
  * The Interface IModel.
@@ -14,7 +17,7 @@ public interface IModel {
 	 *
 	 * @return the message
 	 */
-	String getMap();
+	List<List<Element>> getMap();
 
 	/**
 	 * Load the message.
