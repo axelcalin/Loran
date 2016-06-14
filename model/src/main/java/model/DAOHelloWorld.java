@@ -3,10 +3,12 @@ package model;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.text.Element;
 
@@ -113,18 +115,20 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			if (resultSet.first()) {
 				helloWorld = new HelloWorld(resultSet.getInt("id"), keywords, resultSet.getString("map"));
 			}
-			BufferedReader in = new BufferedReader(new FileReader(resultSet.getString("map")));
-			
-			for (int y = 0; y < this.getHeight(); y++) {
-				for (int x = 0; x < this.getWidth(); x++) {
-					switch((char)in.read()){
-					case 'P' :
-						addElement(new STONE(), x, y);
-						break;
-					}
+			BufferedReader in;
+			String S = resultSet.getString("map");
+			ArrayList<String> map = new ArrayList<String>();
+			for(String temp : S.split("\n")) map.add(temp);
+
+for (int y = 0; y < this.getHeight(); y++) {
+			for (int x = 0; x < this.getWidth(); x++) {
+				switch(map.get(y).charAt(x)){
+				case 'P' :
+					addElement(new STONE(), x, y);
+					break;
 				}
 			}
-			in.close();
+}
 			return helloWorld;
 		} catch (final SQLException e) {
 			e.printStackTrace();
