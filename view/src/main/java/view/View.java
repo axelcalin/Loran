@@ -40,15 +40,17 @@ public class View implements IView, Runnable {
 	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
 		switch (keyCode) {
 			case KeyEvent.VK_G:
-				return ControllerOrder.English;
+				return ControllerOrder.Niveau1;
 			case KeyEvent.VK_F:
-				return ControllerOrder.Francais;
+				return ControllerOrder.Niveau2;
 			case KeyEvent.VK_D:
-				return ControllerOrder.Deutsch;
+				return ControllerOrder.Niveau3;
 			case KeyEvent.VK_I:
-				return ControllerOrder.Indonesia;
+				return ControllerOrder.Niveau4;
+			case KeyEvent.VK_Z:
+				return ControllerOrder.Niveau5;
 			default:
-				return ControllerOrder.English;
+				return ControllerOrder.Niveau1;
 		}
 	}
 
@@ -57,8 +59,8 @@ public class View implements IView, Runnable {
 	 *
 	 * @see contract.IView#printMessage(java.lang.String)
 	 */
-	public void printMessage(final String message) {
-		this.viewFrame.printMessage(message);
+	public void printMap(final String map) {
+		this.viewFrame.printMessage(map);
 	}
 
 	/*
@@ -78,5 +80,10 @@ public class View implements IView, Runnable {
 	 */
 	public void setController(final IController controller) {
 		this.viewFrame.setController(controller);
+	}
+
+	public void printMessage(String message) {
+		// TODO Auto-generated method stub
+		
 	}
 }

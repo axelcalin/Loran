@@ -66,17 +66,23 @@ public class Controller implements IController {
 	 */
 	public void orderPerform(final ControllerOrder controllerOrder) {
 		switch (controllerOrder) {
-			case English:
-				this.model.loadMessage("GB");
+			case Niveau1:
+				this.model.loadMap("n1");
 				break;
-			case Francais:
-				this.model.loadMessage("FR");
+			case Niveau2:
+				this.model.loadMap("n2");
 				break;
-			case Deutsch:
-				this.model.loadMessage("DE");
+			case Niveau3:
+				this.model.loadMap("n3");
 				break;
-			case Indonesia:
-				this.model.loadMessage("ID");
+			case Niveau4:
+				this.model.loadMap("n4");
+				break;
+			case Niveau5:
+				this.model.loadMap("n5");
+				break;
+			case Menu:
+				this.model.loadMap("menu");
 				break;
 
 			default:

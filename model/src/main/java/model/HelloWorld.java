@@ -11,10 +11,10 @@ class HelloWorld extends Entity {
 	private int			id;
 
 	/** The key. */
-	private String	key;
+	private String	keywords;
 
 	/** The message. */
-	private String	message;
+	private String	map;
 
 	/**
 	 * Instantiates a new hello world.
@@ -26,10 +26,10 @@ class HelloWorld extends Entity {
 	 * @param message
 	 *          the message
 	 */
-	public HelloWorld(final int id, final String key, final String message) {
+	public HelloWorld(final int id, final String keywords, final String map) {
 		this.setId(id);
-		this.setKey(key);
-		this.setMessage(message);
+		this.setKeywords(keywords);
+		this.setMap(map);
 	}
 
 	/**
@@ -63,8 +63,8 @@ class HelloWorld extends Entity {
 	 *
 	 * @return the key
 	 */
-	public String getKey() {
-		return this.key;
+	public String getKeywords() {
+		return this.keywords;
 	}
 
 	/**
@@ -73,8 +73,8 @@ class HelloWorld extends Entity {
 	 * @param key
 	 *          the new key
 	 */
-	public void setKey(final String key) {
-		this.key = key;
+	public void setKeywords(final String key) {
+		this.keywords = key;
 	}
 
 	/**
@@ -82,8 +82,8 @@ class HelloWorld extends Entity {
 	 *
 	 * @return the message
 	 */
-	public String getMessage() {
-		return this.message;
+	public String getMap() {
+		return this.map;
 	}
 
 	/**
@@ -92,8 +92,8 @@ class HelloWorld extends Entity {
 	 * @param message
 	 *          the new message
 	 */
-	public void setMessage(final String message) {
-		this.message = message;
+	public void setMap(final String map) {
+		this.map = map;
 	}
 
 }

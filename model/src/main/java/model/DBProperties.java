@@ -21,7 +21,7 @@ class DBProperties extends Properties {
 	private String							url										= "";
 
 	/** The login. */
-	private String							login									= "";
+	private String							login									= "root";
 
 	/** The password. */
 	private String							password							= "";

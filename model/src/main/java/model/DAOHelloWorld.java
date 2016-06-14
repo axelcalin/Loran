@@ -1,9 +1,14 @@
 package model;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import javax.swing.text.Element;
 
 /**
  * The Class DAOHelloWorld.
@@ -11,6 +16,10 @@ import java.sql.SQLException;
  * @author Jean-Aymeric Diet
  */
 class DAOHelloWorld extends DAOEntity<HelloWorld> {
+
+	private int width;
+	private int height;
+	private Element elements[][];
 
 	/**
 	 * Instantiates a new DAO hello world.
@@ -67,13 +76,13 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		HelloWorld helloWorld = new HelloWorld();
 
 		try {
-			final String sql = "{call helloworldById(?)}";
+			final String sql = "{call mapById(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
 			call.setInt(1, id);
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				helloWorld = new HelloWorld(id, resultSet.getString("key"), resultSet.getString("message"));
+				helloWorld = new HelloWorld(id, resultSet.getString("keywords"), resultSet.getString("map"));
 			}
 			return helloWorld;
 		} catch (final SQLException e) {
@@ -87,19 +96,49 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 *
 	 * @see model.DAOEntity#find(java.lang.String)
 	 */
-	@Override
-	public HelloWorld find(final String key) {
+	public HelloWorld find(final String keywords,final int width, final int height) {
+		this.width = width;
+		this.height = height;
+		this.elements = new Element[this.getWidth()][this.getHeight()];{
 		HelloWorld helloWorld = new HelloWorld();
 
 		try {
-			final String sql = "{call helloworldByKey(?)}";
+			final String sql = "{call mapByKey(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
-			call.setString(1, key);
+			call.setString(1, keywords);
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				helloWorld = new HelloWorld(resultSet.getInt("id"), key, resultSet.getString("message"));
+				helloWorld = new HelloWorld(resultSet.getInt("id"), keywords, resultSet.getString("map"));
 			}
+			BufferedReader in = new BufferedReader(new FileReader(resultSet.getString("map")));
+			
+			for (int y = 0; y < this.getHeight(); y++) {
+				for (int x = 0; x < this.getWidth(); x++) {
+					switch((char)in.read()){
+					case 'P' :
+						addElement(Element.STONE, x,y);
+						break;
+					case 'O' :
+						addElement(Element.BONE, x,y);
+						break;
+					case 'I' :
+						addElement(Element.BONE2, x,y);
+						break;
+					case 'U':
+						addElement(Element.TOWN, x,y);
+						break;
+					case 'C':
+						addElement(Element.STONE, x,y);
+						break;
+					case 'W':
+						addElement(Element.CAMP, x,y);
+						break;
+					case 'S':
+						addElement(Element.LAND, x,y);
+						break;
+					}
+				}
 			return helloWorld;
 		} catch (final SQLException e) {
 			e.printStackTrace();
@@ -108,3 +147,28 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	}
 
 }
+public int getWidth() {
+	return this.width;
+}
+
+public int getHeight() {
+	return this.height;
+}
+
+public Element getElements(final int x, final int y) {
+	if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
+		return null;
+	}
+	return this.elements[x][y];
+}
+
+@Override
+public HelloWorld find(String key) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+}
+
+	
