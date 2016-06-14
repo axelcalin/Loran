@@ -119,24 +119,6 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					case 'P' :
 						addElement(Element.STONE, x,y);
 						break;
-					case 'O' :
-						addElement(Element.BONE, x,y);
-						break;
-					case 'I' :
-						addElement(Element.BONE2, x,y);
-						break;
-					case 'U':
-						addElement(Element.TOWN, x,y);
-						break;
-					case 'C':
-						addElement(Element.STONE, x,y);
-						break;
-					case 'W':
-						addElement(Element.CAMP, x,y);
-						break;
-					case 'S':
-						addElement(Element.LAND, x,y);
-						break;
 					}
 				}
 			return helloWorld;

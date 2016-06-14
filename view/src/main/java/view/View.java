@@ -60,7 +60,7 @@ public class View implements IView, Runnable {
 	 * @see contract.IView#printMessage(java.lang.String)
 	 */
 	public void printMap(final String map) {
-		this.viewFrame.printMessage(map);
+		this.viewFrame.printMap(map);
 	}
 
 	/*
