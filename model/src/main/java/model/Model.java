@@ -1,7 +1,11 @@
 package model;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Observable;
+
+import org.Element.Element;
 
 import contract.IModel;
 
@@ -13,13 +17,12 @@ import contract.IModel;
 public class Model extends Observable implements IModel {
 
 	/** The message. */
-	private String map;
+	private List<List<Element>>	map;
 
 	/**
 	 * Instantiates a new model.
 	 */
 	public Model() {
-		this.map = "";
 	}
 
 	/*
@@ -27,7 +30,7 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
-	public String getMap() {
+	public List<List<Element>> getMap() {
 		return this.map;
 	}
 
@@ -37,8 +40,8 @@ public class Model extends Observable implements IModel {
 	 * @param message
 	 *          the new message
 	 */
-	private void setMap(final String map) {
-		this.map = map;
+	private void setMap(final List<List<Element>> list) {
+		this.map = list;
 		this.setChanged();
 		this.notifyObservers();
 	}
@@ -48,10 +51,10 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage(java.lang.String)
 	 */
-	public void loadMap(final String keywords) {
+	public void loadMap(String map) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.find(keywords,22,12).getMap());
+			this.setMap(daoHelloWorld.loadMap(map));
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
