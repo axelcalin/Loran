@@ -10,6 +10,8 @@ import java.sql.SQLException;
 
 import javax.swing.text.Element;
 
+import org.Element.STONE;
+
 /**
  * The Class DAOHelloWorld.
  *
@@ -117,12 +119,14 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 				for (int x = 0; x < this.getWidth(); x++) {
 					switch((char)in.read()){
 					case 'P' :
-						addElement(Element.STONE, x,y);
+						addElement(, x,y);
 						break;
 					}
 				}
 			return helloWorld;
-		} catch (final SQLException e) {
+		}
+		}
+			catch (final SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
