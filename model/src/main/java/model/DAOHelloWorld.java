@@ -120,8 +120,8 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			ArrayList<String> map = new ArrayList<String>();
 			for(String temp : S.split("\n")) map.add(temp);
 
-for (int y = 0; y < this.getHeight(); y++) {
-			for (int x = 0; x < this.getWidth(); x++) {
+for (int y = 0; y < map.size(); y++) {
+			for (int x = 0; x < map.get(y).length(); x++) {
 				switch(map.get(y).charAt(x)){
 				case 'P' :
 					addElement(new STONE(), x, y);
