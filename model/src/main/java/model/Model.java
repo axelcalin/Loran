@@ -51,7 +51,7 @@ public class Model extends Observable implements IModel {
 	public void loadMap(final String keywords) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.find(keywords).getMap());
+			this.setMap(daoHelloWorld.find(keywords,20,12).getMap());
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

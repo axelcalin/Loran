@@ -101,7 +101,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	public HelloWorld find(final String keywords,final int width, final int height) {
 		this.width = width;
 		this.height = height;
-		this.elements = new org.Element.Element[this.getWidth()][this.getHeight()];{
+		this.elements = new org.Element.Element[this.getWidth()][this.getHeight()];
 		HelloWorld helloWorld = new HelloWorld();
 
 		try {
@@ -123,13 +123,13 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 						break;
 					}
 				}
-			return helloWorld;
 			}
-			} catch (final SQLException e) {
+			in.close();
+			return helloWorld;
+		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
-	}
 
 }
 private void addElement(org.Element.Element element, int x, int y) {
