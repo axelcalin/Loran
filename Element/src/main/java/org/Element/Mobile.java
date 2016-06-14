@@ -22,7 +22,7 @@ public class Mobile
 		if ((x >= 0) && (x <= 20))
 		{
 			this.position.x = x;
-			//TODO prevenir  observeur
+			//TODO prevenir observeur
 		}
 	}
 	
