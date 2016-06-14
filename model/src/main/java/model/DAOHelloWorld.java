@@ -1,16 +1,14 @@
 package model;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.swing.text.Element;
+import view.HelloWorld;
 
-import org.Element.STONE;
+
 
 /**
  * The Class DAOHelloWorld.
@@ -18,10 +16,6 @@ import org.Element.STONE;
  * @author Jean-Aymeric Diet
  */
 class DAOHelloWorld extends DAOEntity<HelloWorld> {
-
-	private int width;
-	private int height;
-	private org.Element.Element elements[][];
 
 	/**
 	 * Instantiates a new DAO hello world.
@@ -98,12 +92,8 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 *
 	 * @see model.DAOEntity#find(java.lang.String)
 	 */
-	public HelloWorld find(final String keywords,final int width, final int height) {
-		this.width = width;
-		this.height = height;
-		this.elements = new org.Element.Element[this.getWidth()][this.getHeight()];{
+	public HelloWorld find(final String keywords) {
 		HelloWorld helloWorld = new HelloWorld();
-
 		try {
 			final String sql = "{call mapByKey(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
@@ -113,52 +103,13 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			if (resultSet.first()) {
 				helloWorld = new HelloWorld(resultSet.getInt("id"), keywords, resultSet.getString("map"));
 			}
-			BufferedReader in = new BufferedReader(new FileReader(resultSet.getString("map")));
-			
-			for (int y = 0; y < this.getHeight(); y++) {
-				for (int x = 0; x < this.getWidth(); x++) {
-					switch((char)in.read()){
-					case 'P' :
-						addElement(new STONE(), x, y);
-						break;
-					}
-				}
 			return helloWorld;
-			}
-			} catch (final SQLException e) {
+		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
-	}
 
 }
-private void addElement(org.Element.Element element, int x, int y) {
-		this.elements[x][y] = element;
-		
-	}
-
-public int getWidth() {
-	return this.width;
-}
-
-public int getHeight() {
-	return this.height;
-}
-
-public org.Element.Element getElements(final int x, final int y) {
-	if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
-		return null;
-	}
-	return this.elements[x][y];
-}
-
-@Override
-public HelloWorld find(String key) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-
 }
 
 	
