@@ -4,6 +4,7 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+//import scr.Lorann;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -84,7 +85,18 @@ public class Controller implements IController {
 			case Menu:
 				this.model.loadMap("menu");
 				break;
-
+			case UP:
+				this.moveUp();
+				break;
+			case DOWN:
+				
+				break;
+			case LEFT:
+				
+				break;
+			case RIGHT:
+				
+				break;
 			default:
 				break;
 		}

@@ -13,5 +13,9 @@ public enum ControllerOrder {
 	Niveau3, /** The Indonesia. */
 	Niveau4,
 	Niveau5,
-	Menu
+	Menu,
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
 }
