@@ -21,7 +21,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 
 	private int width;
 	private int height;
-	private Element elements[][];
+	private org.Element.Element elements[][];
 
 	/**
 	 * Instantiates a new DAO hello world.
@@ -101,7 +101,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	public HelloWorld find(final String keywords,final int width, final int height) {
 		this.width = width;
 		this.height = height;
-		this.elements = new Element[this.getWidth()][this.getHeight()];{
+		this.elements = new org.Element.Element[this.getWidth()][this.getHeight()];{
 		HelloWorld helloWorld = new HelloWorld();
 
 		try {
@@ -119,20 +119,24 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 				for (int x = 0; x < this.getWidth(); x++) {
 					switch((char)in.read()){
 					case 'P' :
-						addElement(, x,y);
+						addElement(new STONE(), x, y);
 						break;
 					}
 				}
 			return helloWorld;
-		}
-		}
-			catch (final SQLException e) {
+			}
+			} catch (final SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
 }
+private void addElement(org.Element.Element element, int x, int y) {
+		this.elements[x][y] = element;
+		
+	}
+
 public int getWidth() {
 	return this.width;
 }
@@ -141,7 +145,7 @@ public int getHeight() {
 	return this.height;
 }
 
-public Element getElements(final int x, final int y) {
+public org.Element.Element getElements(final int x, final int y) {
 	if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
 		return null;
 	}
