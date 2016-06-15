@@ -5,13 +5,16 @@ import java.awt.Point;
 import contract.Permeability;
 
 
-public class Mobile
+public class Mobile extends Element
 {
-	private final Point position;
+	private Point position;
+	private int life;
 	
-	public Mobile()
+	public Mobile(Permeability perm, Sprite sprite, int life)
 	{
+		super(perm,sprite)
 		this.position = new Point();
+		this.life = life;
 	}
 	
 	public int getX()
@@ -112,6 +115,19 @@ public class Mobile
 		{
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() + 1);
+		}
+	}
+	
+	public void kill(){
+		this.life -= 1;
+		if(this.life <= 0){
+			
+		}
+	}
+	@Override
+	public void onTouch(Element touch){
+		if(touch instanceof Lorann){
+			touch.kill();
 		}
 	}
 	
