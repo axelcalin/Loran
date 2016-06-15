@@ -3,6 +3,8 @@ package contract;
 import java.util.List;
 import java.util.Observable;
 
+import org.Element.Element;
+
 import contract.IElement;
 
 /**
