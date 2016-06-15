@@ -1,8 +1,9 @@
 package org.Element;
 
+import contract.IElement;
 import contract.Permeability;
 
-public class Element {
+public class Element implements IElement{
 	private Permeability permeability;
 	private Sprite spriteFile;
 	
