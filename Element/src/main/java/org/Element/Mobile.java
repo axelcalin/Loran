@@ -12,7 +12,7 @@ public class Mobile extends Element
 	
 	public Mobile(Permeability perm, Sprite sprite, int life)
 	{
-		super(perm,sprite)
+		super(perm,sprite);
 		this.position = new Point();
 		this.life = life;
 	}
