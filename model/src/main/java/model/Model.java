@@ -7,6 +7,7 @@ import java.util.Observable;
 
 import org.Element.Element;
 
+import contract.IElement;
 import contract.IModel;
 
 /**
