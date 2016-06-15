@@ -84,7 +84,7 @@ class ViewPanel extends JPanel implements Observer {
 		while(n.hasNext()){
 			Iterator<IElement> k = n.next().iterator();
 			while(k.hasNext()){
-				graphics.drawImage(k.next().getSprite().getImage(),j*32,i*32,this);
+				graphics.drawImage(k.next().getSprite().getImage(),j*82,i*82, 75, 75,this);
 				j++;
 			}
 			i++;

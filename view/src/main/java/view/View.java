@@ -39,17 +39,18 @@ public class View implements IView, Runnable {
 	 */
 	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
 		switch (keyCode) {
-			case KeyEvent.VK_G:
-				return ControllerOrder.Niveau1;
-			case KeyEvent.VK_F:
-				return ControllerOrder.Niveau2;
-			case KeyEvent.VK_D:
-				return ControllerOrder.Niveau3;
-			case KeyEvent.VK_I:
-				return ControllerOrder.Niveau4;
+			case KeyEvent.VK_A:
+				return ControllerOrder.Niveau1;	
 			case KeyEvent.VK_Z:
+				return ControllerOrder.Niveau2;
+			case KeyEvent.VK_E:
+				return ControllerOrder.Niveau3;
+			case KeyEvent.VK_R:
+				return ControllerOrder.Niveau4;
+			case KeyEvent.VK_T:
 				return ControllerOrder.Niveau5;
 			case KeyEvent.VK_UP:
+				System.out.println("axel tu pues ça avance à rien");
 				return ControllerOrder.UP;
 			case KeyEvent.VK_DOWN:
 				return ControllerOrder.DOWN;
