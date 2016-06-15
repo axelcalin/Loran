@@ -4,7 +4,7 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
-//import scr.Lorann;
+
 
 // TODO: Auto-generated Javadoc
 /**
@@ -89,13 +89,13 @@ public class Controller implements IController {
 				this.moveUp();
 				break;
 			case DOWN:
-				
+				this.moveDown();
 				break;
 			case LEFT:
-				
+				this.moveLeft();
 				break;
 			case RIGHT:
-				
+				this.moveRight();
 				break;
 			default:
 				break;
