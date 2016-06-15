@@ -8,10 +8,23 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.Element.Bag;
+import org.Element.Candlestick;
+import org.Element.Chesskull;
+import org.Element.CrystalBall;
 import org.Element.Element;
+import org.Element.GateClosed;
+import org.Element.Glass;
 import org.Element.HorizontalBone;
+import org.Element.Korn;
+import org.Element.Lorann;
+import org.Element.Monster_1;
+import org.Element.Statue;
 import org.Element.Stone;
 import org.Element.VerticalBone;
+import org.Element.White;
+import org.Element.YellowMen;
+import org.Element.onion;
 
 import contract.IElement;
 import model.HelloWorld;
@@ -142,31 +155,43 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					array.get(i).add(new VerticalBone());
 					break;
 				case 'U':
+					array.get(i).add(new onion());
 					break;
 				case 'C':
+					array.get(i).add(new Candlestick());
 					break;
 				case 'W':
-					array.get(i).add(null);
+					array.get(i).add(new White());
 					break;
 				case 'S':
+					array.get(i).add(new Bag());
 					break;
 				case 'B':
+					array.get(i).add(new CrystalBall());
 					break;
 				case 'L':
+					array.get(i).add(new Lorann());
 					break;
 				case 'D':
+					array.get(i).add(new GateClosed());
 					break;
 				case 'Z':
+					array.get(i).add(new Statue());
 					break;
 				case 'T':
+					array.get(i).add(new Monster_1());
 					break;
 				case 'Y':
+					array.get(i).add(new YellowMen());
 					break;
 				case 'K':
+					array.get(i).add(new Korn());
 					break;
 				case 'A':
+					array.get(i).add(new Chesskull());
 					break;
 				case 'G':
+					array.get(i).add(new Glass());
 					break;
 				case '\n':
 					array.add(new ArrayList<IElement>());

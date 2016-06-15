@@ -77,8 +77,7 @@ class ViewPanel extends JPanel implements Observer {
 	
 	@Override
 	protected void paintComponent(final Graphics graphics) {
-		System.out.println("test");
-		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
+		graphics.clearRect(0, 0, 1500,1000);
 		int i = 0;
 		int j = 0;
 		Iterator<java.util.List<IElement>> n = this.getViewFrame().getModel().getMap().iterator();
@@ -87,7 +86,6 @@ class ViewPanel extends JPanel implements Observer {
 			while(k.hasNext()){
 				graphics.drawImage(k.next().getSprite().getImage(),j*32,i*32,this);
 				j++;
-				System.out.println("AFFICHE BORDEL!");
 			}
 			i++;
 			j = 0;

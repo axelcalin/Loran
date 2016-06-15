@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
@@ -133,6 +134,7 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.setContentPane(new ViewPanel(this));
 		this.setSize(1500 + this.getInsets().left + this.getInsets().right, 900 + this.getInsets().top + this.getInsets().bottom);
 		this.setLocationRelativeTo(null);
+		this.setBackground(Color.BLACK);
 	}
 
 	/**
