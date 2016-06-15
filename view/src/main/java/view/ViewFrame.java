@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
@@ -129,11 +130,15 @@ class ViewFrame extends JFrame implements KeyListener {
 	private void buildViewFrame(final IModel model) {
 		this.setModel(model);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setResizable(false);
+		this.setResizable(true);
 		this.addKeyListener(this);
 		this.setContentPane(new ViewPanel(this));
-		this.setSize(1500 + this.getInsets().left + this.getInsets().right, 900 + this.getInsets().top + this.getInsets().bottom);
+		this.setExtendedState(this.MAXIMIZED_BOTH);
 		this.setLocationRelativeTo(null);
+		this.setTitle("Lorann vs Wild");
+		this.setVisible(true);
+		this.setResizable(false);
+		this.setAlwaysOnTop(true);
 		this.setBackground(Color.BLACK);
 	}
 
