@@ -42,7 +42,7 @@ public class Mobile
 		}
 	}
 	
-	private  boolean isMovePossible(int x, int y)
+	/*private  boolean isMovePossible(int x, int y)
 	{
 		return (this.getElements(x, y).getPermeability() != Permeability.BLOCKING);
 	}
@@ -77,6 +77,6 @@ public class Mobile
 		{
 			this.setX(this.getX() - 1);
 		}
-	}
+	}*/
 	
 }

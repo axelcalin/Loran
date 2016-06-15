@@ -18,7 +18,7 @@ import contract.IModel;
 public class Model extends Observable implements IModel {
 
 	/** The message. */
-	private List<List<Element>>	map;
+	private List<List<IElement>>	map;
 
 	/**
 	 * Instantiates a new model.
@@ -41,7 +41,7 @@ public class Model extends Observable implements IModel {
 	 * @param message
 	 *          the new message
 	 */
-	private void setMap(final List<List<Element>> list) {
+	private void setMap(final List<List<IElement>> list) {
 		this.map = list;
 		this.setChanged();
 		this.notifyObservers();

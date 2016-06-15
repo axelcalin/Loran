@@ -71,24 +71,21 @@ class ViewPanel extends JPanel implements Observer {
 	 */
 	public void update(final Observable arg0, final Object arg1) {
 		this.repaint();
+		paintComponent(getGraphics());
 	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
-	 */
+	
+	
 	@Override
 	protected void paintComponent(final Graphics graphics) {
+		System.out.println("test");
 		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
-		System.out.println("bite");
 		int i = 0;
 		int j = 0;
 		Iterator<java.util.List<IElement>> n = this.getViewFrame().getModel().getMap().iterator();
 		while(n.hasNext()){
 			Iterator<IElement> k = n.next().iterator();
 			while(k.hasNext()){
-				graphics.drawImage(k.next().getSprite().getImage(),i,j,null);
+				graphics.drawImage(k.next().getSprite().getImage(),i*32,j*32,this);
 				j++;
 				System.out.println("AFFICHE BORDEL!");
 			}
@@ -108,7 +105,7 @@ class ViewPanel extends JPanel implements Observer {
 		private String ImageChoose(final int width, final int height){
 		this.width = width;
 		this.height = height;
-		this.elements = new org.Element.Element[this.getWidth()][this.getHeight()];
+		this.elements = new ordg.Element.Element[this.getWidth()][this.getHeight()];
 		
 		String S = resultSet.getString("map");
 		ArrayList<String> map = new ArrayList<String>();
@@ -122,29 +119,29 @@ class ViewPanel extends JPanel implements Observer {
 						break;
 			}
 				}	
-			}}
+			}}*/
 		
 			
+			
+	private void addElement(org.Element.Element element, int x, int y) {
+		this.elements[x][y] = element;
 		
-private void addElement(org.Element.Element element, int x, int y) {
-	this.elements[x][y] = element;
+	}
 	
-}*/
-
-public int getWidth() {
-return this.width;
-}
-
-public int getHeight() {
-return this.height;
-}
-
-public org.Element.Element getElements(final int x, final int y) {
-if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
-	return null;
-}
-return this.elements[x][y];
-}
+	public int getWidth() {
+	return this.width;
+	}
+	
+	public int getHeight() {
+	return this.height;
+	}
+	
+	public org.Element.Element getElements(final int x, final int y) {
+		if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
+			return null;
+		}
+		return this.elements[x][y];
+	}
 
 
 }

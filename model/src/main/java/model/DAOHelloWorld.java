@@ -116,8 +116,8 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
-	public List<List<Element>> loadMap(final String map){
-		List<List<Element>> array = new ArrayList<List<Element>>();
+	public List<List<IElement>> loadMap(final String map){
+		List<List<IElement>> array = new ArrayList<List<IElement>>();
 		try{
 			final String sql = "{call mapByKey(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
@@ -126,7 +126,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			final ResultSet resultSet = call.getResultSet();
 			resultSet.next();
 			String s = resultSet.getString("map");
-			array.add(new ArrayList<Element>());
+			array.add(new ArrayList<IElement>());
 			int i = 0;
 			for(char c : s.toCharArray()){
 				switch (c){
@@ -167,7 +167,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 				case 'G':
 					break;
 				case '\n':
-					array.add(new ArrayList<Element>());
+					array.add(new ArrayList<IElement>());
 					System.out.println("je suis une salade d'endive");
 					break;
 				default:
