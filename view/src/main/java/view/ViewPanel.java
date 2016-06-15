@@ -2,10 +2,12 @@ package view;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.List;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Observable;
 import java.util.Observer;
 import java.sql.ResultSet;
@@ -14,6 +16,8 @@ import javax.swing.JPanel;
 
 import org.Element.Element;
 import org.Element.Stone;
+
+import contract.IElement;
 
 /**
  * The Class ViewPanel.
@@ -77,16 +81,22 @@ class ViewPanel extends JPanel implements Observer {
 	@Override
 	protected void paintComponent(final Graphics graphics) {
 		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
+		System.out.println("bite");
 		int i = 0;
-		for(String line : this.getViewFrame().getModel().getMap().toString().split("\n")){
-			graphics.drawString(line, 10, 20 + graphics.getFontMetrics().getHeight() * i);
-			i++;
-				for (int j =0; j < 12; j++){
-					...;
-				}
+		int j = 0;
+		Iterator<java.util.List<IElement>> n = this.getViewFrame().getModel().getMap().iterator();
+		while(n.hasNext()){
+			Iterator<IElement> k = n.next().iterator();
+			while(k.hasNext()){
+				graphics.drawImage(k.next().getSprite().getImage(),i,j,null);
+				j++;
+				System.out.println("AFFICHE BORDEL!");
 			}
+			i++;
+			j = 0;
+		}
 	}
-		private Image readImage (int x, int y){
+		/*private Image readImage (int x, int y){
 			try {
 				return ImageIO.read(new File("resources/" + ImageChoose(x, y)));
 			} catch (IOException e) {
@@ -119,7 +129,7 @@ class ViewPanel extends JPanel implements Observer {
 private void addElement(org.Element.Element element, int x, int y) {
 	this.elements[x][y] = element;
 	
-}
+}*/
 
 public int getWidth() {
 return this.width;
