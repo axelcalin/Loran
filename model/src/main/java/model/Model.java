@@ -7,6 +7,7 @@ import java.util.Observable;
 
 import org.Element.Element;
 
+import contract.IElement;
 import contract.IModel;
 
 /**
@@ -30,7 +31,7 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
-	public List<List<Element>> getMap() {
+	public List<List<IElement>> getMap() {
 		return this.map;
 	}
 
