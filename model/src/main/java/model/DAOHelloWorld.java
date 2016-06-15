@@ -11,7 +11,7 @@ import java.util.List;
 import org.Element.Element;
 import org.Element.Stone;
 
-import view.HelloWorld;
+import model.HelloWorld;
 
 
 
