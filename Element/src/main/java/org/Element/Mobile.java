@@ -79,4 +79,40 @@ public class Mobile
 		}
 	}
 	
+	public void moveUpRight()
+	{
+		if (this.isMovePossible(this.getX() + 1, this.getY() - 1))
+		{
+			this.setX(this.getX() + 1);
+			this.setY(this.getY() - 1);
+		}
+	}
+	
+	public void moveUpLeft()
+	{
+		if (this.isMovePossible(this.getX() - 1, this.getY() - 1))
+		{
+			this.setX(this.getX() - 1);
+			this.setY(this.getY() - 1);
+		}
+	}
+	
+	public void moveDownRight()
+	{
+		if (this.isMovePossible(this.getX() + 1, this.getY() + 1))
+		{
+			this.setX(this.getX() + 1);
+			this.setY(this.getY() + 1);
+		}
+	}
+	
+	public void moveDownLeft()
+	{
+		if (this.isMovePossible(this.getX() - 1, this.getY() + 1))
+		{
+			this.setX(this.getX() - 1);
+			this.setY(this.getY() + 1);
+		}
+	}
+	
 }
