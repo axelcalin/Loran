@@ -1,5 +1,7 @@
 package org.Element;
 
+import contract.Permeability;
+
 public class Element {
 	private Permeability permeability;
 	private Sprite spriteFile;

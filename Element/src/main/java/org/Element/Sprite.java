@@ -7,6 +7,8 @@ import java.io.StringWriter;
 
 import javax.imageio.ImageIO;
 
+import contract.ISprite;
+
 public class Sprite extends StringWriter implements ISprite {
 	private Image image;
 

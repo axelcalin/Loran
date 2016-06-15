@@ -2,6 +2,8 @@ package org.Element;
 
 import java.awt.Point;
 
+import contract.Permeability;
+
 
 public class Mobile
 {

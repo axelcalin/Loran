@@ -85,7 +85,7 @@ public class Controller implements IController {
 			case Menu:
 				this.model.loadMap("menu");
 				break;
-			case UP:
+			/*case UP:
 				this.moveUp();
 				break;
 			case DOWN:
@@ -98,7 +98,7 @@ public class Controller implements IController {
 				this.moveRight();
 				break;
 			default:
-				break;
+				break;*/
 		}
 	}
 

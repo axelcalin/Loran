@@ -3,7 +3,7 @@ package contract;
 import java.util.List;
 import java.util.Observable;
 
-import org.Element.Element;
+import contract.IElement;
 
 /**
  * The Interface IModel.
@@ -17,7 +17,7 @@ public interface IModel {
 	 *
 	 * @return the message
 	 */
-	List<List<Element>> getMap();
+	List<List<IElement>> getMap();
 
 	/**
 	 * Load the message.
