@@ -6,6 +6,6 @@ public class GateOpen extends Element
 {
 	public GateOpen()
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "gate_open.png"));
+		super( Permeability.PERMEABLE,new Sprite("â”Œâ”�", "gate_open.png"));
 	}
 }

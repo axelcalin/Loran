@@ -6,6 +6,6 @@ public class Purpse extends Element
 {
 	public Purpse()
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "purpse.png"));
+		super( Permeability.PERMEABLE,new Sprite("â”Œâ”�", "purpse.png"));
 	}
 }
