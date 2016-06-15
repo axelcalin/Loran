@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.Element.Element;
+import org.Element.HorizontalBone;
 import org.Element.Stone;
+import org.Element.VerticalBone;
 
 import contract.IElement;
 import model.HelloWorld;
@@ -132,11 +134,12 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 				switch (c){
 				case 'P':
 					array.get(i).add(new Stone());
-					System.out.println("oui");
 					break;
 				case 'O':
+					array.get(i).add(new HorizontalBone());
 					break;
 				case 'I':
+					array.get(i).add(new VerticalBone());
 					break;
 				case 'U':
 					break;
@@ -144,7 +147,6 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					break;
 				case 'W':
 					array.get(i).add(null);
-					System.out.println("noir");
 					break;
 				case 'S':
 					break;
@@ -168,7 +170,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					break;
 				case '\n':
 					array.add(new ArrayList<IElement>());
-					System.out.println("je suis une salade d'endive");
+					i++;
 					break;
 				default:
 					break;
