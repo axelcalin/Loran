@@ -19,4 +19,8 @@ public class Element implements IElement{
 	public Permeability getPermeability(){
 		return this.permeability;
 	}
+	
+	public void onTouch(Element touch){
+		
+	}
 }
