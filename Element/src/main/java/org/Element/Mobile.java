@@ -24,7 +24,7 @@ public class Mobile
 		if ((x >= 0) && (x <= 20))
 		{
 			this.position.x = x;
-			//TODO prevenir observeur
+			//TODO prevent viewer
 		}
 	}
 	
@@ -38,7 +38,7 @@ public class Mobile
 		if ((y >= 0) && (y <= 12))
 		{
 			this.position.y = y;
-			//TODO prevenir observeur
+			//TODO prevent viewer
 		}
 	}
 	
