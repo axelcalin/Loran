@@ -24,7 +24,7 @@ public class Mobile
 		if ((x >= 0) && (x <= 20))
 		{
 			this.position.x = x;
-			//TODO prevenir observeur
+			//TODO prevent viewer
 		}
 	}
 	
@@ -38,7 +38,7 @@ public class Mobile
 		if ((y >= 0) && (y <= 12))
 		{
 			this.position.y = y;
-			//TODO prevenir observeur
+			//TODO prevent viewer
 		}
 	}
 	
@@ -78,5 +78,41 @@ public class Mobile
 			this.setX(this.getX() - 1);
 		}
 	}*/
+	
+	public void moveUpRight()
+	{
+		if (this.isMovePossible(this.getX() + 1, this.getY() - 1))
+		{
+			this.setX(this.getX() + 1);
+			this.setY(this.getY() - 1);
+		}
+	}
+	
+	public void moveUpLeft()
+	{
+		if (this.isMovePossible(this.getX() - 1, this.getY() - 1))
+		{
+			this.setX(this.getX() - 1);
+			this.setY(this.getY() - 1);
+		}
+	}
+	
+	public void moveDownRight()
+	{
+		if (this.isMovePossible(this.getX() + 1, this.getY() + 1))
+		{
+			this.setX(this.getX() + 1);
+			this.setY(this.getY() + 1);
+		}
+	}
+	
+	public void moveDownLeft()
+	{
+		if (this.isMovePossible(this.getX() - 1, this.getY() + 1))
+		{
+			this.setX(this.getX() - 1);
+			this.setY(this.getY() + 1);
+		}
+	}
 	
 }
