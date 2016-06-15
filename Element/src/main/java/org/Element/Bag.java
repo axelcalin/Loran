@@ -1,10 +1,8 @@
 package org.Element;
 
-import contract.Permeability;
-
-public class Bag extends Element{
+public class Bag extends Item{
 
 		public Bag() {
-			super( Permeability.PERMEABLE,new Sprite("â”Œâ”�", "purse.png"));
+			super( new Sprite("â”Œâ”�", "purse.png"), 650, false);
 		}
 }

@@ -2,9 +2,9 @@ package org.Element;
 
 import contract.Permeability;
 
-public class Statue extends Element{
+public class Statue extends Item{
 
 		public Statue() {
-			super( Permeability.PERMEABLE,new Sprite("â”Œâ”�", "statue.png"));
+			super( new Sprite("â”Œâ”�", "statue.png"),2,true);
 		}
 }

@@ -2,9 +2,9 @@ package org.Element;
 
 import contract.Permeability;
 
-public class Candlestick extends Element{
+public class Candlestick extends Item{
 
 	public Candlestick() {
-		super( Permeability.PERMEABLE,new Sprite("â”Œâ”�", "candlestick.png"));
+		super( new Sprite("â”Œâ”�", "candlestick.png"), 620, false);
 	}
 }

@@ -2,10 +2,10 @@ package org.Element;
 
 import contract.Permeability;
 
-public class Glass extends Element
+public class Glass extends Item
 {
 	public Glass()
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "Glass.png"));
+		super( new Sprite("â”Œâ”�", "Glass.png"),650,false);
 	}
 }
