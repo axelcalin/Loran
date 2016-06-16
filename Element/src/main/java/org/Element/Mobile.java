@@ -2,11 +2,12 @@ package org.Element;
 
 import java.awt.Point;
 
+import contract.IMobile;
 import contract.IModel;
 import contract.Permeability;
 
 
-public class Mobile extends DynamicElement
+public class Mobile extends DynamicElement implements IMobile
 {
 	private Point position;
 	
@@ -46,7 +47,7 @@ public class Mobile extends DynamicElement
 	
 	private  boolean isMovePossible(int x, int y)
 	{
-		return (this.getElements(x, y).getPermeability() != Permeability.BLOCKING);
+		return (this.getModel().getElementxy(x, y).getPermeability() != Permeability.BLOCKING);
 	}
 	
 	public void moveUp()
@@ -54,6 +55,7 @@ public class Mobile extends DynamicElement
 		if (this.isMovePossible(this.getX(), this.getY() - 1))
 		{
 			this.setY(this.getY() - 1);
+			this.getModel().moveElement(getX(), getY(), getX(), getY()-1);
 		}
 	}
 	
@@ -62,6 +64,7 @@ public class Mobile extends DynamicElement
 		if (this.isMovePossible(this.getX(), this.getY() + 1))
 		{
 			this.setY(this.getY() + 1);
+			this.getModel().moveElement(getX(), getY(), getX(), getY()+1);
 		}
 	}
 	
@@ -70,6 +73,7 @@ public class Mobile extends DynamicElement
 		if (this.isMovePossible(this.getX() + 1, this.getY()))
 		{
 			this.setX(this.getX() + 1);
+			this.getModel().moveElement(getX(), getY(), getX()+1, getY());
 		}
 	}
 	
@@ -78,6 +82,7 @@ public class Mobile extends DynamicElement
 		if (this.isMovePossible(this.getX() - 1, this.getY()))
 		{
 			this.setX(this.getX() - 1);
+			this.getModel().moveElement(getX(), getY(), getX()-1, getY());
 		}
 	}
 	
@@ -87,6 +92,7 @@ public class Mobile extends DynamicElement
 		{
 			this.setX(this.getX() + 1);
 			this.setY(this.getY() - 1);
+			this.getModel().moveElement(getX(), getY(), getX()+1, getY()-1);
 		}
 	}
 	
@@ -96,6 +102,7 @@ public class Mobile extends DynamicElement
 		{
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() - 1);
+			this.getModel().moveElement(getX(), getY(), getX()-1, getY()-1);
 		}
 	}
 	
@@ -105,6 +112,7 @@ public class Mobile extends DynamicElement
 		{
 			this.setX(this.getX() + 1);
 			this.setY(this.getY() + 1);
+			this.getModel().moveElement(getX(), getY(), getX()+1, getY()+1);
 		}
 	}
 	
@@ -114,6 +122,7 @@ public class Mobile extends DynamicElement
 		{
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() + 1);
+			this.getModel().moveElement(getX(), getY(), getX()-1, getY()+1);
 		}
 	}
 	

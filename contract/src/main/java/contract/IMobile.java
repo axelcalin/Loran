@@ -1,7 +1,11 @@
-package org.Element;
+package contract;
 
 public interface IMobile
 {
+	public int getX();
+	
+	public int getY();
+	
 	public void moveUp();
 	
 	public void moveDown();
