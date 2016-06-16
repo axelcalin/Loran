@@ -4,11 +4,10 @@ import java.awt.Point;
 
 import contract.Permeability;
 
-public class Lorann extends Mobile
+public class Lorann extends Mobile implements ILorann
 {
 	private Point lastPosition;
-	int j;
-	int i;
+	
 	
 	public Lorann(int j, int i)
 	{
@@ -19,7 +18,7 @@ public class Lorann extends Mobile
 	
 	private void saveLastPostion()
 	{
-		this.lastPosition.setLocation(j, i);
+		this.lastPosition.setLocation(this.getX(),this.getY());
 	}
 	
 	public void moveUp()
