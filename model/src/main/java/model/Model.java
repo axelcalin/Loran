@@ -61,23 +61,8 @@ public class Model extends Observable implements IModel {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
 			this.setMap(daoHelloWorld.loadMap(map));
-			this.setDynamicElements(this.getMap());
 		} catch (final SQLException e) {
 			e.printStackTrace();
-		}
-	}
-
-	private synchronized void setDynamicElements(List<List<IElement>> map) {
-		this.dynamicElements = new ArrayList<IElement>();
-		Iterator<List<IElement>> i = map.iterator();
-		IElement elem;
-		while(i.hasNext()){
-			Iterator<IElement> k = i.next().iterator();
-			while(k.hasNext()){
-				if((elem = k.next()) instanceof Mobile){
-					dynamicElements.add(elem);
-				}
-			}
 		}
 	}
 
