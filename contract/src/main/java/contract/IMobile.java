@@ -21,5 +21,7 @@ public interface IMobile
 	public void moveDownRight();
 	
 	public void moveDownLeft();
+	
+	public void animate();
 
 }
