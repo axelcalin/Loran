@@ -1,11 +1,13 @@
 package org.Element;
 
 import contract.IElement;
+import contract.IModel;
 import contract.Permeability;
 
 public class Element implements IElement{
 	private Permeability permeability;
 	private Sprite spriteFile;
+	private IModel masterModel;
 	
 	public Element(Permeability perm, Sprite sprite){
 		this.permeability = perm;
@@ -28,4 +30,13 @@ public class Element implements IElement{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void setModel(IModel thisModel){
+		this.masterModel = thisModel;
+	}
+	
+	public IModel getModel(){
+		return this.masterModel;
+	}
+
 }

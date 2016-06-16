@@ -89,4 +89,14 @@ public class Model extends Observable implements IModel {
 		this.map.get(y).remove(x);
 		this.map.get(y).add(x, new White());
 	}
+	
+	public void setupElements(){
+		Iterator<java.util.List<IElement>> l = this.getMap().iterator();
+		while(l.hasNext()){
+			Iterator<IElement> m = l.next().iterator();
+			while(m.hasNext()){
+				m.next().setModel(this);
+			}
+		}
+	}
 }
