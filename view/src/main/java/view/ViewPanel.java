@@ -91,11 +91,6 @@ class ViewPanel extends JPanel implements Observer {
 			i++;
 			j = 0;
 		}
-		Iterator<IElement> dynamics = this.getViewFrame().getModel().getDynamicObject().iterator();
-		while(dynamics.hasNext()){
-			IElement components = dynamics.next();
-			components.animate();
-		}
 	}
 			
 			
