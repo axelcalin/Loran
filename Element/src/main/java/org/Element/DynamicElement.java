@@ -12,5 +12,9 @@ public class DynamicElement extends Element {
 	public void setModel(IModel thisModel){
 		this.masterModel = thisModel;
 	}
+	
+	public IModel getModel(){
+		return this.masterModel;
+	}
 
 }
