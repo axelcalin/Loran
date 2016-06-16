@@ -86,7 +86,7 @@ public class Controller implements IController {
 				break;
 			case Menu:
 				System.out.println("menu");
-				this.model.loadMap("menu");
+				this.model.loadMap("me");
 				break;
 			case EXIT:
 				System.out.println("exit");

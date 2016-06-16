@@ -51,6 +51,8 @@ public class View implements IView, Runnable {
 				return ControllerOrder.Niveau4;
 			case KeyEvent.VK_T:
 				return ControllerOrder.Niveau5;
+			case KeyEvent.VK_M:
+				return ControllerOrder.Menu;
 			case KeyEvent.VK_ESCAPE:
 				return ControllerOrder.EXIT;
 			case KeyEvent.VK_UP:
