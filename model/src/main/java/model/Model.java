@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Observable;
 
 import org.Element.Element;
+import org.Element.White;
 
 import contract.IMobile;
 import contract.IElement;
@@ -74,5 +75,18 @@ public class Model extends Observable implements IModel {
 
 	public List<IMobile> getDynamicObject() {
 		return this.dynamicElements;
+	}
+
+	public IElement getElementxy(int x, int y) {
+		return map.get(y).get(x);
+	}
+	
+	public void moveElement(int x, int y, int targetx, int targety){
+		this.map.get(targety).remove(targetx);
+		this.map.get(targety).add(targetx, this.map.get(y).get(x));
+		this.map.get(y).remove(x);
+		this.map.get(y).add(x, new White());
+		this.setChanged();
+		this.notifyObservers();
 	}
 }

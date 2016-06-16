@@ -36,4 +36,8 @@ public interface IModel {
 	Observable getObservable();
 	
 	List<IMobile> getDynamicObject();
+	
+	IElement getElementxy(int x, int y);
+	
+	public void moveElement(int x, int y, int targetx, int targety);
 }

@@ -6,6 +6,6 @@ public class Korn extends Monster
 {
 	public Korn()
 	{
-		super(new Sprite("â”Œâ”�", "monster_3.png"), /* TODO Create this monster's behavior*/);
+		super(new Sprite("â”Œâ”�", "monster_3.png"), new KornBehavior());
 	}
 }
