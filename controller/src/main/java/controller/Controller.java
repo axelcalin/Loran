@@ -5,6 +5,8 @@ import contract.IController;
 import contract.IModel;
 import contract.IView;
 
+import org.Element.ILorann;
+import org.Element.Lorann;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -17,6 +19,8 @@ public class Controller implements IController {
 
 	/** The model. */
 	private IModel	model;
+	
+	private ILorann lorann;
 
 	/**
 	 * Instantiates a new controller.
@@ -91,21 +95,21 @@ public class Controller implements IController {
 			case EXIT:
 				System.out.println("exit");
 				this.view.close();
-				/*case UP:
-				this.moveUp();
+			case UP:
+				this.lorann.moveUp();
 				break;
 			case DOWN:
-				this.moveDown();
+				this.lorann.moveDown();
 				break;
 			case LEFT:
-				this.moveLeft();
+				this.lorann.moveLeft();
 				break;
 			case RIGHT:
-				this.moveRight();
+				this.lorann.moveRight();
 				break;
-			default:
-				break;*/
 		}
 	}
+
+
 
 }
