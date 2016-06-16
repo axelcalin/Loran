@@ -217,6 +217,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 				case 'G':
 					array.get(i).add(new Glass());
 					j++;
+					break;
 				case 'E':
 					array.get(i).add(new GateOpen());
 					j++;

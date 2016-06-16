@@ -95,7 +95,7 @@ public class Controller implements IController {
 			case EXIT:
 				System.out.println("exit");
 				this.view.close();
-			case UP:
+			/*case UP:
 				this.lorann.moveUp();
 				break;
 			case DOWN:
@@ -118,7 +118,7 @@ public class Controller implements IController {
 				break;
 			case DOWNLEFT:
 				this.lorann.moveDownLeft();
-				break;
+				break;*/
 		}
 	}
 
