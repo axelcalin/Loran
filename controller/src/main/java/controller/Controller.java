@@ -107,6 +107,18 @@ public class Controller implements IController {
 			case RIGHT:
 				this.lorann.moveRight();
 				break;
+			case UPRIGHT:
+				this.lorann.moveUpRight();
+				break;
+			case UPLEFT:
+				this.lorann.moveUpLeft();
+				break;
+			case DOWNRIGHT:
+				this.lorann.moveDownRight();
+				break;
+			case DOWNLEFT:
+				this.lorann.moveDownLeft();
+				break;
 		}
 	}
 
