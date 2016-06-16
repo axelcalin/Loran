@@ -19,6 +19,7 @@ public class Model extends Observable implements IModel {
 
 	/** The message. */
 	private List<List<IElement>>	map;
+	private List<IElement>			dynamicElements;
 
 	/**
 	 * Instantiates a new model.
@@ -55,7 +56,7 @@ public class Model extends Observable implements IModel {
 	public void loadMap(String map) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.loadMap(map));
+			this.setMap(daoHelloWorld.loadMap(map, dynamicElements));
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

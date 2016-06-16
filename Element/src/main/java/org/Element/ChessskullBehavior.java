@@ -8,7 +8,7 @@ public class ChessskullBehavior implements IMonsterBehavior {
 	}
 
 	public void animate() {
-		master.
+		master.getModel().
 
 	}
 }
