@@ -20,7 +20,7 @@ public class Element implements IElement{
 		return this.permeability;
 	}
 	
-	public void onTouch(Element touch){
+	public void onTouch(Mobile touch){
 		
 	}
 }

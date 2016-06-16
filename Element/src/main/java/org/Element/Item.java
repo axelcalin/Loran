@@ -4,7 +4,7 @@ import java.awt.Point;
 
 import contract.Permeability;
 
-public abstract class Item extends Element {
+public abstract class Item extends DynamicElement {
 	private int value;
 	private boolean isLife;
 	private Point position;
@@ -24,7 +24,7 @@ public abstract class Item extends Element {
 	}
 	
 	@Override
-	public void onTouch(Element touch){
+	public void onTouch(Mobile touch){
 		//TODO ajout de score+vie 
 	}
 }

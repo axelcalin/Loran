@@ -6,6 +6,6 @@ public class YellowMen extends Mobile
 {
 	public YellowMen()
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "monster_4.png"));
+		super( new Sprite("â”Œâ”�", "monster_4.png"), /* TODO Create this monster's behavior */);
 	}
 }

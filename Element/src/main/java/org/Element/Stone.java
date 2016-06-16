@@ -1,5 +1,6 @@
 package org.Element;
 
+import contract.IModel;
 import contract.Permeability;
 
 public class Stone extends Element{

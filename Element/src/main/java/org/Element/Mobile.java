@@ -2,16 +2,17 @@ package org.Element;
 
 import java.awt.Point;
 
+import contract.IModel;
 import contract.Permeability;
 
 
-public class Mobile extends Element
+public class Mobile extends DynamicElement
 {
 	private Point position;
 	
-	public Mobile(Permeability perm, Sprite sprite)
+	public Mobile(Sprite sprite)
 	{
-		super(perm,sprite);
+		super(Permeability.BLOCKING,sprite);
 		this.position = new Point();
 	}
 	
@@ -43,7 +44,7 @@ public class Mobile extends Element
 		}
 	}
 	
-	/*private  boolean isMovePossible(int x, int y)
+	private  boolean isMovePossible(int x, int y)
 	{
 		return (this.getElements(x, y).getPermeability() != Permeability.BLOCKING);
 	}
@@ -78,7 +79,7 @@ public class Mobile extends Element
 		{
 			this.setX(this.getX() - 1);
 		}
-	}*/
+	}
 	
 	public void moveUpRight()
 	{
@@ -120,7 +121,7 @@ public class Mobile extends Element
 		//TODO kill this object !
 	}
 	@Override
-	public void onTouch(Element touch){
+	public void onTouch(Mobile touch){
 		if(touch instanceof Lorann){
 			touch.kill();
 		}
