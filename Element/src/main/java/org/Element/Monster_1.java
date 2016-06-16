@@ -4,9 +4,8 @@ import contract.Permeability;
 
 public class Monster_1 extends Monster
 {
-	public Monster_1()
-	{
-		super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior());
+	public Monster_1(){
+	super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior());
 	}
 	
 	@Override
