@@ -2,11 +2,12 @@ package org.Element;
 
 import java.awt.Point;
 
+import contract.IMobile;
 import contract.IModel;
 import contract.Permeability;
 
 
-public class Mobile extends DynamicElement
+public class Mobile extends DynamicElement implements IMobile
 {
 	private Point position;
 	

@@ -3,7 +3,7 @@ package org.Element;
 import contract.IModel;
 import contract.Permeability;
 
-public class Chesskull extends Mobile
+public class Chesskull extends Monster
 {
 	public Chesskull()
 	{

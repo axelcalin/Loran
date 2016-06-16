@@ -7,6 +7,7 @@ import java.util.Observable;
 
 import org.Element.Element;
 
+import contract.IMobile;
 import contract.IElement;
 import contract.IModel;
 
@@ -19,7 +20,7 @@ public class Model extends Observable implements IModel {
 
 	/** The message. */
 	private List<List<IElement>>	map;
-	private List<IElement>			dynamicElements;
+	private List<IMobile>			dynamicElements;
 
 	/**
 	 * Instantiates a new model.
@@ -69,5 +70,9 @@ public class Model extends Observable implements IModel {
 	 */
 	public Observable getObservable() {
 		return this;
+	}
+
+	public List<IMobile> getDynamicObject() {
+		return this.dynamicElements;
 	}
 }
