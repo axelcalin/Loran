@@ -133,9 +133,8 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
-	public List<List<IElement>> loadMap(final String map, List<IMobile> dynamicElements){
+	public List<List<IElement>> loadMap(final String map){
 		List<List<IElement>> array = new ArrayList<List<IElement>>();
-		dynamicElements = new ArrayList<IMobile>();
 		try{
 			final String sql = "{call mapByKey(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
@@ -183,7 +182,6 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					break;
 				case 'L':
 					array.get(i).add(new Lorann( j, i));
-					dynamicElements.add((IMobile) array.get(i).get(j));
 					j++;
 					break;
 				case 'D':
@@ -196,22 +194,18 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					break;
 				case 'T':
 					array.get(i).add(new Monster_1());
-					dynamicElements.add((IMobile) array.get(i).get(j));
 					j++;
 					break;
 				case 'Y':
 					array.get(i).add(new YellowMen());
-					dynamicElements.add((IMobile) array.get(i).get(j));
 					j++;
 					break;
 				case 'K':
 					array.get(i).add(new Korn());
-					dynamicElements.add((IMobile) array.get(i).get(j));
 					j++;
 					break;
 				case 'A':
 					array.get(i).add(new Chesskull());
-					dynamicElements.add( (IMobile)(array.get(i).get(j)));
 					j++;
 					break;
 				case 'G':

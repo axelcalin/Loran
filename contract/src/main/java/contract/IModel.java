@@ -3,6 +3,7 @@ package contract;
 import java.util.List;
 import java.util.Observable;
 
+import contract.IMobile;
 
 import contract.IElement;
 
