@@ -143,59 +143,77 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			String s = resultSet.getString("map");
 			array.add(new ArrayList<IElement>());
 			int i = 0;
+			int j = 0;
 			for(char c : s.toCharArray()){
 				switch (c){
 				case 'P':
 					array.get(i).add(new Stone());
+					j++;
 					break;
 				case 'O':
 					array.get(i).add(new HorizontalBone());
+					j++;
 					break;
 				case 'I':
 					array.get(i).add(new VerticalBone());
+					j++;
 					break;
 				case 'U':
 					array.get(i).add(new onion());
+					j++;
 					break;
 				case 'C':
 					array.get(i).add(new Candlestick());
+					j++;
 					break;
 				case 'W':
 					array.get(i).add(new White());
+					j++;
 					break;
 				case 'S':
 					array.get(i).add(new Bag());
+					j++;
 					break;
 				case 'B':
 					array.get(i).add(new CrystalBall());
+					j++;
 					break;
 				case 'L':
-					array.get(i).add(new Lorann());
+					array.get(i).add(new Lorann( j, i));
+					j++;
 					break;
 				case 'D':
 					array.get(i).add(new GateClosed());
+					j++;
 					break;
 				case 'Z':
 					array.get(i).add(new Statue());
+					j++;
 					break;
 				case 'T':
 					array.get(i).add(new Monster_1());
+					j++;
 					break;
 				case 'Y':
 					array.get(i).add(new YellowMen());
+					j++;
 					break;
 				case 'K':
 					array.get(i).add(new Korn());
+					j++;
 					break;
 				case 'A':
 					array.get(i).add(new Chesskull());
+					j++;
 					break;
 				case 'G':
 					array.get(i).add(new Glass());
+					j++;
 					break;
 				case '\n':
 					array.add(new ArrayList<IElement>());
 					i++;
+					j = 0;
 					break;
 				default:
 					break;
