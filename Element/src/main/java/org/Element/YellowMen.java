@@ -2,7 +2,7 @@ package org.Element;
 
 import contract.Permeability;
 
-public class YellowMen extends Element
+public class YellowMen extends Mobile
 {
 	public YellowMen()
 	{

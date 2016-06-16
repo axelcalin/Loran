@@ -8,13 +8,11 @@ import contract.Permeability;
 public class Mobile extends Element
 {
 	private Point position;
-	private int life;
 	
-	public Mobile(Permeability perm, Sprite sprite, int life)
+	public Mobile(Permeability perm, Sprite sprite)
 	{
 		super(perm,sprite);
 		this.position = new Point();
-		this.life = life;
 	}
 	
 	public int getX()
@@ -119,10 +117,7 @@ public class Mobile extends Element
 	}
 	
 	public void kill(){
-		this.life -= 1;
-		if(this.life <= 0){
-			
-		}
+		//TODO kill this object !
 	}
 	@Override
 	public void onTouch(Element touch){

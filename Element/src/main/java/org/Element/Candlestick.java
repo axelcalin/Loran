@@ -1,7 +1,5 @@
 package org.Element;
 
-import contract.Permeability;
-
 public class Candlestick extends Item{
 
 	public Candlestick() {
