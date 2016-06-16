@@ -130,16 +130,18 @@ class ViewFrame extends JFrame implements KeyListener {
 	private void buildViewFrame(final IModel model) {
 		this.setModel(model);
 		this.setExtendedState(this.MAXIMIZED_BOTH);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setUndecorated(true);  
 		this.addKeyListener(this);
 		this.setContentPane(new ViewPanel(this));
 		this.setLocationRelativeTo(null);
 		this.setTitle("Lorann vs Wild");
-		this.setVisible(true);
+		this.setVisible(false);
 		this.setResizable(false);
 		this.setAlwaysOnTop(true);
 		this.setBackground(Color.BLACK);
 	}
+
 
 	/**
 	 * Prints the message.

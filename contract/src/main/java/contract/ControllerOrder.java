@@ -13,6 +13,7 @@ public enum ControllerOrder {
 	Niveau4,
 	Niveau5,
 	Menu,
+	EXIT,
 	UP,
 	DOWN,
 	LEFT,

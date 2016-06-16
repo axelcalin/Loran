@@ -52,7 +52,6 @@ class ViewPanel extends JPanel implements Observer {
 	 */
 	private ViewFrame getViewFrame() {
 		return this.viewFrame;
-		
 	}
 
 	/**
@@ -71,8 +70,8 @@ class ViewPanel extends JPanel implements Observer {
 	 * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
 	 */
 	public void update(final Observable arg0, final Object arg1) {
-		this.repaint();
 		paintComponent(getGraphics());
+		this.repaint();
 	}
 	
 	
@@ -92,34 +91,6 @@ class ViewPanel extends JPanel implements Observer {
 			j = 0;
 		}
 	}
-		/*private Image readImage (int x, int y){
-			try {
-				return ImageIO.read(new File("resources/" + ImageChoose(x, y)));
-			} catch (IOException e) {
-				System.out.println("Erreur de lecture d'image");
-				return null;
-			}
-		}
-		
-		private String ImageChoose(final int width, final int height){
-		this.width = width;
-		this.height = height;
-		this.elements = new ordg.Element.Element[this.getWidth()][this.getHeight()];
-		
-		String S = resultSet.getString("map");
-		ArrayList<String> map = new ArrayList<String>();
-		for(String temp : S.split("\n")) map.add(temp);
-
-			for (int y = 0; y < map.size(); y++) {
-				for (int x = 0; x < map.get(y).length(); x++) {
-					switch(map.get(y).charAt(x)){
-						case 'P' :
-							addElement(new Stone(), x, y);
-						break;
-			}
-				}	
-			}}*/
-		
 			
 			
 	private void addElement(org.Element.Element element, int x, int y) {

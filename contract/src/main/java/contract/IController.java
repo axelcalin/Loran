@@ -7,10 +7,6 @@ package contract;
  */
 public interface IController {
 
-	/**
-	 * Control.
-	 */
-	public void control();
 
 	/**
 	 * Order perform.

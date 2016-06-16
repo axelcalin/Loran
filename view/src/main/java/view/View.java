@@ -51,6 +51,8 @@ public class View implements IView, Runnable {
 				return ControllerOrder.Niveau4;
 			case KeyEvent.VK_T:
 				return ControllerOrder.Niveau5;
+			case KeyEvent.VK_ESCAPE:
+				return ControllerOrder.EXIT;
 			case KeyEvent.VK_UP:
 				System.out.println("monte");
 				return ControllerOrder.UP;
@@ -98,6 +100,11 @@ public class View implements IView, Runnable {
 
 	public void printMessage(String message) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	public void close() {
+		this.viewFrame.dispose();
 		
 	}
 }

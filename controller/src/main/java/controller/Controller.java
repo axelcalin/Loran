@@ -36,9 +36,6 @@ public class Controller implements IController {
 	 * 
 	 * @see contract.IController#control()
 	 */
-	public void control() {
-		this.view.printMessage("Appuyer sur les touches 'E', 'F', 'D' ou 'I', pour afficher Hello world dans la langue d votre choix.");
-	}
 
 	/**
 	 * Sets the view.
@@ -91,7 +88,10 @@ public class Controller implements IController {
 				System.out.println("menu");
 				this.model.loadMap("menu");
 				break;
-			/*case UP:
+			case EXIT:
+				System.out.println("exit");
+				this.view.close();
+				/*case UP:
 				this.moveUp();
 				break;
 			case DOWN:
