@@ -195,22 +195,22 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'T':
-					array.get(i).add(new Monster_1());
+					array.get(i).add(new Monster_1(j,i));
 					dynamicElements.add(array.get(i).get(j));
 					j++;
 					break;
 				case 'Y':
-					array.get(i).add(new YellowMen());
+					array.get(i).add(new YellowMen(j,i));
 					dynamicElements.add(array.get(i).get(j));
 					j++;
 					break;
 				case 'K':
-					array.get(i).add(new Korn());
+					array.get(i).add(new Korn(j,i));
 					dynamicElements.add(array.get(i).get(j));
 					j++;
 					break;
 				case 'A':
-					array.get(i).add(new Chesskull());
+					array.get(i).add(new Chesskull(j,i));
 					dynamicElements.add(array.get(i).get(j));
 					j++;
 					break;
