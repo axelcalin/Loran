@@ -2,10 +2,12 @@ package model;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Observable;
 
 import org.Element.Element;
+import org.Element.Mobile;
 import org.Element.White;
 
 import contract.IMobile;
@@ -58,9 +60,24 @@ public class Model extends Observable implements IModel {
 	public void loadMap(String map) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.loadMap(map, dynamicElements));
+			this.setMap(daoHelloWorld.loadMap(map));
+			this.setDynamicElements(this.getMap());
 		} catch (final SQLException e) {
 			e.printStackTrace();
+		}
+	}
+
+	private void setDynamicElements(List<List<IElement>> map) {
+		dynamicElements = new ArrayList<IMobile>();
+		Iterator<List<IElement>> i = map.iterator();
+		IElement elem;
+		while(i.hasNext()){
+			Iterator<IElement> k = i.next().iterator();
+			while(k.hasNext()){
+				if((elem = k.next()) instanceof Mobile){
+					dynamicElements.add(elem);
+				}
+			}
 		}
 	}
 
