@@ -2,6 +2,7 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Frame;
 import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
@@ -129,7 +130,7 @@ class ViewFrame extends JFrame implements KeyListener {
 	 */
 	private void buildViewFrame(final IModel model) {
 		this.setModel(model);
-		this.setExtendedState(this.MAXIMIZED_BOTH);
+		this.setExtendedState(Frame.MAXIMIZED_BOTH);
 		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setUndecorated(true);  
 		this.addKeyListener(this);

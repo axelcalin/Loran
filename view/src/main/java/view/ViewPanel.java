@@ -99,10 +99,6 @@ class ViewPanel extends JPanel implements Observer {
 	}
 			
 			
-	private void addElement(org.Element.Element element, int x, int y) {
-		this.elements[x][y] = element;
-		
-	}
 	
 	public int getWidth() {
 	return this.width;
