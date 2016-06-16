@@ -92,7 +92,7 @@ public class Model extends Observable implements IModel {
 	}
 	
 	public void setupElements(){
-		Iterator<java.util.List<IElement>> l = this.getMap().iterator();
+		Iterator<java.util.List<IElement>> l = this.map.iterator();
 		while(l.hasNext()){
 			Iterator<IElement> m = l.next().iterator();
 			while(m.hasNext()){
