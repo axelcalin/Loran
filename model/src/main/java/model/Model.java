@@ -88,7 +88,5 @@ public class Model extends Observable implements IModel {
 		this.map.get(targety).add(targetx, this.map.get(y).get(x));
 		this.map.get(y).remove(x);
 		this.map.get(y).add(x, new White());
-		this.setChanged();
-		this.notifyObservers();
 	}
 }

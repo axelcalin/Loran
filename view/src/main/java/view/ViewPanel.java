@@ -91,6 +91,13 @@ class ViewPanel extends JPanel implements Observer {
 			i++;
 			j = 0;
 		}
+		Iterator<java.util.List<IElement>> l = this.getViewFrame().getModel().getMap().iterator();
+		while(l.hasNext()){
+			Iterator<IElement> m = l.next().iterator();
+			while(m.hasNext()){
+				m.next().animate();
+			}
+		}
 	}
 			
 			
