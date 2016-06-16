@@ -1,10 +1,14 @@
 package org.Element;
 
 public class ChessskullBehavior implements IMonsterBehavior {
-
-	public void animate() {
-		// TODO Auto-generated method stub
-
+	private Chesskull master;
+	
+	public ChessskullBehavior(Chesskull master){
+		this.master = master;
 	}
 
+	public void animate() {
+		master.
+
+	}
 }
