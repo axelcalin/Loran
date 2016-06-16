@@ -23,4 +23,9 @@ public class Element implements IElement{
 	public void onTouch(Element touch){
 		
 	}
+
+	public void death() {
+		// TODO Auto-generated method stub
+		
+	}
 }

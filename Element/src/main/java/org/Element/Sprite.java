@@ -13,7 +13,6 @@ public class Sprite extends StringWriter implements ISprite {
 	private Image image;
 
 	public Sprite(final String c, final String image) {
-		this.write(c);
 		try {
 			this.image = ImageIO.read(new File("resources/" + image));
 		} catch (final IOException e) {
