@@ -57,7 +57,7 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage(java.lang.String)
 	 */
-	public void loadMap(String map) {
+	public synchronized void loadMap(String map) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
 			this.setMap(daoHelloWorld.loadMap(map));
@@ -67,8 +67,8 @@ public class Model extends Observable implements IModel {
 		}
 	}
 
-	private void setDynamicElements(List<List<IElement>> map) {
-		dynamicElements = new ArrayList<IElement>();
+	private synchronized void setDynamicElements(List<List<IElement>> map) {
+		this.dynamicElements = new ArrayList<IElement>();
 		Iterator<List<IElement>> i = map.iterator();
 		IElement elem;
 		while(i.hasNext()){
