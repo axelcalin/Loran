@@ -2,7 +2,7 @@ package org.Element;
 
 import contract.Permeability;
 
-public class Monster_1 extends Monster
+public class Monster_1 extends Mobile
 {
 	public Monster_1()
 	{

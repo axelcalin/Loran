@@ -14,6 +14,7 @@ import org.Element.Chesskull;
 import org.Element.CrystalBall;
 import org.Element.Element;
 import org.Element.GateClosed;
+import org.Element.GateOpen;
 import org.Element.Glass;
 import org.Element.HorizontalBone;
 import org.Element.Korn;
@@ -215,6 +216,9 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					break;
 				case 'G':
 					array.get(i).add(new Glass());
+					j++;
+				case 'E':
+					array.get(i).add(new GateOpen());
 					j++;
 					break;
 				case '\n':
