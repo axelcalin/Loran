@@ -6,4 +6,9 @@ public class YellowMen extends Monster
 	{
 		super( new Sprite("â”Œâ”�", "monster_4.png"), new YellowMenBehavior());
 	}
+	
+	@Override
+	public void animate(){
+		this.behavior.animate();
+	}
 }

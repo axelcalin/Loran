@@ -135,5 +135,10 @@ public class Mobile extends DynamicElement implements IMobile
 			touch.kill();
 		}
 	}
+
+	public void animate() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

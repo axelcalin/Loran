@@ -8,4 +8,9 @@ public class Monster_1 extends Monster
 	{
 		super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior());
 	}
+	
+	@Override
+	public void animate(){
+		this.behavior.animate();
+	}
 }

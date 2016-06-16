@@ -8,4 +8,9 @@ public class Korn extends Monster
 	{
 		super(new Sprite("â”Œâ”�", "monster_3.png"), new KornBehavior());
 	}
+	
+	@Override
+	public void animate(){
+		this.behavior.animate();
+	}
 }

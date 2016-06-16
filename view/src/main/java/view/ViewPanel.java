@@ -18,6 +18,7 @@ import org.Element.Element;
 import org.Element.Stone;
 
 import contract.IElement;
+import contract.IMobile;
 
 /**
  * The Class ViewPanel.
@@ -89,6 +90,10 @@ class ViewPanel extends JPanel implements Observer {
 			}
 			i++;
 			j = 0;
+		}
+		Iterator<IMobile> l = this.getViewFrame().getModel().getDynamicObject().iterator();
+		while(l.hasNext()){
+			l.next().
 		}
 	}
 			
