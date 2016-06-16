@@ -60,7 +60,7 @@ public class Model extends Observable implements IModel {
 	public synchronized void loadMap(String map) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.loadMap(map));
+			this.setMap(daoHelloWorld.loadMap(map, dynamicElements));
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
