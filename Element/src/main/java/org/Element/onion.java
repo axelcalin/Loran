@@ -1,7 +1,5 @@
 package org.Element;
 
-import contract.Permeability;
-
 public class onion extends Item
 {
 	public onion()

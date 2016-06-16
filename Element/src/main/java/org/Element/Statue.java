@@ -1,7 +1,5 @@
 package org.Element;
 
-import contract.Permeability;
-
 public class Statue extends Item{
 
 		public Statue() {

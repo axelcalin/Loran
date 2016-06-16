@@ -2,7 +2,7 @@ package org.Element;
 
 import contract.Permeability;
 
-public class Chesskull extends Element
+public class Chesskull extends Mobile
 {
 	public Chesskull()
 	{
