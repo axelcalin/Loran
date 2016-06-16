@@ -23,7 +23,7 @@ public class Model extends Observable implements IModel {
 
 	/** The message. */
 	private List<List<IElement>>	map;
-	private List<IMobile>			dynamicElements;
+	private List<IElement>			dynamicElements;
 
 	/**
 	 * Instantiates a new model.
@@ -68,7 +68,7 @@ public class Model extends Observable implements IModel {
 	}
 
 	private void setDynamicElements(List<List<IElement>> map) {
-		dynamicElements = new ArrayList<IMobile>();
+		dynamicElements = new ArrayList<IElement>();
 		Iterator<List<IElement>> i = map.iterator();
 		IElement elem;
 		while(i.hasNext()){
@@ -90,7 +90,7 @@ public class Model extends Observable implements IModel {
 		return this;
 	}
 
-	public List<IMobile> getDynamicObject() {
+	public List<IElement> getDynamicObject() {
 		return this.dynamicElements;
 	}
 

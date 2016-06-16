@@ -91,7 +91,7 @@ class ViewPanel extends JPanel implements Observer {
 			i++;
 			j = 0;
 		}
-		Iterator<IMobile> l = this.getViewFrame().getModel().getDynamicObject().iterator();
+		Iterator<IElement> l = this.getViewFrame().getModel().getDynamicObject().iterator();
 		if(l != null){
 			while(l.hasNext()){
 				l.next().animate();

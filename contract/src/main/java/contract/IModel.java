@@ -36,7 +36,7 @@ public interface IModel {
 	 */
 	Observable getObservable();
 	
-	List<IMobile> getDynamicObject();
+	List<IElement> getDynamicObject();
 	
 	IElement getElementxy(int x, int y);
 	
