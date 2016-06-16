@@ -210,8 +210,10 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'A':
-					array.get(i).add(new Chesskull(j,i));
+					array.get(i).add(new Chesskull(i,j));
 					dynamicElements.add(array.get(i).get(j));
+					System.out.println("i"+i);
+					System.out.println("j"+j);
 					j++;
 					break;
 				case 'G':
