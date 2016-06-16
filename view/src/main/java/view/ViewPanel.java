@@ -98,7 +98,6 @@ class ViewPanel extends JPanel implements Observer {
 				m.next().animate();
 			}
 		}
-		paintComponent(getGraphics());
 	}
 			
 			
