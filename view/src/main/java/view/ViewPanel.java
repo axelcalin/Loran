@@ -95,6 +95,7 @@ class ViewPanel extends JPanel implements Observer {
 		while(l.hasNext()){
 				l.next().animate();
 		}
+		this.paintComponent(getGraphics());
 	}			
 			
 	
