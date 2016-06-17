@@ -22,13 +22,14 @@ import contract.IModel;
 public class Model extends Observable implements IModel {
 
 	/** The message. */
-	private List<List<IElement>>	map;
+	private IElement[][]			map;
 	private List<IElement>			dynamicElements;
 
 	/**
 	 * Instantiates a new model.
 	 */
 	public Model() {
+		dynamicElements = new ArrayList<IElement>();
 	}
 
 	/*
@@ -36,7 +37,7 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
-	public List<List<IElement>> getMap() {
+	public IElement[][] getMap() {
 		return this.map;
 	}
 
@@ -46,7 +47,7 @@ public class Model extends Observable implements IModel {
 	 * @param message
 	 *          the new message
 	 */
-	private void setMap(final List<List<IElement>> list) {
+	private void setMap(final IElement[][] list) {
 		this.map = list;
 		setupElements();
 		this.setChanged();
@@ -81,22 +82,20 @@ public class Model extends Observable implements IModel {
 	}
 
 	public IElement getElementxy(int x, int y) {
-		return map.get(y).get(x);
+		return map[y][x];
 	}
 	
 	public void moveElement(int x, int y, int targetx, int targety){
-		this.map.get(targety).remove(targetx);
-		this.map.get(targety).add(targetx, this.map.get(y).get(x));
-		this.map.get(y).remove(x);
-		this.map.get(y).add(x, new White());
+		this.map[targety][targetx] = this.map[y][x];
+		this.map[y][x] = new White();
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	public void setupElements(){
-		Iterator<java.util.List<IElement>> l = this.map.iterator();
-		while(l.hasNext()){
-			Iterator<IElement> m = l.next().iterator();
-			while(m.hasNext()){
-				m.next().setModel(this);
+		for(IElement[] etab : this.map){
+			for(IElement e : etab){
+				e.setModel(this);
 			}
 		}
 	}
