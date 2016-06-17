@@ -95,6 +95,11 @@ class ViewPanel extends JPanel implements Observer {
 		while(l.hasNext()){
 				l.next().animate();
 		}
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		this.getViewFrame().getModel().changed();
 	}			
 			
