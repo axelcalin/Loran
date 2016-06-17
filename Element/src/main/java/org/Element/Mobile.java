@@ -77,6 +77,7 @@ public class Mobile extends DynamicElement implements IMobile
 		}
 	}
 	
+	
 	public void moveLeft()
 	{
 		if (this.isMovePossible(this.getX() - 1, this.getY()))

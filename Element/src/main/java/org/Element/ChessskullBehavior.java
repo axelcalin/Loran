@@ -22,5 +22,6 @@ public class ChessskullBehavior implements IMonsterBehavior {
 		int vecy = target.getY() - this.master.getY();
 		}*/
 		this.master.moveLeft();
+		
 	}
 }

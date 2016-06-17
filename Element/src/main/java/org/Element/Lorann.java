@@ -2,6 +2,8 @@ package org.Element;
 
 import java.awt.Point;
 
+import contract.ILorann;
+import contract.IMobile;
 import contract.Permeability;
 
 public class Lorann extends Mobile implements ILorann
@@ -14,6 +16,7 @@ public class Lorann extends Mobile implements ILorann
 		super( new Sprite("â”Œâ”�", "Lorann_u.png"));
 		this.lastPosition = new Point();
 		this.lastPosition.setLocation(j, i);
+		
 	}
 	
 	private void saveLastPostion()
@@ -24,13 +27,13 @@ public class Lorann extends Mobile implements ILorann
 	public void moveUp()
 	{
 		this.saveLastPostion();
-		super.moveUp();
+		((IMobile) this.lastPosition).moveUp();
 	}
 	
 	public void moveDown()
 	{
 		this.saveLastPostion();
-		super.moveDown();
+		((IMobile) super.getModel()).moveDown();
 	}
 	
 	public void moveRight()
