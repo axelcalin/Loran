@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.sql.ResultSet;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
@@ -98,6 +100,14 @@ class ViewPanel extends JPanel implements Observer {
 				m.next().animate();
 			}
 		}
+		Timer timer = new Timer();
+		TimerTask task = new TimerTask(){
+			@Override
+			public void run(){
+				paintComponent(getGraphics());
+			}
+		};
+		timer.scheduleAtFixedRate(task, 1000, 1000);
 	}			
 			
 	
