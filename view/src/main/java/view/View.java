@@ -4,40 +4,36 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.SwingUtilities;
 
-import org.Element.Lorann;
-
 import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
 
-/**
- * The Class View.
- *
- * @author Jean-Aymeric Diet
+/**The class View.
+ * 
+ *@author florent , axel , luc , romain
  */
 public class View implements IView, Runnable {
 
-	/** The frame. */
+	
+	/**
+	 * 
+	 */
 	private final ViewFrame viewFrame;
 
+	
 	/**
-	 * Instantiates a new view.
-	 *
 	 * @param model
-	 *          the model
 	 */
 	public View(final IModel model) {
 		this.viewFrame = new ViewFrame(model);
 		SwingUtilities.invokeLater(this);
 	}
 
+	
 	/**
-	 * Key code to controller order.
-	 *
 	 * @param keyCode
-	 *          the key code
-	 * @return the controller order
+	 * @return
 	 */
 	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
 		switch (keyCode) {
@@ -72,18 +68,17 @@ public class View implements IView, Runnable {
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IView#printMessage(java.lang.String)
+	
+	/**
+	 * @param map
 	 */
 	public void printMap(final String map) {
 		this.viewFrame.printMap(map);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
+	
+	
+	/* (non-Javadoc)
 	 * @see java.lang.Runnable#run()
 	 */
 	public void run() {
@@ -96,17 +91,17 @@ public class View implements IView, Runnable {
 	 * @param controller
 	 *          the new controller
 	 */
+	
 	public void setController(final IController controller) {
 		this.viewFrame.setController(controller);
 	}
 
-	public void printMessage(String message) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	/* (non-Javadoc)
+	 * @see contract.IView#close()
+	 */
 	public void close() {
 		this.viewFrame.dispose();
 		
 	}
+
 }

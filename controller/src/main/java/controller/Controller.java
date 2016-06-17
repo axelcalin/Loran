@@ -3,7 +3,6 @@ package controller;
 import contract.ControllerOrder;
 import contract.IController;
 import contract.IElement;
-import contract.ILorann;
 import contract.IModel;
 import contract.IView;
 
@@ -14,7 +13,10 @@ import org.Element.Lorann;
 // TODO: Auto-generated Javadoc
 /**
  * The Class Controller.
+ *
+ * @author florent, axel, luc, romain;
  */
+
 public class Controller implements IController {
 
 	/** The view. */

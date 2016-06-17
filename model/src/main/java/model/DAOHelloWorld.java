@@ -5,7 +5,6 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.Element.Bag;
@@ -28,7 +27,6 @@ import org.Element.YellowMen;
 import org.Element.onion;
 
 import contract.IElement;
-import contract.IMobile;
 import model.HelloWorld;
 
 
@@ -36,7 +34,7 @@ import model.HelloWorld;
 /**
  * The Class DAOHelloWorld.
  *
- * @author Jean-Aymeric Diet
+ * @author florent, axel, luc, romain;
  */
 class DAOHelloWorld extends DAOEntity<HelloWorld> {
 
@@ -133,6 +131,11 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
+	/**
+	 * @param map
+	 * @param dynamicElements
+	 * @return
+	 */
 	public synchronized IElement[][] loadMap(final String map, List<IElement> dynamicElements){
 		IElement[][] array = new Element[12][20];
 		try{

@@ -1,5 +1,9 @@
 package contract;
-
+/**
+ * The Interface ILorann.
+ *
+ * @author florent , axel , luc , romain
+ */
 public interface ILorann
 {
 	public void moveUp();

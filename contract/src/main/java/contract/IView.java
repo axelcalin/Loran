@@ -3,17 +3,16 @@ package contract;
 /**
  * The Interface IView.
  *
- * @author Jean-Aymeric Diet
+ * @author florent , axel , luc ,romain
  */
 public interface IView {
 
 	/**
-	 * Prints the message.
+	 * Prints the map.
 	 *
-	 * @param message
-	 *          the message
+	 * @param map
+	 *          the map
 	 */
-	void printMessage(final String message);
 	
 	public void close();
 }
