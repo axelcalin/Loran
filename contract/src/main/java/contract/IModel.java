@@ -44,5 +44,5 @@ public interface IModel {
 	
 	public void changed();
 	
-	public ILorann getLorann();
+	public IMobile getLorann();
 }
