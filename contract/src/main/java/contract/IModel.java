@@ -43,4 +43,6 @@ public interface IModel {
 	public void moveElement(int x, int y, int targetx, int targety);
 	
 	public void changed();
+	
+	public ILorann getLorann();
 }

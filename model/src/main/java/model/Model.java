@@ -12,6 +12,7 @@ import org.Element.White;
 
 import contract.IMobile;
 import contract.IElement;
+import contract.ILorann;
 import contract.IModel;
 
 /**
@@ -24,6 +25,7 @@ public class Model extends Observable implements IModel {
 	/** The message. */
 	private IElement[][]			map;
 	private List<IElement>			dynamicElements;
+	private ILorann					lorann;
 
 	/**
 	 * Instantiates a new model.
@@ -101,5 +103,9 @@ public class Model extends Observable implements IModel {
 	
 	public void changed(){
 		this.notifyObservers();
+	}
+	
+	public ILorann getLorann(){
+		return this.lorann;
 	}
 }
