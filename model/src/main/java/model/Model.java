@@ -82,7 +82,12 @@ public class Model extends Observable implements IModel {
 	}
 
 	public IElement getElementxy(int x, int y) {
-		return map[y][x];
+		if(x >= 0 && y >= 0){
+			return map[y][x];
+		}
+		else{
+			return null;
+		}
 	}
 	
 	public void moveElement(int x, int y, int targetx, int targety){
