@@ -19,7 +19,7 @@ public interface IModel {
 	 *
 	 * @return the message
 	 */
-	List<List<IElement>> getMap();
+	IElement[][] getMap();
 
 	/**
 	 * Load the message.

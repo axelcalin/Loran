@@ -83,28 +83,17 @@ class ViewPanel extends JPanel implements Observer {
 		graphics.clearRect(0, 0, 1920,1080);
 		int i = 0;
 		int j = 0;
-		Iterator<java.util.List<IElement>> n = this.getViewFrame().getModel().getMap().iterator();
-		while(n.hasNext()){
-			Iterator<IElement> k = n.next().iterator();
-			while(k.hasNext()){
-				graphics.drawImage(k.next().getSprite().getImage(),j*82,i*82, 75, 75,this);
+		for(IElement[] etab : this.getViewFrame().getModel().getMap()){
+			for(IElement e : etab){
+				graphics.drawImage(e.getSprite().getImage(), j*82, i*82, this);
 				j++;
 			}
 			i++;
-			j = 0;
+			j=0;
 		}
-		Iterator<java.util.List<IElement>> l = this.getViewFrame().getModel().getMap().iterator();
+		Iterator<IElement> l = this.getViewFrame().getModel().getDynamicObject().iterator();
 		while(l.hasNext()){
-			Iterator<IElement> m = l.next().iterator();
-			while(m.hasNext()){
-				m.next().animate();
-			}
-		}
-		try {
-			Thread.currentThread().sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+				l.next().animate();
 		}
 	}			
 			

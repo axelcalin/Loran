@@ -133,9 +133,8 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
-	public List<List<IElement>> loadMap(final String map, List<IElement> dynamicElements){
-		List<List<IElement>> array = new ArrayList<List<IElement>>();
-		dynamicElements = new ArrayList<IElement>();
+	public IElement[][] loadMap(final String map, List<IElement> dynamicElements){
+		IElement[][] array = new Element[12][20];
 		try{
 			final String sql = "{call mapByKey(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
@@ -144,88 +143,84 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			final ResultSet resultSet = call.getResultSet();
 			resultSet.next();
 			String s = resultSet.getString("map");
-			array.add(new ArrayList<IElement>());
 			int i = 0;
 			int j = 0;
 			for(char c : s.toCharArray()){
 				switch (c){
 				case 'P':
-					array.get(i).add(new Stone());
+					array[i][j] = new Stone();
 					j++;
 					break;
 				case 'O':
-					array.get(i).add(new HorizontalBone());
+					array[i][j] = new HorizontalBone(); 
 					j++;
 					break;
 				case 'I':
-					array.get(i).add(new VerticalBone());
+					array[i][j] = new VerticalBone();
 					j++;
 					break;
 				case 'U':
-					array.get(i).add(new onion());
+					array[i][j] = new onion();
 					j++;
 					break;
 				case 'C':
-					array.get(i).add(new Candlestick());
+					array[i][j] = new Candlestick();
 					j++;
 					break;
 				case 'W':
-					array.get(i).add(new White());
+					array[i][j] = new White();
 					j++;
 					break;
 				case 'S':
-					array.get(i).add(new Bag());
+					array[i][j] = new Bag();
 					j++;
 					break;
 				case 'B':
-					array.get(i).add(new CrystalBall());
+					array[i][j] = new CrystalBall();
 					j++;
 					break;
 				case 'L':
-					array.get(i).add(new Lorann( i, j));
-					dynamicElements.add(array.get(i).get(j));
+					array[i][j] = new Lorann(i, j);;
+					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'D':
-					array.get(i).add(new GateClosed());
+					array[i][j] = new GateClosed();
 					j++;
 					break;
 				case 'Z':
-					array.get(i).add(new Statue());
+					array[i][j] = new Statue();
 					j++;
 					break;
 				case 'T':
-					array.get(i).add(new Monster_1(j,i));
-					dynamicElements.add(array.get(i).get(j));
+					array[i][j] = new Monster_1(j,i);
+					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'Y':
-					array.get(i).add(new YellowMen(j,i));
-					dynamicElements.add(array.get(i).get(j));
+					array[i][j] = new YellowMen(j,i);
+					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'K':
-					array.get(i).add(new Korn(j,i));
-					dynamicElements.add(array.get(i).get(j));
+					array[i][j] = new Korn(j,i);
+					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'A':
-					array.get(i).add(new Chesskull(i,j));
-					dynamicElements.add(array.get(i).get(j));
-					System.out.println("i"+i);
-					System.out.println("j"+j);
+					array[i][j] = new Chesskull(i,j);
+					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'G':
-					array.get(i).add(new Glass());
+					array[i][j] = new Glass();
 					j++;
 					break;
 				case 'E':
-					array.get(i).add(new GateOpen());
+					array[i][j] = new GateOpen();
 					j++;
 					break;
 				case '\n':
-					array.add(new ArrayList<IElement>());
 					i++;
 					j = 0;
 					break;
