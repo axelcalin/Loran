@@ -63,8 +63,8 @@ public class Mobile extends DynamicElement implements IMobile
 	{
 		if (this.isMovePossible(this.getX(), this.getY() + 1))
 		{
-			this.getModel().moveElement(getX(), getY(), getX()-1, getY());
-			this.setX(this.getY() + 1);
+			this.getModel().moveElement(getX(), getY(), getX(), getY() + 1);
+			this.setY(this.getY() + 1);
 		}
 	}
 	

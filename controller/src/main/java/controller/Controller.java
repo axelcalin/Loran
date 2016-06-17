@@ -94,7 +94,7 @@ public class Controller implements IController {
 				System.out.println("exit");
 				this.view.close();
 			case UP:
-			this.model.getLorann().moveUp();
+				this.model.getLorann().moveUp();
 				break;
 			case DOWN:
 				this.model.getLorann().moveDown();

@@ -180,7 +180,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'L':
-					array[i][j] = new Lorann(i, j);;
+					array[i][j] = new Lorann(j, i);;
 					dynamicElements.add(array[i][j]);
 					j++;
 					break;
@@ -193,17 +193,17 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'T':
-					array[i][j] = new Monster_1(j,i);
+					array[i][j] = new Monster_1(i,j);
 					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'Y':
-					array[i][j] = new YellowMen(j,i);
+					array[i][j] = new YellowMen(i,j);
 					dynamicElements.add(array[i][j]);
 					j++;
 					break;
 				case 'K':
-					array[i][j] = new Korn(j,i);
+					array[i][j] = new Korn(i,j);
 					dynamicElements.add(array[i][j]);
 					j++;
 					break;
