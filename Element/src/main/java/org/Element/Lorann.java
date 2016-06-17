@@ -17,6 +17,8 @@ public class Lorann extends Mobile
 		super( new Sprite("â”Œâ”�", "Lorann_u.png"));
 		this.lastPosition = new Point();
 		this.lastPosition.setLocation(j, i);
+		this.setX(j);
+		this.setY(i);
 		
 	}
 	
