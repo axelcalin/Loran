@@ -1,5 +1,7 @@
 package contract;
 
+
+
 public interface IMobile
 {
 	public int getX();
