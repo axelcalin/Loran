@@ -19,8 +19,6 @@ public class Controller implements IController {
 
 	/** The model. */
 	private IModel	model;
-	
-	private ILorann lorann;
 
 	/**
 	 * Instantiates a new controller.
@@ -96,28 +94,28 @@ public class Controller implements IController {
 				System.out.println("exit");
 				this.view.close();
 			case UP:
-				lorann.moveUp();
+			this.model.getLorann().moveUp();
 				break;
 			case DOWN:
-				lorann.moveDown();
+				this.model.getLorann().moveDown();
 				break;
 			case LEFT:
-				lorann.moveLeft();
+				this.model.getLorann().moveLeft();
 				break;
 			case RIGHT:
-				lorann.moveRight();
+				this.model.getLorann().moveRight();
 				break;
 			case UPRIGHT:
-				lorann.moveUpRight();
+				this.model.getLorann().moveUpRight();
 				break;
 			case UPLEFT:
-				lorann.moveUpLeft();
+				this.model.getLorann().moveUpLeft();
 				break;
 			case DOWNRIGHT:
-				lorann.moveDownRight();
+				this.model.getLorann().moveDownRight();
 				break;
 			case DOWNLEFT:
-				lorann.moveDownLeft();
+				this.model.getLorann().moveDownLeft();
 				break;
 		}
 	}

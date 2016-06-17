@@ -133,7 +133,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
-	public synchronized IElement[][] loadMap(final String map, List<IElement> dynamicElements){
+	public synchronized IElement[][] loadMap(final String map, List<IElement> dynamicElements, IMobile Lorann){
 		IElement[][] array = new Element[12][20];
 		try{
 			final String sql = "{call mapByKey(?)}";
@@ -182,6 +182,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 				case 'L':
 					array[i][j] = new Lorann(i, j);;
 					dynamicElements.add(array[i][j]);
+					Lorann = (IMobile) array[i][j];
 					j++;
 					break;
 				case 'D':

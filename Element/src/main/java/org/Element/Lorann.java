@@ -6,7 +6,7 @@ import contract.ILorann;
 import contract.IMobile;
 import contract.Permeability;
 
-public class Lorann extends Mobile implements ILorann
+public class Lorann extends Mobile
 {
 	private Point lastPosition;
 	
@@ -27,13 +27,13 @@ public class Lorann extends Mobile implements ILorann
 	public void moveUp()
 	{
 		this.saveLastPostion();
-		((IMobile) this.lastPosition).moveUp();
+		this.moveUp();
 	}
 	
 	public void moveDown()
 	{
 		this.saveLastPostion();
-		((IMobile) super.getModel()).moveDown();
+		super.moveDown();
 	}
 	
 	public void moveRight()
