@@ -96,28 +96,28 @@ public class Controller implements IController {
 				System.out.println("exit");
 				this.view.close();
 			case UP:
-				this.lorann.moveUp();
+				lorann.moveUp();
 				break;
 			case DOWN:
-				this.lorann.moveDown();
+				lorann.moveDown();
 				break;
 			case LEFT:
-				this.lorann.moveLeft();
+				lorann.moveLeft();
 				break;
 			case RIGHT:
-				this.lorann.moveRight();
+				lorann.moveRight();
 				break;
 			case UPRIGHT:
-				this.lorann.moveUpRight();
+				lorann.moveUpRight();
 				break;
 			case UPLEFT:
-				this.lorann.moveUpLeft();
+				lorann.moveUpLeft();
 				break;
 			case DOWNRIGHT:
-				this.lorann.moveDownRight();
+				lorann.moveDownRight();
 				break;
 			case DOWNLEFT:
-				this.lorann.moveDownLeft();
+				lorann.moveDownLeft();
 				break;
 		}
 	}
