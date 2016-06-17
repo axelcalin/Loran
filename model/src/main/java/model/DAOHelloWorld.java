@@ -138,6 +138,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 */
 	public synchronized IElement[][] loadMap(final String map, List<IElement> dynamicElements){
 		IElement[][] array = new Element[12][20];
+		dynamicElements.clear();
 		try{
 			final String sql = "{call mapByKey(?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
