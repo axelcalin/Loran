@@ -100,14 +100,12 @@ class ViewPanel extends JPanel implements Observer {
 				m.next().animate();
 			}
 		}
-		Timer timer = new Timer();
-		TimerTask task = new TimerTask(){
-			@Override
-			public void run(){
-				paintComponent(getGraphics());
-			}
-		};
-		timer.schedule(task, 1000);
+		try {
+			Thread.currentThread().sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}			
 			
 	
