@@ -129,9 +129,9 @@ public class Mobile extends DynamicElement implements IMobile
 	{
 		if (this.isMovePossible(this.getX() + 1, this.getY() - 1))
 		{
+			this.getModel().moveElement(getX(), getY(), getX()+1, getY()-1);
 			this.setX(this.getX() + 1);
 			this.setY(this.getY() - 1);
-			this.getModel().moveElement(getX(), getY(), getX()+1, getY()-1);
 		}
 	}
 	
@@ -142,9 +142,9 @@ public class Mobile extends DynamicElement implements IMobile
 	{
 		if (this.isMovePossible(this.getX() - 1, this.getY() - 1))
 		{
+			this.getModel().moveElement(getX(), getY(), getX()-1, getY()-1);
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() - 1);
-			this.getModel().moveElement(getX(), getY(), getX()-1, getY()-1);
 		}
 	}
 	
@@ -155,9 +155,9 @@ public class Mobile extends DynamicElement implements IMobile
 	{
 		if (this.isMovePossible(this.getX() + 1, this.getY() + 1))
 		{
+			this.getModel().moveElement(getX(), getY(), getX()+1, getY()+1);
 			this.setX(this.getX() + 1);
 			this.setY(this.getY() + 1);
-			this.getModel().moveElement(getX(), getY(), getX()+1, getY()+1);
 		}
 	}
 	
@@ -168,9 +168,9 @@ public class Mobile extends DynamicElement implements IMobile
 	{
 		if (this.isMovePossible(this.getX() - 1, this.getY() + 1))
 		{
+			this.getModel().moveElement(getX(), getY(), getX()-1, getY()+1);
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() + 1);
-			this.getModel().moveElement(getX(), getY(), getX()-1, getY()+1);
 		}
 	}
 	

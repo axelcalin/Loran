@@ -16,6 +16,7 @@ public class Monster_1 extends Monster
 	super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior());
 	this.setX(x);
 	this.setY(y);
+	this.behavior.setMaster(this);
 	}
 	
 	/* (non-Javadoc)

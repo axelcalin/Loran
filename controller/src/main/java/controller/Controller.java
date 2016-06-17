@@ -133,7 +133,7 @@ public class Controller implements IController {
 	}
 	
 	public void control(){
-		this.model.loadMap("me");
+		this.model.loadMap("n2");
 		while(game){
 			this.model.tick();
 			try {
