@@ -1,4 +1,4 @@
-package org.Element;
+package contract;
 
 public interface ILorann
 {
