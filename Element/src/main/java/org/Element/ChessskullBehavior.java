@@ -2,7 +2,6 @@ package org.Element;
 
 import java.util.Random;
 
-
 /**
  * The Class ChesskullBehavior.
  *
@@ -22,8 +21,6 @@ public class ChessskullBehavior implements IMonsterBehavior {
 	public void setMaster(Monster master){
 		this.master = master;
 	}
-
-
 
 	/* (non-Javadoc)
 	 * @see org.Element.IMonsterBehavior#animate()
