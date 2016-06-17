@@ -47,7 +47,7 @@ public class Model extends Observable implements IModel {
 	 * @param message
 	 *          the new message
 	 */
-	private void setMap(final IElement[][] list) {
+	private synchronized void setMap(final IElement[][] list) {
 		this.map = list;
 		setupElements();
 		this.setChanged();
@@ -82,12 +82,7 @@ public class Model extends Observable implements IModel {
 	}
 
 	public IElement getElementxy(int x, int y) {
-		if(x >= 0 && y >= 0){
 			return map[y][x];
-		}
-		else{
-			return null;
-		}
 	}
 	
 	public void moveElement(int x, int y, int targetx, int targety){

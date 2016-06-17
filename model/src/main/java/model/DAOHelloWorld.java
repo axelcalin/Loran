@@ -133,7 +133,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
-	public IElement[][] loadMap(final String map, List<IElement> dynamicElements){
+	public synchronized IElement[][] loadMap(final String map, List<IElement> dynamicElements){
 		IElement[][] array = new Element[12][20];
 		try{
 			final String sql = "{call mapByKey(?)}";
