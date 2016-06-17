@@ -2,23 +2,19 @@ package model;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Observable;
 
-import org.Element.Element;
-import org.Element.Mobile;
 import org.Element.White;
 
 import contract.IMobile;
 import contract.IElement;
-import contract.ILorann;
 import contract.IModel;
 
 /**
  * The Class Model.
  *
- * @author Jean-Aymeric Diet
+ * @author florent, axel, luc, romain;
  */
 public class Model extends Observable implements IModel {
 
@@ -79,20 +75,32 @@ public class Model extends Observable implements IModel {
 		return this;
 	}
 
+	/* (non-Javadoc)
+	 * @see contract.IModel#getDynamicObject()
+	 */
 	public List<IElement> getDynamicObject() {
 		return this.dynamicElements;
 	}
 
+	/* (non-Javadoc)
+	 * @see contract.IModel#getElementxy(int, int)
+	 */
 	public IElement getElementxy(int x, int y) {
 			return map[y][x];
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#moveElement(int, int, int, int)
+	 */
 	public void moveElement(int x, int y, int targetx, int targety){
 		this.map[targety][targetx] = this.map[y][x];
 		this.map[y][x] = new White();
 		this.setChanged();
 	}
 	
+	/**
+	 * 
+	 */
 	public void setupElements(){
 		for(IElement[] etab : this.map){
 			for(IElement e : etab){
@@ -101,13 +109,22 @@ public class Model extends Observable implements IModel {
 		}
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#changed()
+	 */
 	public void changed(){
 		this.notifyObservers();
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#getLorann()
+	 */
 	public IMobile getLorann(){
 		return this.lorann;
 	}
+	/* (non-Javadoc)
+	 * @see contract.IModel#setLorann(contract.IMobile)
+	 */
 	public void setLorann(IMobile lorann){
 		this.lorann = lorann;
 	}

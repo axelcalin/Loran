@@ -17,7 +17,7 @@ import contract.IModel;
 /**
  * The Class ViewFrame.
  *
- * @author Jean-Aymeric Diet
+ * @author florent , axel , luc , romain
  */
 class ViewFrame extends JFrame implements KeyListener {
 

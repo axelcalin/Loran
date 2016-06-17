@@ -1,31 +1,17 @@
 package view;
 
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.List;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Observable;
 import java.util.Observer;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.sql.ResultSet;
-import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import org.Element.Element;
-import org.Element.Stone;
-
 import contract.IElement;
-import contract.IMobile;
 
 /**
  * The Class ViewPanel.
  *
- * @author Jean-Aymeric Diet
+ * @author florent , axel , luc , romain
  */
 class ViewPanel extends JPanel implements Observer {
 
@@ -78,6 +64,9 @@ class ViewPanel extends JPanel implements Observer {
 	}
 	
 	
+	/* (non-Javadoc)
+	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
+	 */
 	@Override
 	protected synchronized void paintComponent(final Graphics graphics) {
 		graphics.clearRect(0, 0, 1920,1080);
@@ -91,9 +80,9 @@ class ViewPanel extends JPanel implements Observer {
 			i++;
 			j=0;
 		}
-		Iterator<IElement> l = this.getViewFrame().getModel().getDynamicObject().iterator();
-		while(l.hasNext()){
-				l.next().animate();
+		Iterator<IElement> monster = this.getViewFrame().getModel().getDynamicObject().iterator();
+		while(monster.hasNext()){
+				monster.next().animate();
 		}
 		try {
 			Thread.sleep(500);
@@ -104,14 +93,25 @@ class ViewPanel extends JPanel implements Observer {
 	}			
 			
 	
+	/* (non-Javadoc)
+	 * @see javax.swing.JComponent#getWidth()
+	 */
 	public int getWidth() {
 	return this.width;
 	}
 	
+	/* (non-Javadoc)
+	 * @see javax.swing.JComponent#getHeight()
+	 */
 	public int getHeight() {
 	return this.height;
 	}
 	
+	/**
+	 * @param x
+	 * @param y
+	 * @return
+	 */
 	public org.Element.Element getElements(final int x, final int y) {
 		if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
 			return null;
@@ -121,8 +121,4 @@ class ViewPanel extends JPanel implements Observer {
 
 
 }
-		/*graphics.drawString(this.getViewFrame().getModel().getMap(), 10, 20);
-		graphics.drawString("test",10,30);
-		System.out.println(this.getViewFrame().getModel().getMap());
-	*/
 

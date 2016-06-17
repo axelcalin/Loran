@@ -8,10 +8,18 @@ import java.io.StringWriter;
 import javax.imageio.ImageIO;
 
 import contract.ISprite;
-
+/**
+ * The Class Sprite.
+ *
+ * @author florent, axel, luc, romain;
+ */
 public class Sprite extends StringWriter implements ISprite {
 	private Image image;
 
+	/**
+	 * @param c
+	 * @param image
+	 */
 	public Sprite(final String c, final String image) {
 		try {
 			this.image = ImageIO.read(new File("resources/" + image));
@@ -20,14 +28,17 @@ public class Sprite extends StringWriter implements ISprite {
 		}
 	}
 
+	/**
+	 * @param c
+	 */
 	public Sprite(final String c) {
 		this(c, "noimage.png");
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see jpu2016.nettle.world.element.ISprite#getImage()
+
+
+	/* (non-Javadoc)
+	 * @see contract.ISprite#getImage()
 	 */
 	public Image getImage() {
 		return this.image;

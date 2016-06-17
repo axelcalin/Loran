@@ -3,7 +3,7 @@ package model;
 /**
  * The Class HelloWorld.
  *
- * @author Jean-Aymeric Diet
+ * @author florent, axel, luc, romain;
  */
 class HelloWorld extends Entity {
 

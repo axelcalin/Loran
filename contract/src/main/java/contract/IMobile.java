@@ -1,7 +1,10 @@
 package contract;
 
-
-
+/**
+ * The Interface IMobile.
+ *
+ * @author florent , axel , luc , romain
+ */
 public interface IMobile
 {
 	public int getX();

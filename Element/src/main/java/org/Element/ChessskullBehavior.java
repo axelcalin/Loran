@@ -1,18 +1,29 @@
 package org.Element;
 
-import java.util.Iterator;
 
-import contract.IMobile;
-
+/**
+ * The Class ChesskullBehavior.
+ *
+ * @author florent, axel, luc, romain;
+ */
 public class ChessskullBehavior implements IMonsterBehavior {
 	private Monster master;
 	
+	/**
+	 * 
+	 */
 	public ChessskullBehavior(){
 	}
+	/* (non-Javadoc)
+	 * @see org.Element.IMonsterBehavior#setMaster(org.Element.Monster)
+	 */
 	public void setMaster(Monster master){
 		this.master = master;
 	}
 
+	/* (non-Javadoc)
+	 * @see org.Element.IMonsterBehavior#animate()
+	 */
 	public void animate() {
 		/*Iterator<IMobile> i = master.getModel().getDynamicObject().iterator();
 		IMobile target = null;
