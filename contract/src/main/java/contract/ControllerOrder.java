@@ -5,7 +5,8 @@ package contract;
  *
  * @author Jean-Aymeric Diet
  */
-public enum ControllerOrder {
+public enum ControllerOrder
+{
 
 	Niveau1, 
 	Niveau2, 
