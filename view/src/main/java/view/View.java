@@ -68,7 +68,7 @@ public class View implements IView, Runnable {
 				System.out.println("droite");
 				return ControllerOrder.RIGHT;
 			default:
-				return ControllerOrder.Niveau1;
+				return ControllerOrder.NULL;
 		}
 	}
 

@@ -73,14 +73,14 @@ class ViewPanel extends JPanel implements Observer {
 	 * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
 	 */
 	public void update(final Observable arg0, final Object arg1) {
-		paintComponent(getGraphics());
 		//this.repaint();
+		paintComponent(getGraphics());
 	}
 	
 	
 	@Override
 	protected synchronized void paintComponent(final Graphics graphics) {
-		graphics.clearRect(0, 0, 1920,1080);
+		//graphics.clearRect(0, 0, 1920,1080);
 		int i = 0;
 		int j = 0;
 		for(IElement[] etab : this.getViewFrame().getModel().getMap()){
@@ -91,16 +91,6 @@ class ViewPanel extends JPanel implements Observer {
 			i++;
 			j=0;
 		}
-		Iterator<IElement> l = this.getViewFrame().getModel().getDynamicObject().iterator();
-		while(l.hasNext()){
-				l.next().animate();
-		}
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		this.getViewFrame().getModel().changed();
 	}			
 			
 	

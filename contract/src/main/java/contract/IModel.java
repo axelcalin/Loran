@@ -47,4 +47,6 @@ public interface IModel {
 	public IMobile getLorann();
 
 	void setLorann(IMobile lorann);
+	
+	public void tick();
 }

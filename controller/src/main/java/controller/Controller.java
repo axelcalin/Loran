@@ -2,9 +2,12 @@ package controller;
 
 import contract.ControllerOrder;
 import contract.IController;
+import contract.IElement;
 import contract.ILorann;
 import contract.IModel;
 import contract.IView;
+
+import java.util.Iterator;
 
 import org.Element.Lorann;
 
@@ -20,6 +23,8 @@ public class Controller implements IController {
 	/** The model. */
 	private IModel	model;
 
+	private boolean game;
+
 	/**
 	 * Instantiates a new controller.
 	 *
@@ -31,6 +36,7 @@ public class Controller implements IController {
 	public Controller(final IView view, final IModel model) {
 		this.setView(view);
 		this.setModel(model);
+		game = true;
 	}
 
 	/*
@@ -92,6 +98,7 @@ public class Controller implements IController {
 				break;
 			case EXIT:
 				System.out.println("exit");
+				this.game = false;
 				this.view.close();
 				break;
 			case UP:
@@ -118,9 +125,23 @@ public class Controller implements IController {
 			case DOWNLEFT:
 				this.model.getLorann().moveDownLeft();
 				break;
+			default:
+				break;
 		}
 	}
-
+	
+	public void control(){
+		this.model.loadMap("me");
+		while(game){
+			this.model.tick();
+			try {
+				Thread.sleep(150);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			this.model.changed();
+		}
+	}
 
 
 }

@@ -1,8 +1,6 @@
 package org.Element;
 
-import java.util.Iterator;
-
-import contract.IMobile;
+import java.util.Random;
 
 public class ChessskullBehavior implements IMonsterBehavior {
 	private Monster master;
@@ -13,16 +11,28 @@ public class ChessskullBehavior implements IMonsterBehavior {
 		this.master = master;
 	}
 
+
+
 	public void animate() {
-		/*Iterator<IMobile> i = master.getModel().getDynamicObject().iterator();
-		IMobile target = null;
-		while(i.hasNext() && !((target = i.next()) instanceof Lorann)){}
-		if(target != null){
-		int vecX = target.getX() - this.master.getX();
-		int vecy = target.getY() - this.master.getY();
-		}*/
-		//this.master.moveLeft();
-		this.master.moveRight();
-		
+		Random r = new Random();
+		int valeur = 1 + r.nextInt(4);
+		switch(valeur){
+		 case 1:
+			 System.out.println("IL T'ATTAQUE !!!!!");
+			 this.master.moveRight();
+			 break;
+		 case 2:
+			 System.out.println("IL T'ATTAQUE !!!!!");
+			 this.master.moveLeft();
+			 break;
+		 case 3:
+			 System.out.println("IL T'ATTAQUE !!!!!");
+			 this.master.moveUp();
+			 break;
+		 case 4:
+			 System.out.println("IL T'ATTAQUE !!!!!");
+			 this.master.moveDown();
+			 break;
+		}
 	}
 }

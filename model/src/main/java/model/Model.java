@@ -90,7 +90,6 @@ public class Model extends Observable implements IModel {
 	public void moveElement(int x, int y, int targetx, int targety){
 		this.map[targety][targetx] = this.map[y][x];
 		this.map[y][x] = new White();
-		this.setChanged();
 	}
 	
 	public void setupElements(){
@@ -102,6 +101,7 @@ public class Model extends Observable implements IModel {
 	}
 	
 	public void changed(){
+		this.setChanged();
 		this.notifyObservers();
 	}
 	
@@ -110,5 +110,12 @@ public class Model extends Observable implements IModel {
 	}
 	public void setLorann(IMobile lorann){
 		this.lorann = lorann;
+	}
+	
+	public void tick(){
+		Iterator<IElement> dynobj = dynamicElements.iterator();
+		while(dynobj.hasNext()){
+				dynobj.next().animate();
+		}
 	}
 }
