@@ -88,6 +88,7 @@ public class Model extends Observable implements IModel {
 	public void moveElement(int x, int y, int targetx, int targety){
 		this.map[targety][targetx] = this.map[y][x];
 		this.map[y][x] = new White();
+		this.setChanged();
 	}
 	
 	public void setupElements(){
@@ -96,5 +97,9 @@ public class Model extends Observable implements IModel {
 				e.setModel(this);
 			}
 		}
+	}
+	
+	public void changed(){
+		this.notifyObservers();
 	}
 }
