@@ -182,7 +182,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'L':
-					array.get(i).add(new Lorann( j, i));
+					array.get(i).add(new Lorann( i, j));
 					dynamicElements.add(array.get(i).get(j));
 					j++;
 					break;

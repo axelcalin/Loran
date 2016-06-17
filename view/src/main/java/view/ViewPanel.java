@@ -98,8 +98,7 @@ class ViewPanel extends JPanel implements Observer {
 				m.next().animate();
 			}
 		}
-	}
-			
+	}			
 			
 	
 	public int getWidth() {
