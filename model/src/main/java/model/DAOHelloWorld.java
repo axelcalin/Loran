@@ -221,6 +221,9 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case '\n':
+					if(array[i].length >= j){
+						array[i][j] = new White();
+					}
 					i++;
 					j = 0;
 					break;
