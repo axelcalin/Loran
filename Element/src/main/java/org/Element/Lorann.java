@@ -34,7 +34,7 @@ public class Lorann extends Mobile
 	public void moveUp()
 	{
 		this.saveLastPostion();
-		this.moveUp();
+		super.moveUp();
 	}
 	
 	public void moveDown()

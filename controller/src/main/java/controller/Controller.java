@@ -93,6 +93,7 @@ public class Controller implements IController {
 			case EXIT:
 				System.out.println("exit");
 				this.view.close();
+				break;
 			case UP:
 				this.model.getLorann().moveUp();
 				break;
