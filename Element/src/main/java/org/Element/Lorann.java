@@ -4,6 +4,7 @@ import java.awt.Point;
 
 import contract.ILorann;
 import contract.IMobile;
+import contract.IModel;
 import contract.Permeability;
 
 public class Lorann extends Mobile
@@ -22,6 +23,12 @@ public class Lorann extends Mobile
 	private void saveLastPostion()
 	{
 		this.lastPosition.setLocation(this.getX(),this.getY());
+	}
+	
+	@Override
+	public void setModel(IModel thisModel){
+		super.setModel(thisModel);
+		thisModel.setLorann(this);
 	}
 	
 	public void moveUp()

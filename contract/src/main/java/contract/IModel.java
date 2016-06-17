@@ -45,4 +45,6 @@ public interface IModel {
 	public void changed();
 	
 	public IMobile getLorann();
+
+	void setLorann(IMobile lorann);
 }

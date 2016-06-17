@@ -64,7 +64,7 @@ public class Model extends Observable implements IModel {
 	public synchronized void loadMap(String map) {
 		try {
 			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.loadMap(map, dynamicElements, lorann));
+			this.setMap(daoHelloWorld.loadMap(map, dynamicElements));
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
@@ -107,5 +107,8 @@ public class Model extends Observable implements IModel {
 	
 	public IMobile getLorann(){
 		return this.lorann;
+	}
+	public void setLorann(IMobile lorann){
+		this.lorann = lorann;
 	}
 }
