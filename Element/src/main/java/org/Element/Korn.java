@@ -16,6 +16,7 @@ public class Korn extends Monster
 		super(new Sprite("â”Œâ”�", "monster_3.png"), new KornBehavior());
 		this.setX(x);
 		this.setY(y);
+		this.behavior.setMaster(this);
 	}
 	
 	/* (non-Javadoc)

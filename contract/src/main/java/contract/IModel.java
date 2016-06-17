@@ -70,4 +70,6 @@ public interface IModel {
 	 * @param lorann
 	 */
 	void setLorann(IMobile lorann);
+	
+	public void tick();
 }
