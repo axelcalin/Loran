@@ -72,13 +72,13 @@ class ViewPanel extends JPanel implements Observer {
 	 */
 	public void update(final Observable arg0, final Object arg1) {
 		paintComponent(getGraphics());
-		this.repaint();
+		//this.repaint();
 	}
 	
 	
 	@Override
-	protected void paintComponent(final Graphics graphics) {
-		graphics.clearRect(0, 0, 1500,1000);
+	protected synchronized void paintComponent(final Graphics graphics) {
+		graphics.clearRect(0, 0, 1920,1080);
 		int i = 0;
 		int j = 0;
 		Iterator<java.util.List<IElement>> n = this.getViewFrame().getModel().getMap().iterator();
