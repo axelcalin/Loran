@@ -107,7 +107,7 @@ class ViewPanel extends JPanel implements Observer {
 				paintComponent(getGraphics());
 			}
 		};
-		timer.scheduleAtFixedRate(task, 1000, 1000);
+		timer.schedule(task, 1000);
 	}			
 			
 	
