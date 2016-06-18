@@ -83,6 +83,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.getModel().moveElement(getX(), getY(), getX(), getY()-1);
 			this.setY(this.getY() - 1);
 		}
+		else{
+			this.getModel().getElementxy(this.getX(), this.getY()-1).onTouch(this);
+		}
 	}
 	
 	/* (non-Javadoc)
@@ -95,6 +98,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.getModel().moveElement(getX(), getY(), getX(), getY() + 1);
 			this.setY(this.getY() + 1);
 		}
+		else{
+			this.getModel().getElementxy(this.getX(), this.getY()+1).onTouch(this);
+		}
 	}
 	
 	/* (non-Javadoc)
@@ -106,6 +112,9 @@ public class Mobile extends DynamicElement implements IMobile
 		{
 			this.getModel().moveElement(getX(), getY(), getX()+1, getY());
 			this.setX(this.getX() + 1);
+		}
+		else{
+			this.getModel().getElementxy(this.getX()+1, this.getY()).onTouch(this);
 		}
 	}
 	
@@ -120,6 +129,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.getModel().moveElement(getX(), getY(), getX()-1, getY());
 			this.setX(this.getX() - 1);
 		}
+		else{
+			this.getModel().getElementxy(this.getX()-1, this.getY()).onTouch(this);
+		}
 	}
 	
 	/* (non-Javadoc)
@@ -132,6 +144,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.getModel().moveElement(getX(), getY(), getX()+1, getY()-1);
 			this.setX(this.getX() + 1);
 			this.setY(this.getY() - 1);
+		}
+		else{
+			this.getModel().getElementxy(this.getX()+1, this.getY()-1).onTouch(this);
 		}
 	}
 	
@@ -146,6 +161,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() - 1);
 		}
+		else{
+			this.getModel().getElementxy(this.getX()-1, this.getY()-1).onTouch(this);
+		}
 	}
 	
 	/* (non-Javadoc)
@@ -159,6 +177,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.setX(this.getX() + 1);
 			this.setY(this.getY() + 1);
 		}
+		else{
+			this.getModel().getElementxy(this.getX()+1, this.getY()+1).onTouch(this);
+		}
 	}
 	
 	/* (non-Javadoc)
@@ -171,6 +192,9 @@ public class Mobile extends DynamicElement implements IMobile
 			this.getModel().moveElement(getX(), getY(), getX()-1, getY()+1);
 			this.setX(this.getX() - 1);
 			this.setY(this.getY() + 1);
+		}
+		else{
+			this.getModel().getElementxy(this.getX()-1, this.getY()+1).onTouch(this);
 		}
 	}
 	

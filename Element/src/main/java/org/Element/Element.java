@@ -1,6 +1,7 @@
 package org.Element;
 
 import contract.IElement;
+import contract.IMobile;
 import contract.IModel;
 import contract.Permeability;
 /**
@@ -63,6 +64,11 @@ public class Element implements IElement{
 	 */
 	public IModel getModel(){
 		return this.masterModel;
+	}
+
+	public void onTouch(IMobile touch) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
