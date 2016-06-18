@@ -50,8 +50,7 @@ public class YellowMenBehavior implements IMonsterBehavior {
 		}
 		if (XN > 0 && YN == 0){
 			this.master.moveLeft();
-		} 
-		else {
+		} else {
 			Random r = new Random();
 			int valeur = 1 + r.nextInt(4);
 			switch(valeur){

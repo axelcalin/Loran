@@ -52,16 +52,12 @@ public class View implements IView, Runnable {
 			case KeyEvent.VK_ESCAPE:
 				return ControllerOrder.EXIT;
 			case KeyEvent.VK_UP:
-				System.out.println("monte");
 				return ControllerOrder.UP;
 			case KeyEvent.VK_DOWN:
-				System.out.println("descend");
 				return ControllerOrder.DOWN;
 			case KeyEvent.VK_LEFT:
-				System.out.println("gauche");
 				return ControllerOrder.LEFT;
 			case KeyEvent.VK_RIGHT:
-				System.out.println("droite");
 				return ControllerOrder.RIGHT;
 			default:
 				return ControllerOrder.NULL;
