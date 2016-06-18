@@ -88,6 +88,15 @@ public class Lorann extends Mobile
 	 * 
 	 */
 	@Override
+	public void kill(){
+		this.getModel().getDynamicObject().clear();
+		this.getModel().loadMap("me");
+	}
+	
+	/*
+	 * 
+	 */
+	@Override
 	public void animate(){
 		if(this.up && this.left){
 			this.moveUpLeft();

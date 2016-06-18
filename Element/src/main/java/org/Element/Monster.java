@@ -23,4 +23,14 @@ public abstract class Monster extends Mobile {
 	public void animate(){
 		behavior.animate();
 	}
+	
+	/*
+	 * 
+	 */
+	@Override
+	public void onTouch(Mobile touch){
+		if(touch instanceof Lorann){
+			touch.kill();
+		}
+	}
 }
