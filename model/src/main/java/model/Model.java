@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Observable;
 
+import org.Element.Lorann;
 import org.Element.White;
 
 import contract.IMobile;
@@ -22,7 +23,7 @@ public class Model extends Observable implements IModel {
 	/** The message. */
 	private IElement[][]			map;
 	private List<IElement>			dynamicElements;
-	private IMobile					lorann;
+	private Lorann					lorann;
 
 	/**
 	 * Instantiates a new model.
@@ -127,7 +128,7 @@ public class Model extends Observable implements IModel {
 	 * @see contract.IModel#setLorann(contract.IMobile)
 	 */
 	public void setLorann(IMobile lorann){
-		this.lorann = lorann;
+		this.lorann = (Lorann) lorann;
 	}
 	
 	public void tick(){
@@ -135,5 +136,13 @@ public class Model extends Observable implements IModel {
 		while(dynobj.hasNext()){
 				dynobj.next().animate();
 		}
+	}
+	
+	public void setPress(char key){
+		this.lorann.setPress(key);
+	}
+	
+	public void setUnpress(char key){
+		this.lorann.setUnpress(key);
 	}
 }

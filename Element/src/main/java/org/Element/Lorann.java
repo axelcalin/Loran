@@ -15,6 +15,13 @@ public class Lorann extends Mobile
 	 */
 	private Point lastPosition;
 	
+	/*
+	 * Booleans that indicate which keys are currently pressed.
+	 */
+	private boolean up;
+	private boolean down;
+	private boolean left;
+	private boolean right;
 	
 	/**
 	 * @param j
@@ -28,6 +35,36 @@ public class Lorann extends Mobile
 		this.setX(j);
 		this.setY(i);
 		
+	}
+	
+	public void setPress(char key){
+		if(key == 'u'){
+			this.up = true;
+		}
+		if(key == 'd'){
+			this.down = true;
+		}
+		if(key == 'l'){
+			this.left = true;
+		}
+		if(key == 'r'){
+			this.right = true;
+		}
+	}
+	
+	public void setUnpress(char key){
+		if(key == 'u'){
+			this.up = false;
+		}
+		if(key == 'd'){
+			this.down = false;
+		}
+		if(key == 'l'){
+			this.left = false;
+		}
+		if(key == 'r'){
+			this.right = false;
+		}
 	}
 	
 	/**
@@ -45,6 +82,37 @@ public class Lorann extends Mobile
 	public void setModel(IModel thisModel){
 		super.setModel(thisModel);
 		thisModel.setLorann(this);
+	}
+	
+	/*
+	 * 
+	 */
+	@Override
+	public void animate(){
+		if(this.up && this.left){
+			this.moveUpLeft();
+		}
+		else if(this.up && this.right){
+			this.moveUpRight();
+		}
+		else if(this.down && this.left){
+			this.moveDownLeft();
+		}
+		else if(this.down && this.right){
+			this.moveDownRight();
+		}
+		else if(this.up){
+			this.moveUp();
+		}
+		else if(this.down){
+			this.moveDown();
+		}
+		else if(this.left){
+			this.moveLeft();
+		}
+		else if(this.right){
+			this.moveRight();
+		}
 	}
 	
 	/* (non-Javadoc)
