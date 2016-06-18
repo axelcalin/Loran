@@ -1,6 +1,5 @@
 package org.Element;
 
-import contract.IModel;
 import contract.Permeability;
 /**
  * The Class Stone.
