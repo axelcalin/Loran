@@ -32,19 +32,15 @@ public class KornBehavior implements IMonsterBehavior {
 		  int valeur = 1 + r.nextInt(4);
 		  switch(valeur){
 		   case 1:
-		   System.out.println("IL T'ATTAQUE !!!!!");
 		   this.master.moveUpRight();
 		   break;
 		   case 2:
-		   System.out.println("IL T'ATTAQUE !!!!!");
 		   this.master.moveUpLeft();
 		   break;
 		   case 3:
-		   System.out.println("IL T'ATTAQUE !!!!!");
 		   this.master.moveDownLeft();
 		   break;
 		   case 4:
-		   System.out.println("IL T'ATTAQUE !!!!!");
 		   this.master.moveDownRight();
 		   break;
 		  }
