@@ -33,7 +33,7 @@ public class Lorann extends Mobile
 	/**
 	 * 
 	 */
-	private void saveLastPostion()
+	public void saveLastPostion()
 	{
 		this.lastPosition.setLocation(this.getX(),this.getY());
 	}
