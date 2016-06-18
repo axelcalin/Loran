@@ -82,7 +82,7 @@ public class YellowMenBehavior implements IMonsterBehavior {
 	 * @see org.Element.IMonsterBehavior#setMaster(org.Element.Monster)
 	 */
 	public void setMaster(Monster master) {
-		// TODO Auto-generated method stub
+		this.master = master;
 		
 	}
 
