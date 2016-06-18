@@ -15,6 +15,7 @@ public class YellowMen extends Monster
 		super( new Sprite("â”Œâ”�", "monster_4.png"), new YellowMenBehavior());
 		this.setX(x);
 		this.setY(y);
+		this.behavior.setMaster(this);
 	}
 	
 	/* (non-Javadoc)
