@@ -10,8 +10,8 @@ import junit.framework.TestCase;
 
 public class LorannTest extends TestCase {
 
-	Point after = null;
 	Point before = null;
+	Point after = null;
 	Lorann lorann;
 	Model model;
 	
@@ -19,12 +19,12 @@ public class LorannTest extends TestCase {
 	public void test ()
 	{
 		model = new Model();
-		model.setNextMap("n1");
+		model.setNextMap("n2");
 		model.loadMap();
-		lorann = new Lorann(5, 5);
-		before = new Point(lorann.getX(), lorann.getY());
-		lorann.moveRight();
-		after = new Point(lorann.getX(), lorann.getY());
+
+		before = new Point(model.getLorann().getX(), model.getLorann().getY());
+		model.getLorann().moveRight();
+		after = new Point(model.getLorann().getX(), model.getLorann().getY());
 		Assert.assertNotEquals(before, after);
 	}
 }

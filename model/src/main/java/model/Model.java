@@ -12,13 +12,14 @@ import org.Element.White;
 import contract.IMobile;
 import contract.IElement;
 import contract.IModel;
+import contract.IModelInternal;
 
 /**
  * The Class Model.
  *
  * @author florent, axel, luc, romain;
  */
-public class Model extends Observable implements IModel {
+public class Model extends Observable implements IModel, IModelInternal {
 
 	/** The message. */
 	private IElement[][]			map;
@@ -72,6 +73,15 @@ public class Model extends Observable implements IModel {
 	 */
 	public synchronized void loadMap() {
 		if(isLoad){
+			if(nextMap.equalsIgnoreCase("me") && this.addLife){
+				DAOLife daoLife;
+				try{
+					daoLife = new DAOLife(DBConnection.getInstance().getConnection());
+					daoLife.addLife();
+				} catch(SQLException e){
+					e.printStackTrace();
+				}
+			}
 			try {
 //				this.curMap = this.nextMap;
 				this.isLoad = false;
@@ -153,6 +163,7 @@ public class Model extends Observable implements IModel {
 				dynobj.next().animate();
 		}
 		this.doKill();
+		this.changed();
 	}
 	
 	public void setPress(char key){
@@ -209,5 +220,24 @@ public class Model extends Observable implements IModel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public void removeLife() {
+		DAOLife daoLife;
+		try{
+			daoLife = new DAOLife(DBConnection.getInstance().getConnection());
+			daoLife.removeLife();
+			if(daoLife.getLife() < 1){
+				this.saveScore();
+				daoLife.resetLife();
+			}
+		} catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void setAddLife() {
+		this.addLife = true;
 	}
 }

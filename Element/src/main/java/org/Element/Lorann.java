@@ -4,6 +4,7 @@ import java.awt.Point;
 
 import contract.IMobile;
 import contract.IModel;
+import contract.IModelInternal;
 import contract.Permeability;
 /**
  * The Class Lorann.
@@ -100,7 +101,7 @@ public class Lorann extends Mobile
 	 * @see org.Element.Element#setModel(contract.IModel)
 	 */
 	@Override
-	public void setModel(IModel thisModel){
+	public void setModel(IModelInternal thisModel){
 		super.setModel(thisModel);
 		thisModel.setLorann(this);
 	}
@@ -111,12 +112,10 @@ public class Lorann extends Mobile
 	@Override
 	public void kill(){
 		this.getModel().setForKill(this);
+		this.getModel().removeLife();
 		this.getModel().setNextMap("me");
 	}
-	
-	public void addScore(int score){
-		
-	}
+
 	
 	public void onTouch(IMobile touch){
 		if(touch instanceof Monster){
@@ -211,6 +210,7 @@ public class Lorann extends Mobile
 			spell.changeDirection();
 		}
 	}
+	
 	public void destroySpell(){
 		if(this.spell != null){
 			this.getModel().setForKill(spell);

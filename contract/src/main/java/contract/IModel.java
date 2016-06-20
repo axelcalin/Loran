@@ -22,70 +22,19 @@ public interface IModel {
 	IElement[][] getMap();
 
 	/**
-	 * Load the message.
-	 *
-	 * @param key
-	 *          the key
-	 */
-	void loadMap();
-
-	/**
 	 * Gets the observable.
 	 *
 	 * @return the observable
 	 */
 	Observable getObservable();
 	
-	/**
-	 * @return
-	 */
-	List<IElement> getDynamicObject();
-	
-	/**
-	 * @param x
-	 * @param y
-	 * @return
-	 */
-	IElement getElementxy(int x, int y);
-	
-	/**
-	 * @param x
-	 * @param y
-	 * @param targetx
-	 * @param targety
-	 */
-	public void moveElement(int x, int y, int targetx, int targety);
-	
-	/**
-	 * 
-	 */
-	public void changed();
-	
-	/**
-	 * @return
-	 */
-	public IMobile getLorann();
-
-	/**
-	 * @param lorann
-	 */
-	void setLorann(IMobile lorann);
-	
 	public void tick();
+	
+	public void saveScore();
 	
 	public void setPress(char key);
 	
 	public void setUnpress(char key);
 	
 	public void setNextMap(String map);
-	
-	public void setGate(IElement gate);
-	
-	public IElement getGate();
-
-	void setForKill(IElement target);
-
-	public void saveScore();
-	
-	public void addScore(int score);
 }

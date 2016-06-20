@@ -47,7 +47,10 @@ public abstract class Item extends DynamicElement {
 			if(!this.isLife){
 			this.getModel().addScore(this.getValue());
 			}
-		}
+			else{
+				this.getModel().setAddLife();
+			}
 		super.onTouch(touch);
+		}
 	}
 }
