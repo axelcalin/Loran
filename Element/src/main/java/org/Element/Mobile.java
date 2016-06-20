@@ -12,24 +12,17 @@ import contract.Permeability;
 
 public class Mobile extends DynamicElement implements IMobile
 {
-	private Point position;
+
 	
 	/**
 	 * @param sprite
 	 */
-	public Mobile(Sprite sprite)
+	public Mobile(Sprite sprite, int X, int Y)
 	{
-		super(Permeability.BLOCKING,sprite);
-		this.position = new Point();
+		super(Permeability.BLOCKING,sprite, X, Y);
 	}
 	
-	/* (non-Javadoc)
-	 * @see contract.IMobile#getX()
-	 */
-	public int getX()
-	{
-		return this.position.x;
-	}
+
 	
 	/**
 	 * @param x
@@ -41,14 +34,6 @@ public class Mobile extends DynamicElement implements IMobile
 			this.position.x = x;
 			//TODO prevent viewer
 		}
-	}
-	
-	/* (non-Javadoc)
-	 * @see contract.IMobile#getY()
-	 */
-	public int getY()
-	{
-		return this.position.y;
 	}
 
 	/**
@@ -183,7 +168,7 @@ public class Mobile extends DynamicElement implements IMobile
 	}
 	
 	/* (non-Javadoc)
-	 * @see contract.IMobile#moveDownLeft()
+	 * @see contract.IMobile#mov	eDownLeft()
 	 */
 	public void moveDownLeft()
 	{

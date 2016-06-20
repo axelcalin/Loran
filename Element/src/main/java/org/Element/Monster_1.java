@@ -13,7 +13,7 @@ public class Monster_1 extends Monster
 	 * @param x
 	 */
 	public Monster_1(int y, int x){
-	super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior());
+	super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior(), x, y);
 	this.setX(x);
 	this.setY(y);
 	this.behavior.setMaster(this);

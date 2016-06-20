@@ -29,7 +29,7 @@ public class Lorann extends Mobile
 	 */
 	public Lorann(int j, int i)
 	{
-		super( new Sprite("â”Œâ”�", "Lorann_u.png"));
+		super( new Sprite("â”Œâ”�", "Lorann_u.png"),j,i);
 		this.lastPosition = new Point();
 		this.lastPosition.setLocation(j, i);
 		this.setX(j);
@@ -91,6 +91,10 @@ public class Lorann extends Mobile
 	public void kill(){
 		this.getModel().getDynamicObject().clear();
 		this.getModel().loadMap("me");
+	}
+	
+	public void addScore(int score){
+		
 	}
 	
 	/*

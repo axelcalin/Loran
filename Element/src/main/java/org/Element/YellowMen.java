@@ -1,4 +1,7 @@
 package org.Element;
+
+import contract.IMobile;
+
 /**
  * The Class Yellowmen.
  *
@@ -12,7 +15,7 @@ public class YellowMen extends Monster
 	 */
 	public YellowMen(int y, int x)
 	{
-		super( new Sprite("â”Œâ”�", "monster_4.png"), new YellowMenBehavior());
+		super( new Sprite("â”Œâ”�", "monster_4.png"), new YellowMenBehavior(), x, y);
 		this.setX(x);
 		this.setY(y);
 		this.behavior.setMaster(this);
@@ -25,4 +28,6 @@ public class YellowMen extends Monster
 	public void animate(){
 		this.behavior.animate();
 	}
+	
+
 }

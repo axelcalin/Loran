@@ -27,4 +27,6 @@ public interface IMobile
 	
 	public void moveDownLeft();
 
+	public void kill();
+
 }

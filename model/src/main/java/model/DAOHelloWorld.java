@@ -164,11 +164,11 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'U':
-					array[i][j] = new onion();
+					array[i][j] = new onion(j,i);
 					j++;
 					break;
 				case 'C':
-					array[i][j] = new Candlestick();
+					array[i][j] = new Candlestick(j,i);
 					j++;
 					break;
 				case 'W':
@@ -176,11 +176,11 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'S':
-					array[i][j] = new Bag();
+					array[i][j] = new Bag(j,i);
 					j++;
 					break;
 				case 'B':
-					array[i][j] = new CrystalBall();
+					array[i][j] = new CrystalBall(j,i);
 					j++;
 					break;
 				case 'L':
@@ -193,7 +193,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'Z':
-					array[i][j] = new Statue();
+					array[i][j] = new Statue(j,i);
 					j++;
 					break;
 				case 'T':
@@ -217,7 +217,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'G':
-					array[i][j] = new Glass();
+					array[i][j] = new Glass(j,i);
 					j++;
 					break;
 				case 'E':

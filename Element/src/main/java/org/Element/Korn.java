@@ -13,7 +13,7 @@ public class Korn extends Monster
 	 */
 	public Korn(int y, int x)
 	{
-		super(new Sprite("â”Œâ”�", "monster_3.png"), new KornBehavior());
+		super(new Sprite("â”Œâ”�", "monster_3.png"), new KornBehavior(), x, y);
 		this.setX(x);
 		this.setY(y);
 		this.behavior.setMaster(this);

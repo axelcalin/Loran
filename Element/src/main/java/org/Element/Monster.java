@@ -1,5 +1,7 @@
 package org.Element;
 
+import contract.IMobile;
+
 /**
  * The Class Monster.
  *
@@ -12,8 +14,8 @@ public abstract class Monster extends Mobile {
 	 * @param sprite
 	 * @param behavior
 	 */
-	public Monster(Sprite sprite, IMonsterBehavior behavior) {
-		super(sprite);
+	public Monster(Sprite sprite, IMonsterBehavior behavior, int X, int Y) {
+		super(sprite, X, Y);
 		this.behavior = behavior;
 	}
 
@@ -28,8 +30,7 @@ public abstract class Monster extends Mobile {
 	 * 
 	 */
 	@Override
-	public void onTouch(Mobile touch){
-		System.out.println("Touch");
+	public void onTouch(IMobile touch){
 		if(touch instanceof Lorann){
 			System.out.println("Kill");
 			touch.kill();

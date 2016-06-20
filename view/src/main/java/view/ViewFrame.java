@@ -138,7 +138,7 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.setTitle("Lorann vs Wild");
 		this.setVisible(false);
 		this.setResizable(false);
-		this.setAlwaysOnTop(true);
+		this.setAlwaysOnTop(false);
 		this.setBackground(Color.BLACK);
 	}
 

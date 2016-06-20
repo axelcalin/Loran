@@ -12,7 +12,7 @@ public class Chesskull extends Monster
 	 */
 	public Chesskull(int y, int x)
 	{
-		super( new Sprite("â”Œâ”�", "monster_2.png"), new ChessskullBehavior());
+		super( new Sprite("â”Œâ”�", "monster_2.png"), new ChessskullBehavior(), x, y);
 		this.behavior.setMaster(this);
 		this.setX(x);
 		this.setY(y);

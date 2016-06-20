@@ -9,8 +9,8 @@ public class onion extends Item
 	/**
 	 * 
 	 */
-	public onion()
+	public onion(int X, int Y)
 	{
-		super( new Sprite("â”Œâ”�", "onion.png"), 620, false);
+		super( new Sprite("â”Œâ”�", "onion.png"), 620, false, X, Y);
 	}
 }
