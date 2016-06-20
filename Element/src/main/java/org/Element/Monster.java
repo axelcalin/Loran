@@ -36,6 +36,7 @@ public abstract class Monster extends Mobile {
 		}
 		if(touch instanceof Fireball){
 			this.kill();
+			touch.kill();
 		}
 		super.onTouch(touch);
 	}

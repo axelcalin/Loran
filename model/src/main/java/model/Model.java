@@ -186,11 +186,12 @@ public class Model extends Observable implements IModel {
 			IElement target = targets.next();
 			while(list.hasNext()){
 				if(target.getClass() == list.next().getClass()){
-					this.map[((IMobile)target).getY()][((IMobile)target).getX()] = new White();
 					list.remove();
 				}
 			}
 			list = this.getDynamicObject().iterator();
+			this.map[((IMobile)target).getY()][((IMobile)target).getX()] = new White();
 		}
+		this.killTargets.clear();
 	}
 }

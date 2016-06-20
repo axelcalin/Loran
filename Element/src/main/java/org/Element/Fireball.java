@@ -1,5 +1,7 @@
 package org.Element;
 
+import contract.IMobile;
+
 public class Fireball extends Mobile{
 	
 	int vx;
@@ -53,5 +55,30 @@ public class Fireball extends Mobile{
 	public void revert(){
 		this.vx -= 2*vx;
 		this.vy -= 2*vy;
+	}
+	public void kill(){
+		this.lorann.destroySpell();
+	}
+	
+	public void changeDirection(){
+		this.vx = (this.lorann.getX()-this.getX());
+		this.vy = (this.lorann.getY()-this.getY());
+		if(vx > 1){
+			vx = 1;
+		}
+		if(vx < -1){
+			vx = -1;
+		}
+		if(vy > 1){
+			vy = 1;
+		}
+		if(vy < -1){
+			vy = -1;
+		}
+	}
+	public void onTouch(IMobile touch){
+		if(touch instanceof Lorann){
+			this.kill();
+		}
 	}
 }
