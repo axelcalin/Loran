@@ -26,32 +26,34 @@ public class YellowMenBehavior implements IMonsterBehavior {
 		int YA = this.master.getY();
 		int XN = XA - XL;
 		int YN = YA - YL;
+		Random moveRand = new Random();
+		int rand = moveRand.nextInt(5);
 		
 		if (XN == 0 && YN < 0){
 			this.master.moveDown();
 		}
-		if (XN == 0 && YN > 0){
+		else if (XN == 0 && YN > 0){
 			this.master.moveUp();
 		}
-		if (XN < 0 && YN < 0){
+		else if (XN < 0 && YN < 0){
 			this.master.moveDownRight();
 		}
-		if (XN > 0 && YN < 0){
+		else if (XN > 0 && YN < 0){
 			this.master.moveLeft();
 		}
-		if  (XN < 0 && YN > 0){
+		else if  (XN < 0 && YN > 0){
 			this.master.moveUpRight(); 
 		}
-		if (XN > 0 && YN > 0){
+		else if (XN > 0 && YN > 0){
 			this.master.moveUpLeft();
 		}
-		if  (XN < 0 && YN == 0){
+		else if  (XN < 0 && YN == 0){
 			this.master.moveRight();
 		}
-		if (XN > 0 && YN == 0){
+		else if (XN > 0 && YN == 0){
 			this.master.moveLeft();
 		} 
-		else {
+		if(rand == 1) {
 			Random r = new Random();
 			int valeur = 1 + r.nextInt(4);
 			switch(valeur){

@@ -73,32 +73,31 @@ public class Controller implements IController {
 		switch (controllerOrder) {
 			case Niveau1:
 				System.out.println("niveau 1");
-				this.model.loadMap("n1");
+				this.model.setNextMap("n1");
 				break;
 			case Niveau2:
 				System.out.println("niveau 2");
-				this.model.loadMap("n2");
+				this.model.setNextMap("n2");
 				break;
 			case Niveau3:
 				System.out.println("niveau 3");
-				this.model.loadMap("n3");
+				this.model.setNextMap("n3");
 				break;
 			case Niveau4:
 				System.out.println("niveau 4");
-				this.model.loadMap("n4");
+				this.model.setNextMap("n4");
 				break;
 			case Niveau5:
 				System.out.println("niveau 5");
-				this.model.loadMap("n5");
+				this.model.setNextMap("n5");
 				break;
 			case Menu:
 				System.out.println("menu");
-				this.model.loadMap("me");
+				this.model.setNextMap("me");
 				break;
 			case EXIT:
 				System.out.println("exit");
 				this.game = false;
-				this.view.close();
 				break;
 			case UP:
 				this.model.setPress('u');
@@ -143,7 +142,7 @@ public class Controller implements IController {
 	
 	public void control(){
 		
-		this.model.loadMap("n1");
+		this.model.setNextMap("me");
 		while(game){
 			this.model.tick();
 			try {
@@ -153,6 +152,7 @@ public class Controller implements IController {
 			}
 			this.model.changed();
 		}
+		this.view.close();
 	}
 
 }

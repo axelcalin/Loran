@@ -2,6 +2,7 @@ package org.Element;
 
 import java.awt.Point;
 
+import contract.IMobile;
 import contract.IModel;
 /**
  * The Class Lorann.
@@ -89,12 +90,17 @@ public class Lorann extends Mobile
 	 */
 	@Override
 	public void kill(){
-		this.getModel().getDynamicObject().clear();
-		this.getModel().loadMap("me");
+		this.getModel().setNextMap("me");
 	}
 	
 	public void addScore(int score){
 		
+	}
+	
+	public void onTouch(IMobile touch){
+		if(touch instanceof Monster){
+			this.kill();
+		}
 	}
 	
 	/*
