@@ -1,5 +1,7 @@
 package org.Element;
 
+import java.util.Random;
+
 /**
  * The Class Korn.
  *
@@ -13,10 +15,9 @@ public class Korn extends Monster
 	 */
 	public Korn(int y, int x)
 	{
-		super(new Sprite("â”Œâ”�", "monster_3.png"), new KornBehavior(), x, y);
+		super(new Sprite("monster_3.png"), x, y);
 		this.setX(x);
 		this.setY(y);
-		this.behavior.setMaster(this);
 	}
 	
 	/* (non-Javadoc)
@@ -24,6 +25,21 @@ public class Korn extends Monster
 	 */
 	@Override
 	public void animate(){
-		this.behavior.animate();
+		Random r = new Random();
+		int valeur = 1 + r.nextInt(4);
+		switch(valeur){
+		   case 1:
+			   this.moveUpRight();
+			   break;
+		   case 2:
+			   this.moveUpLeft();
+			   break;
+		   case 3:
+			   this.moveDownLeft();
+			   break;
+		   case 4:
+			   this.moveDownRight();
+			   break;
+		}
 	}
 }

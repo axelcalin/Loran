@@ -17,7 +17,7 @@ public class Gate extends Element
 	 */
 	public Gate(boolean open)
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "gate_closed.png"));
+		super( Permeability.BLOCKING,new Sprite("gate_closed.png"));
 		this.open = false;
 		if(open){
 			this.open();
@@ -30,7 +30,7 @@ public class Gate extends Element
 		super.setModel(model);
 	}
 	public void open() {
-		this.setSprite(new Sprite("", "gate_open.png"));
+		this.setSprite(new Sprite("gate_open.png"));
 		open = true;
 	}
 	

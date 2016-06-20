@@ -10,6 +10,6 @@ public class Bag extends Item{
 		 * 
 		 */
 		public Bag(int X, int Y) {
-			super( new Sprite("â”Œâ”�", "purse.png"), 650, false, X, Y);
+			super( new Sprite("purse.png"), 650, false, X, Y);
 		}
 }

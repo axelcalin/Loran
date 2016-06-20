@@ -13,7 +13,7 @@ public class VerticalBone extends Element
 	 */
 	public VerticalBone()
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "vertical_bone.png"));
+		super( Permeability.BLOCKING,new Sprite("vertical_bone.png"));
 	}
 
 }

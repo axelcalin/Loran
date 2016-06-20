@@ -14,7 +14,7 @@ public class CrystalBall extends Item
 	 */
 	public CrystalBall(int X, int Y)
 	{
-		super( new Sprite("â”Œâ”�", "crystal_ball.png"),0 ,false, X, Y);
+		super( new Sprite("crystal_ball.png"),0 ,false, X, Y);
 	}
 	
 	@Override

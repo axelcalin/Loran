@@ -10,6 +10,6 @@ public class Candlestick extends Item{
 	 * 
 	 */
 	public Candlestick(int X, int Y) {
-		super( new Sprite("â”Œâ”�", "candlestick.png"), 620, false, X, Y);
+		super( new Sprite("candlestick.png"), 620, false, X, Y);
 	}
 }

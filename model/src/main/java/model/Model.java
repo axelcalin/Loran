@@ -85,8 +85,8 @@ public class Model extends Observable implements IModel, IModelInternal {
 			try {
 //				this.curMap = this.nextMap;
 				this.isLoad = false;
-				final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-				this.setMap(daoHelloWorld.loadMap(nextMap, dynamicElements));
+				final DAOModel daoModel = new DAOModel(DBConnection.getInstance().getConnection());
+				this.setMap(daoModel.loadMap(nextMap, dynamicElements));
 			} catch (final SQLException e) {
 				e.printStackTrace();
 			}
@@ -212,9 +212,9 @@ public class Model extends Observable implements IModel, IModelInternal {
 	}
 	
 	public void saveScore(){
-		DAOHelloWorld daoHelloWorld;
+		DAOModel daoHelloWorld;
 		try {
-			daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
+			daoHelloWorld = new DAOModel(DBConnection.getInstance().getConnection());
 			daoHelloWorld.saveScoreToDB(score);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
