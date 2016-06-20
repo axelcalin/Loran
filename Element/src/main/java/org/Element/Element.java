@@ -40,13 +40,6 @@ public class Element implements IElement{
 	public Permeability getPermeability(){
 		return this.permeability;
 	}
-	
-	/**
-	 * @param touch
-	 */
-	public void onTouch(Mobile touch){
-		
-	}
 
 	/* (non-Javadoc)
 	 * @see contract.IElement#animate()
@@ -71,7 +64,9 @@ public class Element implements IElement{
 	}
 
 	public void onTouch(IMobile touch) {
-		// TODO Auto-generated method stub
+		if(touch instanceof Fireball){
+			((Fireball) touch).revert();
+		}
 		
 	}
 

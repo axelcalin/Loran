@@ -19,8 +19,11 @@ public class CrystalBall extends Item
 	
 	@Override
 	public void onTouch(IMobile touch){
-		Gate gate = (Gate) this.getModel().getGate();
-		gate.open();
+		if(touch instanceof Lorann){
+			Gate gate = (Gate) this.getModel().getGate();
+			gate.open();
+			super.onTouch(touch);
+		}
 		super.onTouch(touch);
 	}
 }

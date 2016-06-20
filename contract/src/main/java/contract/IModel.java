@@ -82,4 +82,6 @@ public interface IModel {
 	public void setGate(IElement gate);
 	
 	public IElement getGate();
+
+	void setForKill(IElement target);
 }

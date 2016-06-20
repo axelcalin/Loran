@@ -23,6 +23,7 @@ public class Model extends Observable implements IModel {
 	/** The message. */
 	private IElement[][]			map;
 	private List<IElement>			dynamicElements;
+	private List<IElement>			killTargets;
 	private Lorann					lorann;
 	private String 					curMap;
 	private String 					nextMap;
@@ -37,6 +38,7 @@ public class Model extends Observable implements IModel {
 		isLoad = false;
 		curMap = null;
 		nextMap = null;
+		killTargets = new ArrayList<IElement>();
 	}
 
 	/*
@@ -148,6 +150,7 @@ public class Model extends Observable implements IModel {
 		while(dynobj.hasNext()){
 				dynobj.next().animate();
 		}
+		this.doKill();
 	}
 	
 	public void setPress(char key){
@@ -169,5 +172,25 @@ public class Model extends Observable implements IModel {
 	}
 	public IElement getGate(){
 		return this.mapGate;
+	}
+
+	public void setForKill(IElement target) {
+		this.killTargets.add(target);
+		
+	}
+	
+	public void doKill(){
+		Iterator<IElement> targets = this.killTargets.iterator();
+		Iterator<IElement> list = this.getDynamicObject().iterator();
+		while(targets.hasNext()){
+			IElement target = targets.next();
+			while(list.hasNext()){
+				if(target.getClass() == list.next().getClass()){
+					this.map[((IMobile)target).getY()][((IMobile)target).getX()] = new White();
+					list.remove();
+				}
+			}
+			list = this.getDynamicObject().iterator();
+		}
 	}
 }

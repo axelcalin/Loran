@@ -4,6 +4,7 @@ import java.awt.Point;
 
 import contract.IMobile;
 import contract.IModel;
+import contract.Permeability;
 /**
  * The Class Lorann.
  *
@@ -16,7 +17,7 @@ public class Lorann extends Mobile
 	 */
 	private Point lastPosition;
 	//private static String[]
-	
+	private Fireball spell;
 	/*
 	 * Booleans that indicate which keys are currently pressed.
 	 */
@@ -37,6 +38,7 @@ public class Lorann extends Mobile
 		this.lastPosition.setLocation(j, i);
 		this.setX(j);
 		this.setY(i);
+		this.spell = null;
 		
 	}
 	
@@ -116,7 +118,13 @@ public class Lorann extends Mobile
 	 */
 	@Override
 	public void animate(){
+		if(spell != null){
+			this.spell.animate();
+		}
 		if(this.up && this.left){
+			if(shot && this.getModel().getElementxy(getX()+1, getY()+1).getPermeability() != Permeability.BLOCKING){
+				this.shoot(1,1);
+			}
 			this.moveUpLeft();
 		}
 		else if(this.up && this.right){
@@ -129,6 +137,9 @@ public class Lorann extends Mobile
 			this.moveDownRight();
 		}
 		else if(this.up){
+			if(shot && this.getModel().getElementxy(getX(), getY()+1).getPermeability() != Permeability.BLOCKING){
+				this.shoot(0, 1);
+			}
 			this.moveUp();
 		}
 		else if(this.down){
@@ -140,6 +151,14 @@ public class Lorann extends Mobile
 		else if(this.right){
 			this.moveRight();
 		}
+	}
+
+	private void shoot(int i, int j) {
+		if(spell == null){
+			this.spell = new Fireball(this.getX() + i,this.getY() + j, i, j, this);
+			spell.setModel(getModel());
+		}
+		
 	}
 
 	/* (non-Javadoc)

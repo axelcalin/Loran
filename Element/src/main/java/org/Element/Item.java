@@ -49,5 +49,6 @@ public abstract class Item extends DynamicElement {
 			//touch.addScore(this.getValue());
 			}
 		}
+		super.onTouch(touch);
 	}
 }
