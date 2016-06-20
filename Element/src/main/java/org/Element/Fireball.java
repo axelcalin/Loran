@@ -4,16 +4,19 @@ public class Fireball extends Mobile{
 	
 	int vx;
 	int vy;
+	private Lorann lorann;
 	
 	/**
 	 * @param y
 	 * @param x
 	 */
-	public Fireball (int y, int x,int vx, int vy)
+	public Fireball (int x, int y,int vx, int vy, Lorann lorann)
 	{
 		super( new Sprite("â”Œâ”�", "fireball_1.png"), x, y);
 		this.vx = vx;
 		this.vy = vy;
+		this.lorann = lorann;
+		this.lorann.getModel().getMap()[y][x] = this;
 	}
  	
 	/* (non-Javadoc)
@@ -45,5 +48,10 @@ public class Fireball extends Mobile{
 		if ( vx == -1 && vy == -1){
 			this.moveUpLeft();
 		}
+	}
+	
+	public void revert(){
+		this.vx -= 2*vx;
+		this.vy -= 2*vy;
 	}
 }

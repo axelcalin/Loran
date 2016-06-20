@@ -111,6 +111,9 @@ public class Controller implements IController {
 			case RIGHT:
 				this.model.setPress('r');
 				break;
+			case SPACE:
+				this.model.setPress('s');
+				break;
 			case RELEASEUP:
 				this.model.setUnpress('u');
 				break;

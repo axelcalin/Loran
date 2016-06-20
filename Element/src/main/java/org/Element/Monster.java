@@ -32,8 +32,15 @@ public abstract class Monster extends Mobile {
 	@Override
 	public void onTouch(IMobile touch){
 		if(touch instanceof Lorann){
-			System.out.println("Kill");
 			touch.kill();
 		}
+		if(touch instanceof Fireball){
+			this.kill();
+		}
+		super.onTouch(touch);
+	}
+	
+	public void kill(){
+		this.getModel().setForKill(this);
 	}
 }

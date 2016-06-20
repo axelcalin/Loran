@@ -201,10 +201,8 @@ public class Mobile extends DynamicElement implements IMobile
 	 * @see org.Element.Element#onTouch(org.Element.Mobile)
 	 */
 	@Override
-	public void onTouch(Mobile touch){
-		if(touch instanceof Lorann){
-			touch.kill();
-		}
+	public void onTouch(IMobile touch){
+		super.onTouch(touch);
 	}
 
 	/* (non-Javadoc)
