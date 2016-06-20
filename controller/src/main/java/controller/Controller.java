@@ -147,7 +147,7 @@ public class Controller implements IController {
 		while(game){
 			this.model.tick();
 			try {
-				Thread.sleep(150);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

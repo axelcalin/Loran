@@ -22,6 +22,7 @@ public class Lorann extends Mobile
 	private boolean down;
 	private boolean left;
 	private boolean right;
+	private boolean shot;
 	
 	/**
 	 * @param j
@@ -50,6 +51,9 @@ public class Lorann extends Mobile
 		if(key == 'r'){
 			this.right = true;
 		}
+		if(key == 's'){
+			this.shot = true;
+		}
 	}
 	
 	public void setUnpress(char key){
@@ -64,6 +68,9 @@ public class Lorann extends Mobile
 		}
 		if(key == 'r'){
 			this.right = false;
+		}
+		if(key == 's'){
+			this.shot = false;
 		}
 	}
 	
