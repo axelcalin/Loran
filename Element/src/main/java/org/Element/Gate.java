@@ -43,6 +43,7 @@ public class Gate extends Element
 			else{
 				touch.kill();
 			}
-			}
+		}
+		super.onTouch(touch);
 	}
 }
