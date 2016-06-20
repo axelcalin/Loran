@@ -111,6 +111,9 @@ public class Lorann extends Mobile
 		if(touch instanceof Monster){
 			this.kill();
 		}
+		if(touch instanceof Fireball){
+			touch.kill();
+		}
 	}
 	
 	/*
@@ -118,38 +121,56 @@ public class Lorann extends Mobile
 	 */
 	@Override
 	public void animate(){
-		if(spell != null){
-			this.spell.animate();
-		}
 		if(this.up && this.left){
+			this.moveUpLeft();
 			if(shot && this.getModel().getElementxy(getX()+1, getY()+1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(1,1);
 			}
-			this.moveUpLeft();
 		}
 		else if(this.up && this.right){
 			this.moveUpRight();
+			if(shot && this.getModel().getElementxy(getX()-1, getY()+1).getPermeability() != Permeability.BLOCKING){
+				this.shoot(-1,1);
+			}
 		}
 		else if(this.down && this.left){
 			this.moveDownLeft();
+			if(shot && this.getModel().getElementxy(getX()+1, getY()-1).getPermeability() != Permeability.BLOCKING){
+				this.shoot(1,-1);
+			}
 		}
 		else if(this.down && this.right){
 			this.moveDownRight();
+			if(shot && this.getModel().getElementxy(getX()-1, getY()-1).getPermeability() != Permeability.BLOCKING){
+				this.shoot(-1,-1);
+			}
 		}
 		else if(this.up){
+			this.moveUp();
 			if(shot && this.getModel().getElementxy(getX(), getY()+1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(0, 1);
 			}
-			this.moveUp();
 		}
 		else if(this.down){
 			this.moveDown();
+			if(shot && this.getModel().getElementxy(getX(), getY()-1).getPermeability() != Permeability.BLOCKING){
+				this.shoot(0,-1);
+			}
 		}
 		else if(this.left){
 			this.moveLeft();
+			if(shot && this.getModel().getElementxy(getX()+1, getY()).getPermeability() != Permeability.BLOCKING){
+				this.shoot(1,0);
+			}
 		}
 		else if(this.right){
 			this.moveRight();
+			if(shot && this.getModel().getElementxy(getX()-1, getY()).getPermeability() != Permeability.BLOCKING){
+				this.shoot(-1,0);
+			}
+		}
+		if(spell != null){
+			this.spell.animate();
 		}
 	}
 
@@ -158,7 +179,13 @@ public class Lorann extends Mobile
 			this.spell = new Fireball(this.getX() + i,this.getY() + j, i, j, this);
 			spell.setModel(getModel());
 		}
-		
+		else{
+			spell.changeDirection();
+		}
+	}
+	public void destroySpell(){
+		this.getModel().setForKill(spell);
+		this.spell = null;
 	}
 
 	/* (non-Javadoc)
