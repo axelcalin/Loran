@@ -16,7 +16,16 @@ public class Lorann extends Mobile
 	 * 
 	 */
 	private Point lastPosition;
-	//private static String[]
+	/*private static final Sprite[] = new Sprite[8]{	
+													new Sprite("","Lorann_u.png"); 
+													new Sprite("","Lorann_ur.png"); 
+													new Sprite("","Lorann_r.png"); 
+													new Sprite("","Lorann_br.png"); 
+													new Sprite("","Lorann_b.png"); 
+													new Sprite("","Lorann_bl");
+													new Sprite("","Lorann_l.png"); 
+													new Sprite("","Loran_ul.png");
+												};*/
 	private Fireball spell;
 	/*
 	 * Booleans that indicate which keys are currently pressed.
@@ -100,6 +109,7 @@ public class Lorann extends Mobile
 	 */
 	@Override
 	public void kill(){
+		this.getModel().setForKill(this);
 		this.getModel().setNextMap("me");
 	}
 	
@@ -121,6 +131,9 @@ public class Lorann extends Mobile
 	 */
 	@Override
 	public void animate(){
+		if(spell != null){
+			this.spell.animate();
+		}
 		if(this.up && this.left){
 			this.moveUpLeft();
 			if(shot && this.getModel().getElementxy(getX()+1, getY()+1).getPermeability() != Permeability.BLOCKING){
@@ -168,9 +181,6 @@ public class Lorann extends Mobile
 			if(shot && this.getModel().getElementxy(getX()-1, getY()).getPermeability() != Permeability.BLOCKING){
 				this.shoot(-1,0);
 			}
-		}
-		if(spell != null){
-			this.spell.animate();
 		}
 	}
 
