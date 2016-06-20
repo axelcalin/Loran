@@ -15,6 +15,7 @@ public class Lorann extends Mobile
 	 * 
 	 */
 	private Point lastPosition;
+	//private static String[]
 	
 	/*
 	 * Booleans that indicate which keys are currently pressed.
