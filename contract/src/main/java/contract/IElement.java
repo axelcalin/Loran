@@ -8,6 +8,6 @@ public interface IElement {
 	public ISprite getSprite();
 	public Permeability getPermeability();
 	public void animate();
-	public void setModel(IModel model);
+	public void setModel(IModelInternal model);
 	public void onTouch(IMobile touch);
 }

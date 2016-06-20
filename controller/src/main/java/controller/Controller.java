@@ -143,7 +143,6 @@ public class Controller implements IController {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			this.model.changed();
 		}
 		this.model.saveScore();
 		this.view.close();

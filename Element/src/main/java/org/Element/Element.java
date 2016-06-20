@@ -3,6 +3,7 @@ package org.Element;
 import contract.IElement;
 import contract.IMobile;
 import contract.IModel;
+import contract.IModelInternal;
 import contract.Permeability;
 /**
  * The Class Element.
@@ -12,7 +13,7 @@ import contract.Permeability;
 public class Element implements IElement{
 	private Permeability permeability;
 	private Sprite spriteFile;
-	private IModel masterModel;
+	private IModelInternal masterModel;
 	
 	/**
 	 * @param perm
@@ -52,14 +53,14 @@ public class Element implements IElement{
 	/* (non-Javadoc)
 	 * @see contract.IElement#setModel(contract.IModel)
 	 */
-	public void setModel(IModel thisModel){
+	public void setModel(IModelInternal thisModel){
 		this.masterModel = thisModel;
 	}
 	
 	/**
 	 * @return
 	 */
-	public IModel getModel(){
+	public IModelInternal getModel(){
 		return this.masterModel;
 	}
 

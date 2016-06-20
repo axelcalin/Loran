@@ -2,6 +2,7 @@ package org.Element;
 
 import contract.IMobile;
 import contract.IModel;
+import contract.IModelInternal;
 import contract.Permeability;
 /**
  * The Class GateClosed.
@@ -24,7 +25,7 @@ public class Gate extends Element
 	}
 	
 	@Override
-	public void setModel(IModel model){
+	public void setModel(IModelInternal model){
 		model.setGate(this);
 		super.setModel(model);
 	}
