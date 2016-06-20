@@ -11,6 +11,6 @@ public class onion extends Item
 	 */
 	public onion(int X, int Y)
 	{
-		super( new Sprite("â”Œâ”�", "onion.png"), 620, false, X, Y);
+		super( new Sprite("onion.png"), 620, false, X, Y);
 	}
 }

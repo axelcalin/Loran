@@ -85,12 +85,7 @@ public class View implements IView, Runnable {
 	}
 
 	
-	/**
-	 * @param map
-	 */
-	public void printMap(final String map) {
-		this.viewFrame.printMap(map);
-	}
+
 
 	
 	

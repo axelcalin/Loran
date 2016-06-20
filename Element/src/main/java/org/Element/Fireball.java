@@ -8,10 +8,10 @@ public class Fireball extends Mobile{
 	private int vy;
 	private Lorann lorann;
 	private static final Sprite[] IMAGES =  {	
-													new Sprite("","fireball_1.png"),
-													new Sprite("","fireball_2.png"), 
-													new Sprite("","fireball_3.png"), 
-													new Sprite("","fireball_4.png"), 
+													new Sprite("fireball_1.png"),
+													new Sprite("fireball_2.png"), 
+													new Sprite("fireball_3.png"), 
+													new Sprite("fireball_4.png"), 
 											   };
 	private int imageIndex;
 	
@@ -21,7 +21,7 @@ public class Fireball extends Mobile{
 	 */
 	public Fireball (int x, int y,int vx, int vy, Lorann lorann)
 	{
-		super( new Sprite("â”Œâ”�", "fireball_1.png"), x, y);
+		super( new Sprite("fireball_1.png"), x, y);
 		this.vx = vx;
 		this.vy = vy;
 		this.lorann = lorann;

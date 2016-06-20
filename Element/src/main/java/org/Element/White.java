@@ -13,6 +13,6 @@ public class White extends Element
 	 */
 	public White()
 	{
-		super( Permeability.PERMEABLE,new Sprite("â”Œâ”�", "black.png"));
+		super( Permeability.PERMEABLE,new Sprite("black.png"));
 	}
 }

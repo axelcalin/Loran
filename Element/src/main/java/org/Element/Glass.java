@@ -11,6 +11,6 @@ public class Glass extends Item
 	 */
 	public Glass(int X, int Y)
 	{
-		super( new Sprite("â”Œâ”�", "Glass.png"),650,false, X, Y);
+		super( new Sprite("Glass.png"),650,false, X, Y);
 	}
 }

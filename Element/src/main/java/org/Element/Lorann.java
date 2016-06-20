@@ -18,14 +18,14 @@ public class Lorann extends Mobile
 	 */
 	private Point lastPosition;
 	private static final Sprite[] IMAGES =  {	
-											new Sprite("","Lorann_u.png"),
-											new Sprite("","Lorann_ur.png"), 
-											new Sprite("","Lorann_r.png"), 
-											new Sprite("","Lorann_br.png"), 
-											new Sprite("","Lorann_b.png"), 
-											new Sprite("","Lorann_bl.png"),
-											new Sprite("","Lorann_l.png"),
-											new Sprite("","Lorann_ul.png"),
+											new Sprite("Lorann_u.png"),
+											new Sprite("Lorann_ur.png"), 
+											new Sprite("Lorann_r.png"), 
+											new Sprite("Lorann_br.png"), 
+											new Sprite("Lorann_b.png"), 
+											new Sprite("Lorann_bl.png"),
+											new Sprite("Lorann_l.png"),
+											new Sprite("Lorann_ul.png"),
 									   };
 	private Fireball spell;
 	private int imageIndex;
@@ -44,7 +44,7 @@ public class Lorann extends Mobile
 	 */
 	public Lorann(int j, int i)
 	{
-		super( new Sprite("â”Œâ”�", "Lorann_u.png"),j,i);
+		super( new Sprite("Lorann_u.png"),j,i);
 		this.lastPosition = new Point();
 		this.lastPosition.setLocation(j, i);
 		this.setX(j);

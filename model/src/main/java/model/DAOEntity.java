@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * @param <E>
  *          the element type
  */
-abstract class DAOEntity<E extends Entity> {
+abstract class DAOEntity {
 
 	/** The connection. */
 	private final Connection connection;
@@ -36,50 +36,4 @@ abstract class DAOEntity<E extends Entity> {
 	protected Connection getConnection() {
 		return this.connection;
 	}
-
-	/**
-	 * Creates the.
-	 *
-	 * @param entity
-	 *          the entity
-	 * @return true, if successful
-	 */
-	public abstract boolean create(E entity);
-
-	/**
-	 * Delete.
-	 *
-	 * @param entity
-	 *          the entity
-	 * @return true, if successful
-	 */
-	public abstract boolean delete(E entity);
-
-	/**
-	 * Update.
-	 *
-	 * @param entity
-	 *          the entity
-	 * @return true, if successful
-	 */
-	public abstract boolean update(E entity);
-
-	/**
-	 * Find.
-	 *
-	 * @param id
-	 *          the id
-	 * @return the e
-	 */
-	public abstract E find(int id);
-
-	/**
-	 * Find.
-	 *
-	 * @param key
-	 *          the key
-	 * @return the e
-	 */
-	public abstract E find(String key);
-
 }
