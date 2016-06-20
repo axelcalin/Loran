@@ -45,7 +45,7 @@ public abstract class Item extends DynamicElement {
 			System.out.println("Item");
 			this.getModel().getMap()[this.getY()][this.getX()] = new White();
 			if(!this.isLife){
-			//touch.addScore(this.getValue());
+			this.getModel().addScore(this.getValue());
 			}
 		}
 		super.onTouch(touch);

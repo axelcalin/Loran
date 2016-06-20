@@ -25,11 +25,11 @@ public class Model extends Observable implements IModel {
 	private List<IElement>			dynamicElements;
 	private List<IElement>			killTargets;
 	private Lorann					lorann;
-	private String 					curMap;
 	private String 					nextMap;
 	private boolean 				isLoad;
 	private IElement				mapGate;
 	private int 					score;
+	private boolean 				addLife;
 
 	/**
 	 * Instantiates a new model.
@@ -37,10 +37,10 @@ public class Model extends Observable implements IModel {
 	public Model() {
 		dynamicElements = new ArrayList<IElement>();
 		isLoad = false;
-		curMap = null;
 		nextMap = null;
 		killTargets = new ArrayList<IElement>();
 		score = 0;
+		addLife = false;
 	}
 
 	/*
@@ -73,7 +73,7 @@ public class Model extends Observable implements IModel {
 	public synchronized void loadMap() {
 		if(isLoad){
 			try {
-				this.curMap = this.nextMap;
+//				this.curMap = this.nextMap;
 				this.isLoad = false;
 				final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
 				this.setMap(daoHelloWorld.loadMap(nextMap, dynamicElements));

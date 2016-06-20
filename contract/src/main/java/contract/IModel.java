@@ -86,4 +86,6 @@ public interface IModel {
 	void setForKill(IElement target);
 
 	public void saveScore();
+	
+	public void addScore(int score);
 }
