@@ -194,7 +194,6 @@ public class Mobile extends DynamicElement implements IMobile
 	 * 
 	 */
 	public void kill(){
-		//TODO kill this object !
 	}
 	/* (non-Javadoc)
 	 * @see org.Element.Element#onTouch(org.Element.Mobile)

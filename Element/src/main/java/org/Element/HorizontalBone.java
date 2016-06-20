@@ -13,6 +13,6 @@ public class HorizontalBone extends Element
 	 */
 	public HorizontalBone()
 	{
-		super( Permeability.BLOCKING,new Sprite("â”Œâ”�", "horizontal_bone.png"));
+		super( Permeability.BLOCKING,new Sprite("horizontal_bone.png"));
 	}
 }

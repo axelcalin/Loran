@@ -79,36 +79,6 @@ class ViewPanel extends JPanel implements Observer {
 			i++;
 			j=0;	
 		}
-		
 	}			
-			
-	
-	/* (non-Javadoc)
-	 * @see javax.swing.JComponent#getWidth()
-	 */
-	public int getWidth() {
-	return this.width;
-	}
-	
-	/* (non-Javadoc)
-	 * @see javax.swing.JComponent#getHeight()
-	 */
-	public int getHeight() {
-	return this.height;
-	}
-	
-	/**
-	 * @param x
-	 * @param y
-	 * @return
-	 */
-	public org.Element.Element getElements(final int x, final int y) {
-		if ((x < 0) || (y < 0) || (x >= this.getWidth()) || (y >= this.getHeight())) {
-			return null;
-		}
-		return this.elements[x][y];
-	}
-
-
 }
 

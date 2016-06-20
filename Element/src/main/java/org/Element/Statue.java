@@ -10,6 +10,6 @@ public class Statue extends Item{
 		 * 
 		 */
 		public Statue(int X, int Y) {
-			super( new Sprite("â”Œâ”�", "statue.png"),2,true, X, Y);
+			super( new Sprite("statue.png"),2,true, X, Y);
 		}
 }

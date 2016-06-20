@@ -13,14 +13,14 @@ import contract.ISprite;
  *
  * @author florent, axel, luc, romain;
  */
-public class Sprite extends StringWriter implements ISprite {
+public class Sprite implements ISprite {
 	private Image image;
 
 	/**
 	 * @param c
 	 * @param image
 	 */
-	public Sprite(final String c, final String image) {
+	public Sprite(final String image) {
 		try {
 			this.image = ImageIO.read(new File("resources/" + image));
 		} catch (final IOException e) {
@@ -31,9 +31,7 @@ public class Sprite extends StringWriter implements ISprite {
 	/**
 	 * @param c
 	 */
-	public Sprite(final String c) {
-		this(c, "noimage.png");
-	}
+
 
 
 

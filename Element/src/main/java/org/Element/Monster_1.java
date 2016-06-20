@@ -1,5 +1,6 @@
 package org.Element;
 
+import java.util.Random;
 
 /**
  * The Class Monster_1.
@@ -13,10 +14,9 @@ public class Monster_1 extends Monster
 	 * @param x
 	 */
 	public Monster_1(int y, int x){
-	super( new Sprite("â”Œâ”�", "monster_1.png"), new Monster_1Behavior(), x, y);
+	super( new Sprite("monster_1.png"), x, y);
 	this.setX(x);
 	this.setY(y);
-	this.behavior.setMaster(this);
 	}
 	
 	/* (non-Javadoc)
@@ -24,6 +24,33 @@ public class Monster_1 extends Monster
 	 */
 	@Override
 	public void animate(){
-		this.behavior.animate();
+		Random r = new Random();
+		  int valeur = 1 + r.nextInt(8);
+		  switch(valeur){
+		   case 1:
+		   this.moveUpRight();
+		   break;
+		   case 2:
+		   this.moveUpLeft();
+		   break;
+		   case 3:
+		   this.moveDownLeft();
+		   break;
+		   case 4:
+		   this.moveDownRight();
+		   break;
+		   case 5:
+		   this.moveRight();
+		   break;
+		   case 6 :
+		   this.moveLeft();
+		   break;
+		   case 7 :
+		   this.moveUp();
+		   break;
+		   case 8 :
+		   this.moveDown();
+		   break;
+		  }
 	}
 }
