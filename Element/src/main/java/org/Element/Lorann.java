@@ -141,7 +141,7 @@ public class Lorann extends Mobile
 			this.moveRight();
 		}
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see org.Element.Mobile#moveUp()
 	 */

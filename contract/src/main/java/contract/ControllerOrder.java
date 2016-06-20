@@ -7,7 +7,6 @@ package contract;
  */
 public enum ControllerOrder
 {
-
 	Niveau1, 
 	Niveau2, 
 	Niveau3, 
@@ -27,6 +26,6 @@ public enum ControllerOrder
 	RELEASEUP, 
 	RELEASEDOWN, 
 	RELEASELEFT,
-	RELEASERIGHT;
-	
+	RELEASERIGHT,
+	RELEASESPACE;
 }

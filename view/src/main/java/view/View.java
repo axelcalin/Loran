@@ -74,6 +74,8 @@ public class View implements IView, Runnable {
 				return ControllerOrder.RELEASELEFT;
 			case KeyEvent.VK_RIGHT:
 				return ControllerOrder.RELEASERIGHT;
+			case KeyEvent.VK_SPACE:	
+				return ControllerOrder.RELEASESPACE;
 			default:
 				return ControllerOrder.NULL;
 			}
