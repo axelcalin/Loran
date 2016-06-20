@@ -8,8 +8,6 @@ import org.Element.Lorann;
 import org.Element.Stone;
 import org.Element.White;
 import org.Element.YellowMen;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import contract.IElement;

@@ -4,7 +4,6 @@ import java.awt.Point;
 import org.Element.Lorann;
 import org.Element.White;
 import org.Element.YellowMen;
-import org.junit.Before;
 import org.junit.Test;
 
 import contract.IElement;
