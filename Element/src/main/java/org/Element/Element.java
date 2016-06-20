@@ -30,6 +30,10 @@ public class Element implements IElement{
 		return this.spriteFile;
 	}
 	
+	protected void setSprite(Sprite sprite){
+		this.spriteFile = sprite;
+	}
+	
 	/* (non-Javadoc)
 	 * @see contract.IElement#getPermeability()
 	 */

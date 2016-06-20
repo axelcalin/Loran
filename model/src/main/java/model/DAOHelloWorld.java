@@ -12,7 +12,7 @@ import org.Element.Candlestick;
 import org.Element.Chesskull;
 import org.Element.CrystalBall;
 import org.Element.Element;
-import org.Element.GateClosed;
+import org.Element.Gate;
 import org.Element.GateOpen;
 import org.Element.Glass;
 import org.Element.HorizontalBone;
@@ -189,7 +189,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'D':
-					array[i][j] = new GateClosed();
+					array[i][j] = new Gate(false);
 					j++;
 					break;
 				case 'Z':
@@ -221,7 +221,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					j++;
 					break;
 				case 'E':
-					array[i][j] = new GateOpen();
+					array[i][j] = new Gate(true);
 					j++;
 					break;
 				case '\n':

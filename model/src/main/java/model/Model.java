@@ -27,6 +27,7 @@ public class Model extends Observable implements IModel {
 	private String 					curMap;
 	private String 					nextMap;
 	private boolean 				isLoad;
+	private IElement				mapGate;
 
 	/**
 	 * Instantiates a new model.
@@ -161,5 +162,12 @@ public class Model extends Observable implements IModel {
 		this.nextMap = map;
 		this.isLoad = true;
 		
+	}
+	
+	public void setGate(IElement gate){
+		this.mapGate = gate;
+	}
+	public IElement getGate(){
+		return this.mapGate;
 	}
 }

@@ -78,4 +78,8 @@ public interface IModel {
 	public void setUnpress(char key);
 	
 	public void setNextMap(String map);
+	
+	public void setGate(IElement gate);
+	
+	public IElement getGate();
 }
