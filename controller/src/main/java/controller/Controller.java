@@ -135,6 +135,8 @@ public class Controller implements IController {
 			case RELEASERIGHT:
 				this.model.setUnpress('r');
 				break;
+			case RELEASESPACE:
+				this.model.setUnpress('s');
 			default:
 				break;
 		}
