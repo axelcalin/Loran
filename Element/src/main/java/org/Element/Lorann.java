@@ -16,17 +16,18 @@ public class Lorann extends Mobile
 	 * 
 	 */
 	private Point lastPosition;
-	/*private static final Sprite[] = new Sprite[8]{	
-													new Sprite("","Lorann_u.png"); 
-													new Sprite("","Lorann_ur.png"); 
-													new Sprite("","Lorann_r.png"); 
-													new Sprite("","Lorann_br.png"); 
-													new Sprite("","Lorann_b.png"); 
-													new Sprite("","Lorann_bl");
-													new Sprite("","Lorann_l.png"); 
-													new Sprite("","Loran_ul.png");
-												};*/
+	private static final Sprite[] IMAGES =  {	
+											new Sprite("","Lorann_u.png"),
+											new Sprite("","Lorann_ur.png"), 
+											new Sprite("","Lorann_r.png"), 
+											new Sprite("","Lorann_br.png"), 
+											new Sprite("","Lorann_b.png"), 
+											new Sprite("","Lorann_bl.png"),
+											new Sprite("","Lorann_l.png"),
+											new Sprite("","Lorann_ul.png"),
+									   };
 	private Fireball spell;
+	private int imageIndex;
 	/*
 	 * Booleans that indicate which keys are currently pressed.
 	 */
@@ -48,7 +49,7 @@ public class Lorann extends Mobile
 		this.setX(j);
 		this.setY(i);
 		this.spell = null;
-		
+		this.imageIndex = 0;
 	}
 	
 	public void setPress(char key){
@@ -131,56 +132,73 @@ public class Lorann extends Mobile
 	 */
 	@Override
 	public void animate(){
+		this.switchImage();
 		if(spell != null){
 			this.spell.animate();
 		}
 		if(this.up && this.left){
+			this.setSprite(Lorann.IMAGES[7]);
 			this.moveUpLeft();
 			if(shot && this.getModel().getElementxy(getX()+1, getY()+1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(1,1);
 			}
 		}
 		else if(this.up && this.right){
+			this.setSprite(Lorann.IMAGES[1]);
 			this.moveUpRight();
 			if(shot && this.getModel().getElementxy(getX()-1, getY()+1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(-1,1);
 			}
 		}
 		else if(this.down && this.left){
+			this.setSprite(Lorann.IMAGES[5]);
 			this.moveDownLeft();
 			if(shot && this.getModel().getElementxy(getX()+1, getY()-1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(1,-1);
 			}
 		}
 		else if(this.down && this.right){
+			this.setSprite(Lorann.IMAGES[3]);
 			this.moveDownRight();
 			if(shot && this.getModel().getElementxy(getX()-1, getY()-1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(-1,-1);
 			}
 		}
 		else if(this.up){
+			this.setSprite(Lorann.IMAGES[0]);
 			this.moveUp();
 			if(shot && this.getModel().getElementxy(getX(), getY()+1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(0, 1);
 			}
 		}
 		else if(this.down){
+			this.setSprite(Lorann.IMAGES[4]);
 			this.moveDown();
 			if(shot && this.getModel().getElementxy(getX(), getY()-1).getPermeability() != Permeability.BLOCKING){
 				this.shoot(0,-1);
 			}
 		}
 		else if(this.left){
+			this.setSprite(Lorann.IMAGES[6]);
 			this.moveLeft();
 			if(shot && this.getModel().getElementxy(getX()+1, getY()).getPermeability() != Permeability.BLOCKING){
 				this.shoot(1,0);
 			}
 		}
 		else if(this.right){
+			this.setSprite(Lorann.IMAGES[2]);
 			this.moveRight();
 			if(shot && this.getModel().getElementxy(getX()-1, getY()).getPermeability() != Permeability.BLOCKING){
 				this.shoot(-1,0);
 			}
+		}
+	}
+
+	private void switchImage() {
+		this.setSprite(Lorann.IMAGES[this.imageIndex]);
+		this.imageIndex++;
+		if(this.imageIndex > 7){
+			this.imageIndex = 0;
 		}
 	}
 

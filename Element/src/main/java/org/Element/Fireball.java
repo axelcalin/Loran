@@ -4,9 +4,16 @@ import contract.IMobile;
 
 public class Fireball extends Mobile{
 	
-	int vx;
-	int vy;
+	private int vx;
+	private int vy;
 	private Lorann lorann;
+	private static final Sprite[] IMAGES =  {	
+													new Sprite("","fireball_1.png"),
+													new Sprite("","fireball_2.png"), 
+													new Sprite("","fireball_3.png"), 
+													new Sprite("","fireball_4.png"), 
+											   };
+	private int imageIndex;
 	
 	/**
 	 * @param y
@@ -19,6 +26,7 @@ public class Fireball extends Mobile{
 		this.vy = vy;
 		this.lorann = lorann;
 		this.lorann.getModel().getMap()[y][x] = this;
+		this.imageIndex = 0;
 	}
  	
 	/* (non-Javadoc)
@@ -26,6 +34,7 @@ public class Fireball extends Mobile{
 	 */
 	@Override
 	public void animate(){
+		this.switchImage();
 		if ( vx == 1 && vy == 0){
 			this.moveRight();
 		}
@@ -49,6 +58,13 @@ public class Fireball extends Mobile{
 		}
 		if ( vx == -1 && vy == -1){
 			this.moveUpLeft();
+		}
+	}
+	private void switchImage() {
+		this.setSprite(Fireball.IMAGES[this.imageIndex]);
+		this.imageIndex++;
+		if(this.imageIndex > 3){
+			this.imageIndex = 0;
 		}
 	}
 	
