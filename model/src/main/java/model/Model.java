@@ -74,7 +74,7 @@ public class Model extends Observable implements IModel, IModelInternal {
 	 * @param list
 	 * 			The map you wish to set as current.
 	 */
-	private synchronized void setMap(final IElement[][] list) {
+	public synchronized void setMap(final IElement[][] list) {
 		this.map = list;
 		setupElements();
 		this.setChanged();
