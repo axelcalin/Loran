@@ -34,6 +34,10 @@ public class Mobile extends DynamicElement implements IMobile
 			this.position.x = x;
 			//TODO prevent viewer
 		}
+		else
+		{
+			this.position.x = 1;
+		}
 	}
 
 	/**
@@ -45,6 +49,10 @@ public class Mobile extends DynamicElement implements IMobile
 		{
 			this.position.y = y;
 			//TODO prevent viewer
+		}
+		else
+		{
+			this.position.x = 1;
 		}
 	}
 	

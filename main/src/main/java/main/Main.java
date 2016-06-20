@@ -7,7 +7,7 @@ import view.View;
 /**
  * The Class Main.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public abstract class Main {
 
