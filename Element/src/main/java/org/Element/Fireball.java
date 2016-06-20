@@ -2,6 +2,11 @@ package org.Element;
 
 import contract.IMobile;
 
+/**
+ * The Fireball class, also known as the multicoloured spell.
+ * @author Florent, Axel, Luc, Romain
+ *
+ */
 public class Fireball extends Mobile{
 	
 	/**

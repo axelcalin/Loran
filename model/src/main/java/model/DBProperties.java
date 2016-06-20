@@ -5,9 +5,9 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * The Class DBProperties.
+ * The DBProperties class.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 class DBProperties extends Properties {
 
@@ -17,7 +17,7 @@ class DBProperties extends Properties {
 	/** The Constant PROPERTIES_FILE_NAME. */
 	private final static String PROPERTIES_FILE_NAME = "model.properties";
 
-	/** The url. */
+	/** The database url. */
 	private String url = "";
 
 	/** The login. */

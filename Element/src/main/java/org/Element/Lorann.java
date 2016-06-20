@@ -6,16 +6,18 @@ import contract.IMobile;
 import contract.IModelInternal;
 import contract.Permeability;
 /**
- * The Class Lorann.
+ * The Lorann class.
+ * Which is our main character actually.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class Lorann extends Mobile
 {
-	/**
-	 * 
-	 */
 	private Point lastPosition;
+	
+	/**
+	 * A collection of all sprites used by Lorann, and the index of the currently used sprite.
+	 */
 	private static final Sprite[] IMAGES =  {	
 											new Sprite("Lorann_u.png"),
 											new Sprite("Lorann_ur.png"), 
@@ -26,9 +28,14 @@ public class Lorann extends Mobile
 											new Sprite("Lorann_l.png"),
 											new Sprite("Lorann_ul.png"),
 									   };
-	private Fireball spell;
 	private int imageIndex;
-	/*
+	
+	/**
+	 * Lorann's spell's instance.
+	 */
+	private Fireball spell;
+	
+	/**
 	 * Booleans that indicate which keys are currently pressed.
 	 */
 	private boolean up;
@@ -38,20 +45,27 @@ public class Lorann extends Mobile
 	private boolean shot;
 	
 	/**
-	 * @param j
-	 * @param i
+	 * Creates Lorann at set location.
+	 * @param x
+	 * 			The initial position on the x axis.
+	 * @param y
+	 * 			The initial position on the y axis.
 	 */
-	public Lorann(int j, int i)
+	public Lorann(int x, int y)
 	{
-		super( new Sprite("Lorann_u.png"),j,i);
+		super( new Sprite("Lorann_u.png"),x,y);
 		this.lastPosition = new Point();
-		this.lastPosition.setLocation(j, i);
-		this.setX(j);
-		this.setY(i);
+		this.lastPosition.setLocation(x, y);
+		this.setX(x);
+		this.setY(y);
 		this.spell = null;
 		this.imageIndex = 0;
 	}
 	
+	/**
+	 * @param key
+	 * 			The key corresponding to the currently pressed... key.
+	 */
 	public void setPress(char key){
 		if(key == 'u'){
 			this.up = true;
@@ -105,8 +119,9 @@ public class Lorann extends Mobile
 		thisModel.setLorann(this);
 	}
 	
-	/*
-	 * 
+	
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#kill()
 	 */
 	@Override
 	public void kill(){
@@ -116,6 +131,9 @@ public class Lorann extends Mobile
 	}
 
 	
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#onTouch(contract.IMobile)
+	 */
 	public void onTouch(IMobile touch){
 		if(touch instanceof Monster){
 			this.kill();
@@ -125,8 +143,8 @@ public class Lorann extends Mobile
 		}
 	}
 	
-	/*
-	 * 
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#animate()
 	 */
 	@Override
 	public void animate(){
@@ -192,6 +210,9 @@ public class Lorann extends Mobile
 		}
 	}
 
+	/**
+	 * Cycles through Lorann's sprites.
+	 */
 	private void switchImage() {
 		this.setSprite(Lorann.IMAGES[this.imageIndex]);
 		this.imageIndex++;
@@ -200,9 +221,16 @@ public class Lorann extends Mobile
 		}
 	}
 
-	private void shoot(int i, int j) {
+	/**
+	 * The function that creates, or changes the direction of Lorann's spell.
+	 * @param x
+	 * 			The spell's initial position on the x axis.
+	 * @param y
+	 * 			The spell's initial position on the y axis.
+	 */
+	private void shoot(int x, int y) {
 		if(spell == null){
-			this.spell = new Fireball(this.getX() + i,this.getY() + j, i, j, this);
+			this.spell = new Fireball(this.getX() + x,this.getY() + y, x, y, this);
 			spell.setModel(getModel());
 		}
 		else{
@@ -210,6 +238,9 @@ public class Lorann extends Mobile
 		}
 	}
 	
+	/**
+	 * Destroys the current instance of the spell.
+	 */
 	public void destroySpell(){
 		if(this.spell != null){
 			this.getModel().setForKill(spell);

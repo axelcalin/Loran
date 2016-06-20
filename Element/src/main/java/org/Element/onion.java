@@ -1,13 +1,18 @@
 package org.Element;
 /**
- * The Class onion.
+ * The Onion class.
+ * That... isn't an onion.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class onion extends Item
 {
 	/**
-	 * 
+	 * Creates an... onion ? With a score value of 620.
+	 * @param X
+	 * 			The onion's position on the x axis.
+	 * @param Y
+	 * 			The onion's position on the y axis
 	 */
 	public onion(int X, int Y)
 	{

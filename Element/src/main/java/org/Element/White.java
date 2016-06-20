@@ -2,15 +2,13 @@ package org.Element;
 
 import contract.Permeability;
 /**
- * The Class White.
+ * The White class. It is actually black.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class White extends Element
 {
-	/**
-	 * 
-	 */
+	
 	public White()
 	{
 		super( Permeability.PERMEABLE,new Sprite("black.png"));

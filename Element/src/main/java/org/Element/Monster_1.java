@@ -3,15 +3,19 @@ package org.Element;
 import java.util.Random;
 
 /**
- * The Class Monster_1.
+ * The Monster_1 class.
+ * Because we couldn't find a funny name for this one.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class Monster_1 extends Monster
 {
 	/**
+	 * Creates a Monster_1 type monster at set location.
 	 * @param y
+	 * 			The monster's initial position on the y axis.
 	 * @param x
+	 * 			The monster's initial position on the x axis.
 	 */
 	public Monster_1(int y, int x){
 	super( new Sprite("monster_1.png"), x, y);

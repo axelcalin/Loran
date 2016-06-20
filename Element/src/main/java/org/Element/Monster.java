@@ -3,17 +3,12 @@ package org.Element;
 import contract.IMobile;
 
 /**
- * The Class Monster.
+ * The Monster class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public abstract class Monster extends Mobile {
 
-	
-	/**
-	 * @param sprite
-	 * @param behavior
-	 */
 	public Monster(Sprite sprite, int X, int Y) {
 		super(sprite, X, Y);
 	}
@@ -24,8 +19,8 @@ public abstract class Monster extends Mobile {
 	public void animate(){
 	}
 	
-	/*
-	 * 
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#onTouch(contract.IMobile)
 	 */
 	@Override
 	public void onTouch(IMobile touch){
@@ -39,6 +34,9 @@ public abstract class Monster extends Mobile {
 		super.onTouch(touch);
 	}
 	
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#kill()
+	 */
 	public void kill(){
 		this.getModel().setForKill(this);
 	}

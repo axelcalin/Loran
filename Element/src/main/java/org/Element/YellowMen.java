@@ -3,15 +3,19 @@ package org.Element;
 import java.util.Random;
 
 /**
- * The Class Yellowmen.
+ * The Yellowmen class.
+ * It is actually a single man. And it's not even a man.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class YellowMen extends Monster
 {
 	/**
+	 * Creates a Yellowmen-class monster at set location.
 	 * @param y
+	 * 			The monster's initial position on the y axis.
 	 * @param x
+	 * 			The monster's initial position on the x axis.
 	 */
 	public YellowMen(int y, int x)
 	{

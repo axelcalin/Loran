@@ -9,9 +9,9 @@ public class Candlestick extends Item{
 	/**
 	 * Creates a candlestick with a score value of 620.
 	 * @param X
-	 * 			The bag's position on the x axis.
+	 * 			The candlestick's position on the x axis.
 	 * @param Y
-	 * 			The bag's position on the y axis
+	 * 			The candlestick's position on the y axis
 	 */
 	public Candlestick(int X, int Y) {
 		super( new Sprite("candlestick.png"), 620, false, X, Y);

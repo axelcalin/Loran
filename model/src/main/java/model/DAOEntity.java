@@ -4,23 +4,22 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * The Class DAOEntity.
+ * The DAOEntity class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  *
- * @param <E>
- *          the element type
+ * 
  */
 abstract class DAOEntity {
 
-	/** The connection. */
+	/** The databse connection. */
 	private final Connection connection;
 
 	/**
 	 * Instantiates a new DAO entity.
 	 *
 	 * @param connection
-	 *          the connection
+	 *          the database connection
 	 * @throws SQLException
 	 *           the SQL exception
 	 */
@@ -31,7 +30,7 @@ abstract class DAOEntity {
 	/**
 	 * Gets the connection.
 	 *
-	 * @return the connection
+	 * @return the database connection
 	 */
 	protected Connection getConnection() {
 		return this.connection;

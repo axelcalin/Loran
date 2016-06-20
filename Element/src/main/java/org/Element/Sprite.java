@@ -7,16 +7,16 @@ import javax.imageio.ImageIO;
 
 import contract.ISprite;
 /**
- * The Class Sprite.
+ * The Sprite class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class Sprite implements ISprite {
 	private Image image;
 
 	/**
-	 * @param c
 	 * @param image
+	 * 			This sprite's image.
 	 */
 	public Sprite(final String image) {
 		try {
@@ -25,13 +25,6 @@ public class Sprite implements ISprite {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * @param c
-	 */
-
-
-
 
 	/* (non-Javadoc)
 	 * @see contract.ISprite#getImage()

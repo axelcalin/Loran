@@ -9,7 +9,7 @@ import contract.Permeability;
  *
  * @author Florent, Axel, Luc, Romain;
  */
-public class Element implements IElement{
+public abstract class Element implements IElement{
 	private Permeability permeability;
 	private Sprite spriteFile;
 	private IModelInternal masterModel;

@@ -4,18 +4,13 @@ package org.Element;
 import contract.IMobile;
 import contract.Permeability;
 /**
- * The Class Mobile.
+ * The Mobile class.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 
-public class Mobile extends DynamicElement implements IMobile
+public abstract class Mobile extends DynamicElement implements IMobile
 {
-
-	
-	/**
-	 * @param sprite
-	 */
 	public Mobile(Sprite sprite, int X, int Y)
 	{
 		super(Permeability.BLOCKING,sprite, X, Y);
@@ -25,6 +20,7 @@ public class Mobile extends DynamicElement implements IMobile
 	
 	/**
 	 * @param x
+	 * 			The new position on the x axis.
 	 */
 	protected void setX(final int x)
 	{
@@ -40,6 +36,7 @@ public class Mobile extends DynamicElement implements IMobile
 
 	/**
 	 * @param y
+	 * 			The new position on the y axis.
 	 */
 	protected void setY(final int y)
 	{
@@ -54,9 +51,12 @@ public class Mobile extends DynamicElement implements IMobile
 	}
 	
 	/**
+	 * Checks if the target position is a valid move spot.
 	 * @param x
+	 * 			The target position's x axis.
 	 * @param y
-	 * @return
+	 * 			The target position's y axis.
+	 * @return A boolean indicating if movement is possible.
 	 */
 	private  boolean isMovePossible(int x, int y)
 	{
@@ -188,11 +188,12 @@ public class Mobile extends DynamicElement implements IMobile
 		}
 	}
 	
-	/**
-	 * 
+	/* (non-Javadoc)
+	 * @see contract.IMobile#kill()
 	 */
 	public void kill(){
 	}
+	
 	/* (non-Javadoc)
 	 * @see org.Element.Element#onTouch(org.Element.Mobile)
 	 */

@@ -9,21 +9,22 @@ import contract.IController;
 import contract.IModel;
 import contract.IView;
 
-/**The class View.
+/**The View class
  * 
- *@author florent , axel , luc , romain
+ *@author Florent , Axel , Luc , Romain
  */
 public class View implements IView, Runnable {
 
 	
 	/**
-	 * 
+	 * The frame containing the display.
 	 */
 	private final ViewFrame viewFrame;
 
 	
 	/**
 	 * @param model
+	 * 			The model that this view will display.
 	 */
 	public View(final IModel model) {
 		this.viewFrame = new ViewFrame(model);
@@ -102,7 +103,6 @@ public class View implements IView, Runnable {
 	 * @param controller
 	 *          the new controller
 	 */
-	
 	public void setController(final IController controller) {
 		this.viewFrame.setController(controller);
 	}

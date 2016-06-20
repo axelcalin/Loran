@@ -8,7 +8,7 @@ import contract.Permeability;
  *
  * @author Florent, Axel, Luc, Romain;
  */
-public class DynamicElement extends Element {
+public abstract class DynamicElement extends Element {
 	protected Point position;
 
 	/**

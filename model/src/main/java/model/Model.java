@@ -15,20 +15,34 @@ import contract.IModel;
 import contract.IModelInternal;
 
 /**
- * The Class Model.
+ * The Model class.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
+ */
+/**
+ * @author Florent
+ *
  */
 public class Model extends Observable implements IModel, IModelInternal {
 
-	/** The message. */
+	/** The current level's map. */
 	private IElement[][]			map;
+	
+	/** The list of the current map's dynamic elements. */
 	private List<IElement>			dynamicElements;
+	
+	/** The list of "to be eliminated on next tick" entities. */
 	private List<IElement>			killTargets;
+	
+	/** Critically important entities on the map, the hero and the exit door */
 	private Lorann					lorann;
+	private IElement				mapGate;
+	
+	/** The map-loading variables, nextMap defines which, isLoad tells the game to load it. */
 	private String 					nextMap;
 	private boolean 				isLoad;
-	private IElement				mapGate;
+	
+	/** The game's score, and the boolean that sets whether a life should be added after ending the level or not*/
 	private int 					score;
 	private boolean 				addLife;
 
@@ -53,11 +67,12 @@ public class Model extends Observable implements IModel, IModelInternal {
 		return this.map;
 	}
 
+
 	/**
-	 * Sets the message.
-	 *
-	 * @param message
-	 *          the new message
+	 * Sets the map
+	 * 
+	 * @param list
+	 * 			The map you wish to set as current.
 	 */
 	private synchronized void setMap(final IElement[][] list) {
 		this.map = list;
@@ -66,10 +81,10 @@ public class Model extends Observable implements IModel, IModelInternal {
 		this.notifyObservers();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IModel#getMessage(java.lang.String)
+
+	/**
+	 * Loads the map defined by nextMap, if isLoad is set to true.
+	 * Also adds two lives when going back to the "menu" and addLife is true.
 	 */
 	public synchronized void loadMap() {
 		if(isLoad){
@@ -102,22 +117,24 @@ public class Model extends Observable implements IModel, IModelInternal {
 		return this;
 	}
 
-	/* (non-Javadoc)
-	 * @see contract.IModel#getDynamicObject()
+	/**
+	 * @return	The list of this map's dynamic objects.
 	 */
 	public List<IElement> getDynamicObject() {
 		return this.dynamicElements;
 	}
 
+
 	/* (non-Javadoc)
-	 * @see contract.IModel#getElementxy(int, int)
+	 * @see contract.IModelInternal#getElementxy(int, int)
 	 */
 	public IElement getElementxy(int x, int y) {
 			return map[y][x];
 	}
 	
+
 	/* (non-Javadoc)
-	 * @see contract.IModel#moveElement(int, int, int, int)
+	 * @see contract.IModelInternal#moveElement(int, int, int, int)
 	 */
 	public void moveElement(int x, int y, int targetx, int targety){
 		this.map[targety][targetx] = this.map[y][x];
@@ -125,7 +142,7 @@ public class Model extends Observable implements IModel, IModelInternal {
 	}
 	
 	/**
-	 * 
+	 * Calls all elements to set this model as the one they're attached to.
 	 */
 	public void setupElements(){
 		for(IElement[] etab : this.map){
@@ -135,27 +152,34 @@ public class Model extends Observable implements IModel, IModelInternal {
 		}
 	}
 	
-	/* (non-Javadoc)
-	 * @see contract.IModel#changed()
+
+	/**
+	 * Sets the model as changed, once per tick.
 	 */
 	public void changed(){
 		this.setChanged();
 		this.notifyObservers();
 	}
 	
+
 	/* (non-Javadoc)
-	 * @see contract.IModel#getLorann()
+	 * @see contract.IModelInternal#getLorann()
 	 */
 	public IMobile getLorann(){
 		return this.lorann;
 	}
+
+	
 	/* (non-Javadoc)
-	 * @see contract.IModel#setLorann(contract.IMobile)
+	 * @see contract.IModelInternal#setLorann(contract.IMobile)
 	 */
 	public void setLorann(IMobile lorann){
 		this.lorann = (Lorann) lorann;
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#tick()
+	 */
 	public void tick(){
 		this.loadMap();
 		Iterator<IElement> dynobj = dynamicElements.iterator();
@@ -166,31 +190,53 @@ public class Model extends Observable implements IModel, IModelInternal {
 		this.changed();
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#setPress(char)
+	 */
 	public void setPress(char key){
 		this.lorann.setPress(key);
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#setUnpress(char)
+	 */
 	public void setUnpress(char key){
 		this.lorann.setUnpress(key);
 	}
 
+	/* (non-Javadoc)
+	 * @see contract.IModel#setNextMap(java.lang.String)
+	 */
 	public void setNextMap(String map) {
 		this.nextMap = map;
 		this.isLoad = true;
 		
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModelInternal#setGate(contract.IElement)
+	 */
 	public void setGate(IElement gate){
 		this.mapGate = gate;
 	}
+	
+	/* (non-Javadoc)
+	 * @see contract.IModelInternal#getGate()
+	 */
 	public IElement getGate(){
 		return this.mapGate;
 	}
 
+	/* (non-Javadoc)
+	 * @see contract.IModelInternal#setForKill(contract.IElement)
+	 */
 	public void setForKill(IElement target) {
 		this.killTargets.add(target);
 	}
 	
+	/**
+	 * Removes the objects stored in targets from the map.
+	 */
 	public void doKill(){
 		Iterator<IElement> targets = this.killTargets.iterator();
 		Iterator<IElement> list = this.getDynamicObject().iterator();
@@ -207,10 +253,16 @@ public class Model extends Observable implements IModel, IModelInternal {
 		this.killTargets.clear();
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModelInternal#addScore(int)
+	 */
 	public void addScore(int score){
 		this.score += score;
 	}
 	
+	/* (non-Javadoc)
+	 * @see contract.IModel#saveScore()
+	 */
 	public void saveScore(){
 		DAOModel daoHelloWorld;
 		try {
@@ -222,6 +274,9 @@ public class Model extends Observable implements IModel, IModelInternal {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see contract.IModelInternal#removeLife()
+	 */
 	public void removeLife() {
 		DAOLife daoLife;
 		try{
@@ -237,6 +292,9 @@ public class Model extends Observable implements IModel, IModelInternal {
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see contract.IModelInternal#setAddLife()
+	 */
 	public void setAddLife() {
 		this.addLife = true;
 	}

@@ -30,17 +30,17 @@ import contract.IElement;
 
 
 /**
- * The Class DAOHelloWorld.
+ * The DAOModel class. Although the filename says otherwise.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 class DAOModel extends DAOEntity {
 
 	/**
-	 * Instantiates a new DAO hello world.
+	 * Instantiates a new DAO Model
 	 *
 	 * @param connection
-	 *          the connection
+	 *          the database connection
 	 * @throws SQLException
 	 *           the SQL exception
 	 */
@@ -48,6 +48,12 @@ class DAOModel extends DAOEntity {
 		super(connection);
 	}
 	
+	/**
+	 * Saves the given score in the database.
+	 * 
+	 * @param scoreToSave
+	 * 			The score to save.
+	 */
 	public void saveScoreToDB(int scoreToSave){
 		try{
 			final String sql ="{call High_Scores(?,?)}";
@@ -59,10 +65,15 @@ class DAOModel extends DAOEntity {
 			e.printStackTrace();
 		}
 	}
+
+
 	/**
+	 * Loads the chosen map.
 	 * @param map
+	 * 			The chosen map.
 	 * @param dynamicElements
-	 * @return
+	 * 			The map's dynamic elements.
+	 * @return The loaded map.
 	 */
 	public synchronized IElement[][] loadMap(final String map, List<IElement> dynamicElements){
 		IElement[][] array = new Element[12][20];

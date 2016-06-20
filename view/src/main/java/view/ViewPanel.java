@@ -8,14 +8,15 @@ import javax.swing.JPanel;
 import contract.IElement;
 
 /**
- * The Class ViewPanel.
+ * The Viewpanel class
  *
- * @author florent , axel , luc , romain
+ * @author Florent , Axel , Luc , Romain
  */
 class ViewPanel extends JPanel implements Observer {
 
 	/** The view frame. */
 	private ViewFrame					viewFrame;
+	
 	private int width;
 	private int height;
 	/** The Constant serialVersionUID. */

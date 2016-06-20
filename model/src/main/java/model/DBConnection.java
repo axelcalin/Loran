@@ -5,15 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * The Class DBConnection.
+ * The DBConnection class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 final class DBConnection {
-	/** The instance. */
+	/** This object's single instance. */
 	private static DBConnection	INSTANCE	= null;
 
-	/** The connection. */
+	/** The database connection. */
 	private Connection					connection;
 
 	/**
@@ -36,7 +36,7 @@ final class DBConnection {
 	}
 
 	/**
-	 * Open.
+	 * Open the DB connection.
 	 *
 	 * @return the boolean
 	 */

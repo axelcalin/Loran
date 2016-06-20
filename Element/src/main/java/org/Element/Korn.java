@@ -3,15 +3,18 @@ package org.Element;
 import java.util.Random;
 
 /**
- * The Class Korn.
+ * The Korn class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class Korn extends Monster
 {
 	/**
+	 * Creates a Korn-type monster at set location
 	 * @param y
+	 * 			The initial position on the y axis.
 	 * @param x
+	 * 			The initial position on the x axis.
 	 */
 	public Korn(int y, int x)
 	{
