@@ -35,32 +35,48 @@ public class View implements IView, Runnable {
 	 * @param keyCode
 	 * @return the order of the KeyEvent
 	 */
-	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
-		switch (keyCode) {
-			case KeyEvent.VK_A:
-				return ControllerOrder.Niveau1;	
-			case KeyEvent.VK_Z:
-				return ControllerOrder.Niveau2;
-			case KeyEvent.VK_E:
-				return ControllerOrder.Niveau3;
-			case KeyEvent.VK_R:
-				return ControllerOrder.Niveau4;
-			case KeyEvent.VK_T:
-				return ControllerOrder.Niveau5;
-			case KeyEvent.VK_M:
-				return ControllerOrder.Menu;
-			case KeyEvent.VK_ESCAPE:
-				return ControllerOrder.EXIT;
+	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode, boolean release) {
+		if(!release){
+			switch (keyCode) {
+				case KeyEvent.VK_A:
+					return ControllerOrder.Niveau1;	
+				case KeyEvent.VK_Z:
+					return ControllerOrder.Niveau2;
+				case KeyEvent.VK_E:
+					return ControllerOrder.Niveau3;
+				case KeyEvent.VK_R:
+					return ControllerOrder.Niveau4;
+				case KeyEvent.VK_T:
+					return ControllerOrder.Niveau5;
+				case KeyEvent.VK_M:
+					return ControllerOrder.Menu;
+				case KeyEvent.VK_ESCAPE:
+					return ControllerOrder.EXIT;
+				case KeyEvent.VK_UP:
+					return ControllerOrder.UP;
+				case KeyEvent.VK_DOWN:
+					return ControllerOrder.DOWN;
+				case KeyEvent.VK_LEFT:
+					return ControllerOrder.LEFT;
+				case KeyEvent.VK_RIGHT:
+					return ControllerOrder.RIGHT;
+				default:
+					return ControllerOrder.NULL;
+			}
+		}
+		else{
+			switch (keyCode) {
 			case KeyEvent.VK_UP:
-				return ControllerOrder.UP;
+				return ControllerOrder.RELEASEUP;
 			case KeyEvent.VK_DOWN:
-				return ControllerOrder.DOWN;
+				return ControllerOrder.RELEASEDOWN;
 			case KeyEvent.VK_LEFT:
-				return ControllerOrder.LEFT;
+				return ControllerOrder.RELEASELEFT;
 			case KeyEvent.VK_RIGHT:
-				return ControllerOrder.RIGHT;
+				return ControllerOrder.RELEASERIGHT;
 			default:
 				return ControllerOrder.NULL;
+			}
 		}
 	}
 

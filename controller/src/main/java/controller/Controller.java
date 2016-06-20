@@ -101,18 +101,18 @@ public class Controller implements IController {
 				this.view.close();
 				break;
 			case UP:
-				this.model.getLorann().moveUp();
+				this.model.setPress('u');
 				break;
 			case DOWN:
-				this.model.getLorann().moveDown();
+				this.model.setPress('d');
 				break;
 			case LEFT:
-				this.model.getLorann().moveLeft();
+				this.model.setPress('l');
 				break;
 			case RIGHT:
-				this.model.getLorann().moveRight();
+				this.model.setPress('r');
 				break;
-			case UPRIGHT:
+			/*case UPRIGHT:
 				this.model.getLorann().moveUpRight();
 				break;
 			case UPLEFT:
@@ -123,6 +123,18 @@ public class Controller implements IController {
 				break;
 			case DOWNLEFT:
 				this.model.getLorann().moveDownLeft();
+				break;*/
+			case RELEASEUP:
+				this.model.setUnpress('u');
+				break;
+			case RELEASEDOWN:
+				this.model.setUnpress('d');
+				break;
+			case RELEASELEFT:
+				this.model.setUnpress('l');
+				break;
+			case RELEASERIGHT:
+				this.model.setUnpress('r');
 				break;
 			default:
 				break;

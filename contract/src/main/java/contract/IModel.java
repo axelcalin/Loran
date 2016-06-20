@@ -72,4 +72,8 @@ public interface IModel {
 	void setLorann(IMobile lorann);
 	
 	public void tick();
+	
+	public void setPress(char key);
+	
+	public void setUnpress(char key);
 }

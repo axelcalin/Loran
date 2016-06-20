@@ -23,6 +23,10 @@ public enum ControllerOrder
 	UPLEFT,
 	DOWNRIGHT,
 	DOWNLEFT, 
-	NULL;
+	NULL, 
+	RELEASEUP, 
+	RELEASEDOWN, 
+	RELEASELEFT,
+	RELEASERIGHT;
 	
 }

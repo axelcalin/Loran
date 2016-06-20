@@ -9,4 +9,5 @@ public interface IElement {
 	public Permeability getPermeability();
 	public void animate();
 	public void setModel(IModel model);
+	public void onTouch(IMobile touch);
 }
