@@ -1,5 +1,6 @@
 package controller;
 
+
 import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
@@ -129,7 +130,8 @@ public class Controller implements IController {
 	}
 	
 	public void control(){
-		this.model.loadMap("n2");
+		
+		this.model.loadMap("n1");
 		while(game){
 			this.model.tick();
 			try {
@@ -140,6 +142,5 @@ public class Controller implements IController {
 			this.model.changed();
 		}
 	}
-
 
 }

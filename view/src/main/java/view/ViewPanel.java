@@ -72,13 +72,15 @@ class ViewPanel extends JPanel implements Observer {
 		int i = 0;
 		int j = 0;
 		for(IElement[] etab : this.getViewFrame().getModel().getMap()){
+			graphics.drawString("level 1", 0, 0);
 			for(IElement e : etab){
 				graphics.drawImage(e.getSprite().getImage(), j*92, i*89, 95, 95, this);
 				j++;
 			}
 			i++;
-			j=0;
+			j=0;	
 		}
+		
 	}			
 			
 	

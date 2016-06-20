@@ -33,7 +33,7 @@ public class View implements IView, Runnable {
 	
 	/**
 	 * @param keyCode
-	 * @return
+	 * @return the order of the KeyEvent
 	 */
 	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
 		switch (keyCode) {
