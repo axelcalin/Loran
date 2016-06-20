@@ -29,6 +29,7 @@ public class Model extends Observable implements IModel {
 	private String 					nextMap;
 	private boolean 				isLoad;
 	private IElement				mapGate;
+	private int 					score;
 
 	/**
 	 * Instantiates a new model.
@@ -39,6 +40,7 @@ public class Model extends Observable implements IModel {
 		curMap = null;
 		nextMap = null;
 		killTargets = new ArrayList<IElement>();
+		score = 0;
 	}
 
 	/*
@@ -176,7 +178,6 @@ public class Model extends Observable implements IModel {
 
 	public void setForKill(IElement target) {
 		this.killTargets.add(target);
-		
 	}
 	
 	public void doKill(){
@@ -193,5 +194,20 @@ public class Model extends Observable implements IModel {
 			this.map[((IMobile)target).getY()][((IMobile)target).getX()] = new White();
 		}
 		this.killTargets.clear();
+	}
+	
+	public void addScore(int score){
+		this.score += score;
+	}
+	
+	public void saveScore(){
+		DAOHelloWorld daoHelloWorld;
+		try {
+			daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
+			daoHelloWorld.saveScoreToDB(score);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

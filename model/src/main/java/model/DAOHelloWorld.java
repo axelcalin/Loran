@@ -130,6 +130,18 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 		return null;
 
 }
+	
+	public void saveScoreToDB(int scoreToSave){
+		try{
+			final String sql ="{call High_Scores(?,?)}";
+			final CallableStatement call = this.getConnection().prepareCall(sql);
+			call.setString(1, "Lorann");
+			call.setInt(2, scoreToSave);
+			call.executeQuery();
+		} catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
 	/**
 	 * @param map
 	 * @param dynamicElements

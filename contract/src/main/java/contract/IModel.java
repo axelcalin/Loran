@@ -84,4 +84,6 @@ public interface IModel {
 	public IElement getGate();
 
 	void setForKill(IElement target);
+
+	public void saveScore();
 }

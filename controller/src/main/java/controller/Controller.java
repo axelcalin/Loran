@@ -145,6 +145,7 @@ public class Controller implements IController {
 			}
 			this.model.changed();
 		}
+		this.model.saveScore();
 		this.view.close();
 	}
 
