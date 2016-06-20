@@ -3,16 +3,16 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <enumeration id="1" language="java" name="contract.ControllerOrder" project="contract" 
     file="/contract/src/main/java/contract/ControllerOrder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="484" width="226" x="261" y="35"/>    
+    <position height="484" width="226" x="106" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <interface id="2" language="java" name="contract.ILorann" project="contract" 
-    file="/contract/src/main/java/contract/ILorann.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="214" width="152" x="527" y="35"/>    
+  <interface id="2" language="java" name="contract.IModelInternal" project="contract" 
+    file="/contract/src/main/java/contract/IModelInternal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="206" x="633" y="520"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </interface>  
   <interface id="3" language="java" name="contract.IController" project="contract" 
     file="/contract/src/main/java/contract/IController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="221" x="719" y="35"/>    
+    <position height="88" width="221" x="372" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </interface>  
   <interface id="4" language="java" name="contract.IModel" project="contract" 
     file="/contract/src/main/java/contract/IModel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="376" width="233" x="980" y="35"/>    
+    <position height="196" width="184" x="633" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </interface>  
   <interface id="5" language="java" name="contract.IMobile" project="contract" 
     file="/contract/src/main/java/contract/IMobile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="268" width="152" x="1253" y="35"/>    
+    <position height="268" width="152" x="857" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </interface>  
   <interface id="6" language="java" name="contract.IElement" project="contract" 
     file="/contract/src/main/java/contract/IElement.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="160" width="200" x="1445" y="35"/>    
+    <position height="160" width="200" x="1049" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </interface>  
   <interface id="7" language="java" name="contract.IView" project="contract" 
     file="/contract/src/main/java/contract/IView.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="120" x="1685" y="35"/>    
+    <position height="88" width="120" x="1289" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </interface>  
   <enumeration id="8" language="java" name="contract.Permeability" project="contract" 
     file="/contract/src/main/java/contract/Permeability.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="187" x="1845" y="35"/>    
+    <position height="124" width="187" x="1449" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,13 +75,34 @@
   </enumeration>  
   <interface id="9" language="java" name="contract.ISprite" project="contract" 
     file="/contract/src/main/java/contract/ISprite.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="126" x="2072" y="35"/>    
+    <position height="88" width="126" x="1676" y="-4"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
+  <class id="10" language="java" name="java.lang.Enum" project="contract" 
+    file="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="880" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

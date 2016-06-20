@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="org.Element.Element" project="Element" 
     file="/Element/src/main/java/org/Element/Element.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="774" y="95"/>    
+    <position height="250" width="200" x="1066" y="-33"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,578 +12,448 @@
   </class>  
   <class id="2" language="java" name="org.Element.Item" project="Element" 
     file="/Element/src/main/java/org/Element/Item.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="53" y="548"/>    
+    <position height="177" width="196" x="720" y="457"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="org.Element.Sprite" project="Element" 
-    file="/Element/src/main/java/org/Element/Sprite.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="706" y="1774"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="org.Element.KornBehavior" project="Element" 
-    file="/Element/src/main/java/org/Element/KornBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="947" y="522"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="org.Element.Monster_1" project="Element" 
-    file="/Element/src/main/java/org/Element/Monster_1.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="615" y="1489"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="org.Element.Candlestick" project="Element" 
-    file="/Element/src/main/java/org/Element/Candlestick.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-440" y="884"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="org.Element.DynamicElement" project="Element" 
-    file="/Element/src/main/java/org/Element/DynamicElement.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1111" y="331"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="org.Element.Statue" project="Element" 
-    file="/Element/src/main/java/org/Element/Statue.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-281" y="884"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="org.Element.Bag" project="Element" 
-    file="/Element/src/main/java/org/Element/Bag.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-137" y="884"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="org.Element.GateOpen" project="Element" 
-    file="/Element/src/main/java/org/Element/GateOpen.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="72" y="304"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="org.Element.Mobile" project="Element" 
-    file="/Element/src/main/java/org/Element/Mobile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="515" y="630"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="org.Element.ChessskullBehavior" project="Element" 
-    file="/Element/src/main/java/org/Element/ChessskullBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="741" y="522"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="org.Element.Gate" project="Element" 
-    file="/Element/src/main/java/org/Element/Gate.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="239" y="340"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="org.Element.Fireball" project="Element" 
+  <class id="3" language="java" name="org.Element.Fireball" project="Element" 
     file="/Element/src/main/java/org/Element/Fireball.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="397" y="1561"/>    
+    <position height="250" width="187" x="1394" y="1415"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="org.Element.Monster_1Behavior" project="Element" 
-    file="/Element/src/main/java/org/Element/Monster_1Behavior.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1358" y="522"/>    
+  <class id="4" language="java" name="org.Element.Sprite" project="Element" 
+    file="/Element/src/main/java/org/Element/Sprite.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1700" y="1766"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="org.Element.Glass" project="Element" 
+  <class id="5" language="java" name="org.Element.Glass" project="Element" 
     file="/Element/src/main/java/org/Element/Glass.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="7" y="884"/>    
+    <position height="88" width="104" x="258" y="837"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="org.Element.onion" project="Element" 
+  <class id="6" language="java" name="org.Element.onion" project="Element" 
     file="/Element/src/main/java/org/Element/onion.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="151" y="884"/>    
+    <position height="88" width="104" x="402" y="837"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="org.Element.YellowMenBehavior" project="Element" 
-    file="/Element/src/main/java/org/Element/YellowMenBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1153" y="522"/>    
+  <class id="7" language="java" name="org.Element.Monster_1" project="Element" 
+    file="/Element/src/main/java/org/Element/Monster_1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="127" x="750" y="1415"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="org.Element.Korn" project="Element" 
+  <class id="8" language="java" name="org.Element.Korn" project="Element" 
     file="/Element/src/main/java/org/Element/Korn.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="772" y="1489"/>    
+    <position height="106" width="106" x="917" y="1415"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="org.Element.HorizontalBone" project="Element" 
+  <class id="9" language="java" name="org.Element.HorizontalBone" project="Element" 
     file="/Element/src/main/java/org/Element/HorizontalBone.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="422" y="304"/>    
+    <position height="88" width="135" x="474" y="257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="org.Element.Stone" project="Element" 
+  <class id="10" language="java" name="org.Element.Candlestick" project="Element" 
+    file="/Element/src/main/java/org/Element/Candlestick.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="88" width="134" x="546" y="837"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="org.Element.DynamicElement" project="Element" 
+    file="/Element/src/main/java/org/Element/DynamicElement.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="278" x="1324" y="257"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="org.Element.Statue" project="Element" 
+    file="/Element/src/main/java/org/Element/Statue.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="88" width="104" x="720" y="837"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="org.Element.Stone" project="Element" 
     file="/Element/src/main/java/org/Element/Stone.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="582" y="304"/>    
+    <position height="88" width="104" x="649" y="257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="org.Element.VerticalBone" project="Element" 
+  <class id="14" language="java" name="org.Element.VerticalBone" project="Element" 
     file="/Element/src/main/java/org/Element/VerticalBone.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="731" y="304"/>    
+    <position height="88" width="114" x="793" y="257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="org.Element.Monster" project="Element" 
+  <class id="15" language="java" name="org.Element.Bag" project="Element" 
+    file="/Element/src/main/java/org/Element/Bag.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="88" width="104" x="864" y="837"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="org.Element.Mobile" project="Element" 
+    file="/Element/src/main/java/org/Element/Mobile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="340" width="205" x="1369" y="457"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="org.Element.Monster" project="Element" 
     file="/Element/src/main/java/org/Element/Monster.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="991" y="910"/>    
+    <position height="141" width="151" x="1197" y="837"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="org.Element.White" project="Element" 
+  <class id="18" language="java" name="org.Element.White" project="Element" 
     file="/Element/src/main/java/org/Element/White.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="880" y="304"/>    
+    <position height="88" width="104" x="947" y="257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="org.Element.YellowMen" project="Element" 
+  <class id="19" language="java" name="org.Element.YellowMen" project="Element" 
     file="/Element/src/main/java/org/Element/YellowMen.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="929" y="1489"/>    
+    <position height="106" width="128" x="1063" y="1415"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="org.Element.CrystalBall" project="Element" 
+  <class id="20" language="java" name="org.Element.CrystalBall" project="Element" 
     file="/Element/src/main/java/org/Element/CrystalBall.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="317" y="893"/>    
+    <position height="106" width="149" x="1008" y="837"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="27" language="java" name="org.Element.IMonsterBehavior" project="Element" 
-    file="/Element/src/main/java/org/Element/IMonsterBehavior.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1278" y="1489"/>    
+  <class id="21" language="java" name="org.Element.Gate" project="Element" 
+    file="/Element/src/main/java/org/Element/Gate.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="193" x="1091" y="257"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
-  </interface>  
-  <class id="28" language="java" name="org.Element.Chesskull" project="Element" 
+  </class>  
+  <class id="22" language="java" name="org.Element.Chesskull" project="Element" 
     file="/Element/src/main/java/org/Element/Chesskull.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1094" y="1489"/>    
+    <position height="106" width="123" x="1231" y="1415"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="org.Element.Lorann" project="Element" 
+  <class id="23" language="java" name="org.Element.Lorann" project="Element" 
     file="/Element/src/main/java/org/Element/Lorann.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="530" y="1118"/>    
+    <position height="538" width="193" x="1409" y="837"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="30" language="java" name="contract.IModel" project="contract" 
-    file="/contract/src/main/java/contract/IModel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="376" width="233" x="1287" y="-125"/>    
+  <interface id="24" language="java" name="contract.IModelInternal" project="contract" 
+    file="/contract/src/main/java/contract/IModelInternal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="206" x="1451" y="-153"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <enumeration id="31" language="java" name="contract.Permeability" project="contract" 
+  <enumeration id="25" language="java" name="contract.Permeability" project="contract" 
     file="/contract/src/main/java/contract/Permeability.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="187" x="-18" y="-62"/>    
+    <position height="124" width="187" x="629" y="-200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="32" language="java" name="java.awt.Point" project="Element" 
-    file="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1587" y="964"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
-      <operations public="false" package="false" protected="false" private="false" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="33" language="java" name="contract.IMobile" project="contract" 
-    file="/contract/src/main/java/contract/IMobile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="268" width="152" x="-420" y="198"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <interface id="34" language="java" name="contract.IElement" project="contract" 
+  <interface id="26" language="java" name="contract.IElement" project="contract" 
     file="/contract/src/main/java/contract/IElement.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="160" width="200" x="907" y="-131"/>    
+    <position height="-1" width="-1" x="726" y="77"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="35" language="java" name="contract.ISprite" project="contract" 
+  <interface id="27" language="java" name="contract.IMobile" project="contract" 
+    file="/contract/src/main/java/contract/IMobile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1176" y="616"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="28" language="java" name="java.awt.Point" project="Element" 
+    file="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1751" y="991"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="java.awt.Image" project="Element" 
+    file="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="447" width="352" x="1097" y="1511"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="30" language="java" name="contract.ISprite" project="contract" 
     file="/contract/src/main/java/contract/ISprite.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="88" width="126" x="1006" y="1674"/>    
+    <position height="-1" width="-1" x="1156" y="1621"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="36" language="java" name="java.awt.Image" project="Element" 
-    file="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-62" y="1686"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
-      <operations public="false" package="false" protected="false" private="false" static="true"/>    
-    </display>  
-  </class>  
-  <class id="37" language="java" name="java.io.StringWriter" project="Element" 
-    file="C:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="147" y="1777"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
-      <operations public="false" package="false" protected="false" private="false" static="true"/>    
-    </display>  
-  </class>  
-  <generalization id="38">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="39">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="40">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="41" name="IMAGES"/>      
-      <multiplicity id="42" minimum="0" maximum="2147483647"/>    
+  <association id="31">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="32" name="spell"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="43">    
-    <bendpoint x="1148" y="840"/>    
-    <end type="SOURCE" refId="12"/>    
+  <generalization id="34">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <realization id="37">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="40">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="27"/>  
   </realization>  
-  <association id="44">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="45" name="spell"/>      
-      <multiplicity id="46" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <generalization id="48">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="49">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="50" name="image"/>      
-      <multiplicity id="51" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="52">    
+  <generalization id="41">    
     <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="53">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <generalization id="54">    
-    <bendpoint x="422" y="840"/>    
-    <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="11"/>  
   </generalization>  
-  <association id="55">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="56" name="master"/>      
-      <multiplicity id="57" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="58">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="34"/>  
-  </realization>  
-  <association id="59">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="60" name="position"/>      
-      <multiplicity id="61" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="62">    
+  <association id="42">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="63" name="permeability"/>      
-      <multiplicity id="64" minimum="0" maximum="1"/>    
+      <attribute id="43" name="masterModel"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="24" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="65">    
-    <end type="SOURCE" refId="20"/>    
+  <generalization id="45">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="46">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="30"/>  
+  </realization>  
+  <association id="47">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="48" name="position"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="50">    
+    <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <association id="66">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="67" name="behavior"/>      
-      <multiplicity id="68" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="69">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="70" name="masterModel"/>      
-      <multiplicity id="71" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="72">    
+  <generalization id="51">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="55">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="73">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="2"/>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <generalization id="74">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <realization id="75">    
-    <bendpoint x="1169" y="840"/>    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="27"/>  
-  </realization>  
-  <realization id="76">    
-    <bendpoint x="1190" y="840"/>    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="27"/>  
-  </realization>  
-  <generalization id="77">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <generalization id="78">    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <association id="79">    
-    <bendpoint x="1471" y="260"/>    
-    <bendpoint x="1471" y="460"/>    
-    <bendpoint x="1471" y="840"/>    
-    <bendpoint x="1471" y="1436"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="80" name="spriteFile"/>      
-      <multiplicity id="81" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="82">    
-    <bendpoint x="1245" y="840"/>    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="27"/>  
-  </realization>  
-  <realization id="83">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="35"/>  
-  </realization>  
-  <generalization id="84">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="37"/>  
-  </generalization>  
-  <generalization id="85">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="86">    
+  <generalization id="57">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <generalization id="87">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <generalization id="88">    
-    <end type="SOURCE" refId="7"/>    
+  <generalization id="58">    
+    <end type="SOURCE" refId="21"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <association id="89">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="90" name="master"/>      
-      <multiplicity id="91" minimum="0" maximum="1"/>    
+  <association id="59">    
+    <bendpoint x="1624" y="1684"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="60" name="IMAGES"/>      
+      <multiplicity id="61" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="62">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="63">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="64" name="lorann"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="23" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="92">    
-    <bendpoint x="521" y="1436"/>    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="93" name="IMAGES"/>      
-      <multiplicity id="94" minimum="0" maximum="2147483647"/>    
+  <association id="66">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="67" name="lastPosition"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="95">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="96" name="master"/>      
-      <multiplicity id="97" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="98">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="1"/>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
   </generalization>  
-  <generalization id="99">    
+  <generalization id="70">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="7"/>  
-  </generalization>  
-  <generalization id="100">    
-    <end type="SOURCE" refId="23"/>    
     <end type="TARGET" refId="11"/>  
   </generalization>  
-  <generalization id="101">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="1"/>  
+  <generalization id="71">    
+    <bendpoint x="1378" y="837"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <association id="102">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="103" name="master"/>      
-      <multiplicity id="104" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="105">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="23"/>  
-  </generalization>  
-  <realization id="106">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="33"/>  
-  </realization>  
-  <association id="107">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="108" name="lastPosition"/>      
-      <multiplicity id="109" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="110">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="111" name="lorann"/>      
-      <multiplicity id="112" minimum="0" maximum="1"/>    
+  <association id="72">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="73" name="image"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="29" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="75">    
+    <bendpoint x="1537" y="1737"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="76" name="IMAGES"/>      
+      <multiplicity id="77" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="79" name="permeability"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="81">    
+    <bendpoint x="1632" y="257"/>    
+    <bendpoint x="1632" y="457"/>    
+    <bendpoint x="1632" y="837"/>    
+    <bendpoint x="1770" y="1412"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="82" name="spriteFile"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="84">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
