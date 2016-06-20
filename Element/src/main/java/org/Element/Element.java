@@ -2,13 +2,12 @@ package org.Element;
 
 import contract.IElement;
 import contract.IMobile;
-import contract.IModel;
 import contract.IModelInternal;
 import contract.Permeability;
 /**
- * The Class Element.
+ * The Element class.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class Element implements IElement{
 	private Permeability permeability;

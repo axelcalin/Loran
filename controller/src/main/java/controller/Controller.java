@@ -6,14 +6,11 @@ import contract.IController;
 import contract.IModel;
 import contract.IView;
 
-
-// TODO: Auto-generated Javadoc
 /**
- * The Class Controller.
+ * The Controller class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
-
 public class Controller implements IController {
 
 	/** The view. */
@@ -21,7 +18,7 @@ public class Controller implements IController {
 
 	/** The model. */
 	private IModel	model;
-
+	/** The locking constant, that keeps the game running */
 	private boolean game;
 
 	/**
@@ -37,12 +34,6 @@ public class Controller implements IController {
 		this.setModel(model);
 		game = true;
 	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see contract.IController#control()
-	 */
 
 	/**
 	 * Sets the view.
@@ -65,8 +56,6 @@ public class Controller implements IController {
 	}
 
 	/*
-	 * (non-Javadoc)
-	 *
 	 * @see contract.IController#orderPerform(contract.ControllerOrder)
 	 */
 	public void orderPerform(final ControllerOrder controllerOrder) {
@@ -133,6 +122,9 @@ public class Controller implements IController {
 		}
 	}
 	
+	/**
+	 * The program's main loop.
+	 */
 	public void control(){
 		
 		this.model.setNextMap("me");

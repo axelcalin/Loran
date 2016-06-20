@@ -3,7 +3,6 @@ package org.Element;
 import java.awt.Point;
 
 import contract.IMobile;
-import contract.IModel;
 import contract.IModelInternal;
 import contract.Permeability;
 /**

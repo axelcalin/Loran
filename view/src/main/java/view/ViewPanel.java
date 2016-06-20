@@ -18,7 +18,6 @@ class ViewPanel extends JPanel implements Observer {
 	private ViewFrame					viewFrame;
 	private int width;
 	private int height;
-	private org.Element.Element elements[][];
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -998294702363713521L;
 

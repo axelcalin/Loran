@@ -2,12 +2,15 @@ package contract;
 
 import java.awt.Image;
 /**
- * The Interface ISprite.
+ * The ISprite interface
  *
- * @author florent , axel , luc , romain
+ * @author Florent , Axel , Luc , Romain
  */
 public interface ISprite {
 
+	/**
+	 * @return The current sprite's corresponding image.
+	 */
 	Image getImage();
 
 }

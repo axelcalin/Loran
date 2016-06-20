@@ -4,9 +4,9 @@ package org.Element;
 import contract.IMobile;
 import contract.Permeability;
 /**
- * The Class Item.
+ * The Item class.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public abstract class Item extends DynamicElement {
 	private int value;
@@ -50,7 +50,7 @@ public abstract class Item extends DynamicElement {
 			else{
 				this.getModel().setAddLife();
 			}
-		super.onTouch(touch);
 		}
+		super.onTouch(touch);
 	}
 }

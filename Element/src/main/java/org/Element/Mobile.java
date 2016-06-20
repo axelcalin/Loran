@@ -31,7 +31,6 @@ public class Mobile extends DynamicElement implements IMobile
 		if ((x >= 0) && (x <= 20))
 		{
 			this.position.x = x;
-			//TODO prevent viewer
 		}
 		else
 		{
@@ -47,7 +46,6 @@ public class Mobile extends DynamicElement implements IMobile
 		if ((y >= 0) && (y <= 12))
 		{
 			this.position.y = y;
-			//TODO prevent viewer
 		}
 		else
 		{

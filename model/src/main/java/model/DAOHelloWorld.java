@@ -52,7 +52,7 @@ class DAOModel extends DAOEntity {
 		try{
 			final String sql ="{call High_Scores(?,?)}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
-			call.setString(1, "Lorann");
+			call.setInt(1, 19);
 			call.setInt(2, scoreToSave);
 			call.executeQuery();
 		} catch(SQLException e){

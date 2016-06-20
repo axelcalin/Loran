@@ -3,8 +3,6 @@ package org.Element;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
-import java.io.StringWriter;
-
 import javax.imageio.ImageIO;
 
 import contract.ISprite;

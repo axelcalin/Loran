@@ -3,15 +3,18 @@ package org.Element;
 import java.util.Random;
 
 /**
- * The Class Chesskull.
+ * The Chesskull class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class Chesskull extends Monster
 {
 	/**
+	 * Creates a Chesskull-type (note : this name is fun) monster.
 	 * @param y
+	 * 			The monster's initial position on the y axis.
 	 * @param x
+	 * 			The monster's initial position on the x axis.
 	 */
 	public Chesskull(int y, int x)
 	{

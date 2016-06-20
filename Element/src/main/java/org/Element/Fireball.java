@@ -4,9 +4,20 @@ import contract.IMobile;
 
 public class Fireball extends Mobile{
 	
+	/**
+	 * The spell's vector.
+	 */
 	private int vx;
 	private int vy;
+	
+	/**
+	 * The spell's master.
+	 */
 	private Lorann lorann;
+	
+	/**
+	 * All of the spell's sprites, and the index used to go through them..
+	 */
 	private static final Sprite[] IMAGES =  {	
 													new Sprite("fireball_1.png"),
 													new Sprite("fireball_2.png"), 
@@ -15,9 +26,19 @@ public class Fireball extends Mobile{
 											   };
 	private int imageIndex;
 	
+	
 	/**
-	 * @param y
+	 * Creates a new, and unique instance of Lorann's spell.
 	 * @param x
+	 * 			The spell's original position on the x axis.
+	 * @param y
+	 * 			The spell's original position on the y axis.
+	 * @param vx
+	 * 			The spell's x axis vector component.
+	 * @param vy
+	 * 			The spell's y axis vector component.
+	 * @param lorann
+	 * 			The spell's master entity.
 	 */
 	public Fireball (int x, int y,int vx, int vy, Lorann lorann)
 	{
@@ -60,6 +81,10 @@ public class Fireball extends Mobile{
 			this.moveUpLeft();
 		}
 	}
+	
+	/**
+	 * The function used to cycle through the spell's sprites.
+	 */
 	private void switchImage() {
 		this.setSprite(Fireball.IMAGES[this.imageIndex]);
 		this.imageIndex++;
@@ -68,14 +93,24 @@ public class Fireball extends Mobile{
 		}
 	}
 	
+	/**
+	 * The function used to revert the spell's trajectory
+	 */
 	public void revert(){
 		this.vx -= 2*vx;
 		this.vy -= 2*vy;
 	}
+	
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#kill()
+	 */
 	public void kill(){
 		this.lorann.destroySpell();
 	}
 	
+	/**
+	 * A function used to change te spell's vector, to move towards its master.
+	 */
 	public void changeDirection(){
 		this.vx = (this.lorann.getX()-this.getX());
 		this.vy = (this.lorann.getY()-this.getY());
@@ -92,6 +127,10 @@ public class Fireball extends Mobile{
 			vy = -1;
 		}
 	}
+	
+	/* (non-Javadoc)
+	 * @see org.Element.Mobile#onTouch(contract.IMobile)
+	 */
 	public void onTouch(IMobile touch){
 		if(touch instanceof Lorann){
 			this.kill();

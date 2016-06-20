@@ -1,18 +1,14 @@
 package contract;
 
 /**
- * The Interface IView.
+ * The IView interface
  *
- * @author florent , axel , luc ,romain
+ * @author Florent, Axel, Luc, Romain
  */
 public interface IView {
 
 	/**
-	 * Prints the map.
-	 *
-	 * @param map
-	 *          the map
+	 * Closes the game's window.
 	 */
-	
 	public void close();
 }

@@ -2,14 +2,14 @@ package org.Element;
 
 import contract.Permeability;
 /**
- * The Class HorizontalBone.
+ * The Horizontalbone class
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class HorizontalBone extends Element
 {
 	/**
-	 * 
+	 * Creates an horizontal wall.
 	 */
 	public HorizontalBone()
 	{

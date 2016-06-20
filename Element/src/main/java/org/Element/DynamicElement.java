@@ -4,7 +4,7 @@ import java.awt.Point;
 
 import contract.Permeability;
 /**
- * The Class DynamicElement.
+ * The DynamicElement class
  *
  * @author Florent, Axel, Luc, Romain;
  */
@@ -12,8 +12,15 @@ public class DynamicElement extends Element {
 	protected Point position;
 
 	/**
+	 * Creates a dynamic element.
 	 * @param perm
+	 * 			The element's permeability.
 	 * @param sprite
+	 * 			The element's sprite.
+	 * @param X
+	 * 			The element's original position on the x axis.
+	 * @param Y
+	 * 			The element's original position on the y axis.
 	 */
 	public DynamicElement(Permeability perm, Sprite sprite, int X, int Y) {
 		super(perm, sprite);
