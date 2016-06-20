@@ -27,7 +27,7 @@ public interface IModel {
 	 * @param key
 	 *          the key
 	 */
-	void loadMap(String key);
+	void loadMap();
 
 	/**
 	 * Gets the observable.
@@ -76,4 +76,6 @@ public interface IModel {
 	public void setPress(char key);
 	
 	public void setUnpress(char key);
+	
+	public void setNextMap(String map);
 }

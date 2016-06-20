@@ -24,12 +24,18 @@ public class Model extends Observable implements IModel {
 	private IElement[][]			map;
 	private List<IElement>			dynamicElements;
 	private Lorann					lorann;
+	private String 					curMap;
+	private String 					nextMap;
+	private boolean 				isLoad;
 
 	/**
 	 * Instantiates a new model.
 	 */
 	public Model() {
 		dynamicElements = new ArrayList<IElement>();
+		isLoad = false;
+		curMap = null;
+		nextMap = null;
 	}
 
 	/*
@@ -59,12 +65,16 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage(java.lang.String)
 	 */
-	public synchronized void loadMap(String map) {
-		try {
-			final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
-			this.setMap(daoHelloWorld.loadMap(map, dynamicElements));
-		} catch (final SQLException e) {
-			e.printStackTrace();
+	public synchronized void loadMap() {
+		if(isLoad){
+			try {
+				this.curMap = this.nextMap;
+				this.isLoad = false;
+				final DAOHelloWorld daoHelloWorld = new DAOHelloWorld(DBConnection.getInstance().getConnection());
+				this.setMap(daoHelloWorld.loadMap(nextMap, dynamicElements));
+			} catch (final SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -132,6 +142,7 @@ public class Model extends Observable implements IModel {
 	}
 	
 	public void tick(){
+		this.loadMap();
 		Iterator<IElement> dynobj = dynamicElements.iterator();
 		while(dynobj.hasNext()){
 				dynobj.next().animate();
@@ -144,5 +155,11 @@ public class Model extends Observable implements IModel {
 	
 	public void setUnpress(char key){
 		this.lorann.setUnpress(key);
+	}
+
+	public void setNextMap(String map) {
+		this.nextMap = map;
+		this.isLoad = true;
+		
 	}
 }
