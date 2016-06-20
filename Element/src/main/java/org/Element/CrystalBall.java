@@ -5,7 +5,7 @@ import contract.IMobile;
 /**
  * The Class CrystallBall.
  *
- * @author florent, axel, luc, romain;
+ * @author Florent, Axel, Luc, Romain;
  */
 public class CrystalBall extends Item
 {
