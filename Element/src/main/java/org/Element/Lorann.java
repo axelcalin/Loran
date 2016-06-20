@@ -212,8 +212,10 @@ public class Lorann extends Mobile
 		}
 	}
 	public void destroySpell(){
-		this.getModel().setForKill(spell);
-		this.spell = null;
+		if(this.spell != null){
+			this.getModel().setForKill(spell);
+			this.spell = null;
+		}
 	}
 
 	/* (non-Javadoc)
