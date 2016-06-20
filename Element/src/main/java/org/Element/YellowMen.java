@@ -1,6 +1,5 @@
 package org.Element;
 
-import contract.IMobile;
 
 /**
  * The Class Yellowmen.

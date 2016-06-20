@@ -1,6 +1,5 @@
 package org.Element;
 
-import java.awt.Point;
 
 import contract.IMobile;
 import contract.Permeability;

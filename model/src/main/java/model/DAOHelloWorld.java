@@ -13,7 +13,6 @@ import org.Element.Chesskull;
 import org.Element.CrystalBall;
 import org.Element.Element;
 import org.Element.Gate;
-import org.Element.GateOpen;
 import org.Element.Glass;
 import org.Element.HorizontalBone;
 import org.Element.Korn;
