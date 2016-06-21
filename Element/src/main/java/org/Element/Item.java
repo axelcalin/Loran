@@ -42,7 +42,6 @@ public abstract class Item extends DynamicElement {
 	@Override
 	public void onTouch(IMobile touch){
 		if(touch instanceof Lorann){
-			System.out.println("Item");
 			this.getModel().getMap()[this.getY()][this.getX()] = new White();
 			if(!this.isLife){
 			this.getModel().addScore(this.getValue());
