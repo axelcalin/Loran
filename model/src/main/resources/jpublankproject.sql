@@ -2,10 +2,10 @@
 -- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Lun 20 Juin 2016 à 14:24
--- Version du serveur :  5.7.9
--- Version de PHP :  5.6.16
+-- Host: 127.0.0.1
+-- Generation Time: Jun 21, 2016 at 06:40 AM
+-- Server version: 5.7.9
+-- PHP Version: 5.6.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,15 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `lorann`
+-- Database: `jpublankproject`
 --
 
 DELIMITER $$
 --
--- Procédures
+-- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Add_player`(IN `p_Player_Name` VARCHAR(8))
-BEGIN
+DROP PROCEDURE IF EXISTS `Add_player`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Add_player` (IN `p_Player_Name` VARCHAR(8))  BEGIN
 
 	INSERT INTO Player (Player_Name, Player_Score)
 	VALUES (p_Player_Name, 0);
@@ -34,20 +34,10 @@ BEGIN
 	FROM Player
 	ORDER BY Player_Id ASC;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `MapById`(IN `p_id` INT)
-    READS SQL DATA
-    SQL SECURITY INVOKER
-SELECT * FROM map WHERE id = p_id
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_lives`()
-    NO SQL
-SELECT Life
-FROM main_character
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Delete_player`(IN `p_Player_Id` INT)
-BEGIN
+DROP PROCEDURE IF EXISTS `Delete_player`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Delete_player` (IN `p_Player_Id` INT)  BEGIN
 
 	DELETE FROM Player_High_Scores
 	WHERE Player_Id = p_Player_Id;
@@ -62,10 +52,23 @@ BEGIN
 	ORDER BY Player_Id ASC;
 
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `High_scores`(IN `p_Player_Id` INT, IN `p_Player_Score` INT)
-BEGIN
+DROP PROCEDURE IF EXISTS `Get_lives`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_lives` ()  NO SQL
+SELECT Life
+FROM main_character$$
+
+DROP PROCEDURE IF EXISTS `Give_two_lives`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Give_two_lives` ()  BEGIN
+
+	UPDATE Main_Character
+	SET Life = Life + 2;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `High_scores`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `High_scores` (IN `p_Player_Id` INT, IN `p_Player_Score` INT)  BEGIN
 
 	INSERT INTO High_Scores (Player_High_Score)
 	VALUES (p_Player_Score);
@@ -84,32 +87,29 @@ BEGIN
 	SELECT Player_Id, Player_Name, Player_Score
 	FROM Player;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Give_two_lives`()
-BEGIN
-
-	UPDATE Main_Character
-	SET Life = Life + 2;
-
-END
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `MapByKey`(IN `p_key` VARCHAR(2))
-    READS SQL DATA
+DROP PROCEDURE IF EXISTS `MapById`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `MapById` (IN `p_id` INT)  READS SQL DATA
     SQL SECURITY INVOKER
-SELECT * FROM jpublankproject.map where `keywords`=p_key
+SELECT * FROM map WHERE id = p_id$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Remove_life`()
-BEGIN
+DROP PROCEDURE IF EXISTS `MapByKey`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `MapByKey` (IN `p_key` VARCHAR(2))  READS SQL DATA
+    SQL SECURITY INVOKER
+SELECT * FROM jpublankproject.map where `keywords`=p_key$$
+
+DROP PROCEDURE IF EXISTS `Remove_life`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Remove_life` ()  BEGIN
 
 	UPDATE Main_Character
 	SET Life = Life - 1
 	WHERE Life > 0;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_Lives`(IN `p_Player_Id` INT)
-BEGIN
+DROP PROCEDURE IF EXISTS `Reset_Lives`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_Lives` (IN `p_Player_Id` INT)  BEGIN
 
 	UPDATE Main_Character
 	SET Life = 11;
@@ -122,10 +122,10 @@ BEGIN
 	FROM Player
 	ORDER BY Player_Score DESC;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_scores`()
-BEGIN
+DROP PROCEDURE IF EXISTS `Reset_scores`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_scores` ()  BEGIN
 
 	UPDATE Player
 	SET Player_Score = 0;
@@ -134,8 +134,6 @@ BEGIN
     
     DELETE FROM High_Scores;
 
-END
-
 END$$
 
 DELIMITER ;
@@ -143,7 +141,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Structure de la table `high_scores`
+-- Table structure for table `high_scores`
 --
 
 DROP TABLE IF EXISTS `high_scores`;
@@ -151,12 +149,30 @@ CREATE TABLE IF NOT EXISTS `high_scores` (
   `High_Score_Id` int(11) NOT NULL AUTO_INCREMENT,
   `Player_High_Score` int(11) NOT NULL,
   PRIMARY KEY (`High_Score_Id`,`Player_High_Score`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `high_scores`
+--
+
+INSERT INTO `high_scores` (`High_Score_Id`, `Player_High_Score`) VALUES
+(6, 0),
+(7, 0),
+(8, 0),
+(9, 0),
+(10, 0),
+(11, 0),
+(12, 0),
+(13, 0),
+(14, 0),
+(15, 0),
+(16, 0),
+(17, 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `main_character`
+-- Table structure for table `main_character`
 --
 
 DROP TABLE IF EXISTS `main_character`;
@@ -168,16 +184,16 @@ CREATE TABLE IF NOT EXISTS `main_character` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `main_character`
+-- Dumping data for table `main_character`
 --
 
 INSERT INTO `main_character` (`Character_Id`, `Name`, `Life`) VALUES
-(1, 'Lorann', 11);
+(1, 'Lorann', 6);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `map`
+-- Table structure for table `map`
 --
 
 DROP TABLE IF EXISTS `map`;
@@ -190,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `map` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `map`
+-- Dumping data for table `map`
 --
 
 INSERT INTO `map` (`Map_id`, `keywords`, `map`) VALUES
@@ -205,7 +221,7 @@ INSERT INTO `map` (`Map_id`, `keywords`, `map`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `player`
+-- Table structure for table `player`
 --
 
 DROP TABLE IF EXISTS `player`;
@@ -214,30 +230,41 @@ CREATE TABLE IF NOT EXISTS `player` (
   `Player_Name` varchar(8) NOT NULL,
   `Player_Score` int(11) NOT NULL,
   PRIMARY KEY (`Player_Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `player`
+-- Dumping data for table `player`
 --
 
 INSERT INTO `player` (`Player_Id`, `Player_Name`, `Player_Score`) VALUES
 (1, 'Axel', 0),
 (2, 'Florent', 0),
 (3, 'Luc', 0),
-(4, 'Romain', 0);
+(4, 'Romain', 0),
+(19, 'Lorann', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `player_high_scores`
+-- Table structure for table `player_high_scores`
 --
 
 DROP TABLE IF EXISTS `player_high_scores`;
 CREATE TABLE IF NOT EXISTS `player_high_scores` (
+  `Score_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Player_Id` int(11) NOT NULL,
   `Player_High_Score` int(11) NOT NULL,
-  PRIMARY KEY (`Player_Id`,`Player_High_Score`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`Score_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `player_high_scores`
+--
+
+INSERT INTO `player_high_scores` (`Score_ID`, `Player_Id`, `Player_High_Score`) VALUES
+(1, 19, 0),
+(2, 19, 0),
+(3, 19, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
