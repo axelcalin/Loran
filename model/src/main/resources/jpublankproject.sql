@@ -1,17 +1,16 @@
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Data Base :  `jpublankproject`
+-- Database :  `lorann`
 --
 
 DELIMITER $$
 --
--- Procedure
+-- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Add_player`(IN `p_Player_Name` VARCHAR(8))
-BEGIN
+DROP PROCEDURE IF EXISTS `Add_player`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Add_player` (IN `p_Player_Name` VARCHAR(8))  BEGIN
 
 	INSERT INTO Player (Player_Name, Player_Score)
 	VALUES (p_Player_Name, 0);
@@ -20,20 +19,10 @@ BEGIN
 	FROM Player
 	ORDER BY Player_Id ASC;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `MapById`(IN `p_id` INT)
-    READS SQL DATA
-    SQL SECURITY INVOKER
-SELECT * FROM map WHERE id = p_id
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Get_lives`()
-    NO SQL
-SELECT Life
-FROM main_character
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Delete_player`(IN `p_Player_Id` INT)
-BEGIN
+DROP PROCEDURE IF EXISTS `Delete_player`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Delete_player` (IN `p_Player_Id` INT)  BEGIN
 
 	DELETE FROM Player_High_Scores
 	WHERE Player_Id = p_Player_Id;
@@ -48,10 +37,26 @@ BEGIN
 	ORDER BY Player_Id ASC;
 
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `High_scores`(IN `p_Player_Id` INT, IN `p_Player_Score` INT)
-BEGIN
+DROP PROCEDURE IF EXISTS `Give_eleven_lives_to_Lorann`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Give_eleven_lives_to_Lorann` (IN `p_Player_Id` INT)  BEGIN
+
+	UPDATE Main_Character
+	SET Life = 11;
+
+	UPDATE Player
+	SET Player_Score = 0
+	WHERE Player_Id = p_Player_Id;
+	
+	SELECT Player_Id, Player_Name, Player_Score
+	FROM Player
+	ORDER BY Player_Score DESC;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `High_scores`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `High_scores` (IN `p_Player_Id` INT, IN `p_Player_Score` INT)  BEGIN
 
 	INSERT INTO High_Scores (Player_High_Score)
 	VALUES (p_Player_Score);
@@ -70,48 +75,28 @@ BEGIN
 	SELECT Player_Id, Player_Name, Player_Score
 	FROM Player;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Give_two_lives`()
-BEGIN
+DROP PROCEDURE IF EXISTS `Level_won_give_two_lives_to_Lorann`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Level_won_give_two_lives_to_Lorann` ()  BEGIN
 
 	UPDATE Main_Character
 	SET Life = Life + 2;
 
-END
+END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `MapByKey`(IN `p_key` VARCHAR(2))
-    READS SQL DATA
+DROP PROCEDURE IF EXISTS `MapById`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `MapById` (IN `p_id` INT)  READS SQL DATA
     SQL SECURITY INVOKER
-SELECT * FROM jpublankproject.map where `keywords`=p_key
+SELECT * FROM map WHERE id = p_id$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Remove_life`()
-BEGIN
+DROP PROCEDURE IF EXISTS `MapByKey`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `MapByKey` (IN `p_key` VARCHAR(2))  READS SQL DATA
+    SQL SECURITY INVOKER
+SELECT * FROM jpublankproject.map where `keywords`=p_key$$
 
-	UPDATE Main_Character
-	SET Life = Life - 1
-	WHERE Life > 0;
-
-END
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_Lives`(IN `p_Player_Id` INT)
-BEGIN
-
-	UPDATE Main_Character
-	SET Life = 11;
-
-	UPDATE Player
-	SET Player_Score = 0
-	WHERE Player_Id = p_Player_Id;
-	
-	SELECT Player_Id, Player_Name, Player_Score
-	FROM Player
-	ORDER BY Player_Score DESC;
-
-END
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_scores`()
-BEGIN
+DROP PROCEDURE IF EXISTS `Reset_scores`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Reset_scores` ()  BEGIN
 
 	UPDATE Player
 	SET Player_Score = 0;
@@ -120,7 +105,14 @@ BEGIN
     
     DELETE FROM High_Scores;
 
-END
+END$$
+
+DROP PROCEDURE IF EXISTS `Take_a_life_to_Lorann`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Take_a_life_to_Lorann` ()  BEGIN
+
+	UPDATE Main_Character
+	SET Life = Life - 1
+	WHERE Life > 0;
 
 END$$
 
@@ -129,7 +121,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Structure of the `high_scores`table
+-- Structure of the table `high_scores`
 --
 
 DROP TABLE IF EXISTS `high_scores`;
@@ -142,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `high_scores` (
 -- --------------------------------------------------------
 
 --
--- Structure of the `main_character` table
+-- Structure of the table `main_character`
 --
 
 DROP TABLE IF EXISTS `main_character`;
@@ -154,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `main_character` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Table contents`main_character`
+-- Table contents `main_character`
 --
 
 INSERT INTO `main_character` (`Character_Id`, `Name`, `Life`) VALUES
@@ -163,7 +155,7 @@ INSERT INTO `main_character` (`Character_Id`, `Name`, `Life`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure of the `map`table
+-- Structure of the table : `map`
 --
 
 DROP TABLE IF EXISTS `map`;
@@ -191,7 +183,7 @@ INSERT INTO `map` (`Map_id`, `keywords`, `map`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure of the `player`table
+-- Structure of the the : `player`
 --
 
 DROP TABLE IF EXISTS `player`;
@@ -215,7 +207,7 @@ INSERT INTO `player` (`Player_Id`, `Player_Name`, `Player_Score`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure of the `player_high_scores` table
+-- Structure of the table : `player_high_scores`
 --
 
 DROP TABLE IF EXISTS `player_high_scores`;
