@@ -53,6 +53,10 @@ public class View implements IView, Runnable {
 					return ControllerOrder.Test1;
 				case KeyEvent.VK_U:
 					return ControllerOrder.Test2;
+				case KeyEvent.VK_I:
+					return ControllerOrder.Test3;
+				case KeyEvent.VK_O:
+					return ControllerOrder.Test4;
 				case KeyEvent.VK_M:
 					return ControllerOrder.Menu;
 				case KeyEvent.VK_ESCAPE:
