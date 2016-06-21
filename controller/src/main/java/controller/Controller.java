@@ -84,6 +84,14 @@ public class Controller implements IController {
 				System.out.println("menu");
 				this.model.setNextMap("me");
 				break;
+			case Test1:
+				System.out.println("Test");
+				this.model.setNextMap("t1");
+				break;
+			case Test2:
+				System.out.println("Test");
+				this.model.setNextMap("t2");
+				break;
 			case EXIT:
 				System.out.println("exit");
 				this.game = false;

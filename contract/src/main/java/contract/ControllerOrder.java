@@ -28,5 +28,7 @@ public enum ControllerOrder
 	RELEASEDOWN, 
 	RELEASELEFT,
 	RELEASERIGHT,
-	RELEASESPACE;
+	RELEASESPACE,
+	Test1,
+	Test2;
 }
