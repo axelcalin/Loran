@@ -1,28 +1,14 @@
--- phpMyAdmin SQL Dump
--- version 4.5.2
--- http://www.phpmyadmin.net
---
--- Client :  127.0.0.1
--- Généré le :  Lun 20 Juin 2016 à 14:24
--- Version du serveur :  5.7.9
--- Version de PHP :  5.6.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Base de données :  `lorann`
+-- Data Base :  `jpublankproject`
 --
 
 DELIMITER $$
 --
--- Procédures
+-- Procedure
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Add_player`(IN `p_Player_Name` VARCHAR(8))
 BEGIN
@@ -143,7 +129,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Structure de la table `high_scores`
+-- Structure of the `high_scores`table
 --
 
 DROP TABLE IF EXISTS `high_scores`;
@@ -156,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `high_scores` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `main_character`
+-- Structure of the `main_character` table
 --
 
 DROP TABLE IF EXISTS `main_character`;
@@ -168,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `main_character` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `main_character`
+-- Table contents`main_character`
 --
 
 INSERT INTO `main_character` (`Character_Id`, `Name`, `Life`) VALUES
@@ -177,7 +163,7 @@ INSERT INTO `main_character` (`Character_Id`, `Name`, `Life`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `map`
+-- Structure of the `map`table
 --
 
 DROP TABLE IF EXISTS `map`;
@@ -190,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `map` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `map`
+-- Table contents `map`
 --
 
 INSERT INTO `map` (`Map_id`, `keywords`, `map`) VALUES
@@ -205,7 +191,7 @@ INSERT INTO `map` (`Map_id`, `keywords`, `map`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `player`
+-- Structure of the `player`table
 --
 
 DROP TABLE IF EXISTS `player`;
@@ -217,7 +203,7 @@ CREATE TABLE IF NOT EXISTS `player` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `player`
+-- Table contents `player`
 --
 
 INSERT INTO `player` (`Player_Id`, `Player_Name`, `Player_Score`) VALUES
@@ -229,7 +215,7 @@ INSERT INTO `player` (`Player_Id`, `Player_Name`, `Player_Score`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `player_high_scores`
+-- Structure of the `player_high_scores` table
 --
 
 DROP TABLE IF EXISTS `player_high_scores`;
