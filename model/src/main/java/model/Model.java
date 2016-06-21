@@ -285,6 +285,7 @@ public class Model extends Observable implements IModel, IModelInternal {
 			if(daoLife.getLife() < 1){
 				this.saveScore();
 				daoLife.resetLife();
+				this.score = 0;
 			}
 		} catch(SQLException e){
 			e.printStackTrace();
