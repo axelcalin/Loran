@@ -7,7 +7,6 @@ import org.Element.Gate;
 import org.Element.Lorann;
 import org.Element.Sprite;
 import org.Element.White;
-import org.junit.Before;
 import org.junit.Test;
 
 import contract.IElement;

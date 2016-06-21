@@ -7,11 +7,11 @@ package contract;
  */
 public enum ControllerOrder
 {
-	Niveau1, 
-	Niveau2, 
-	Niveau3, 
-	Niveau4,
-	Niveau5,
+	Level1,
+	Level2,
+	Level3,
+	Level4,
+	Level5,
 	Menu,
 	EXIT,
 	UP,

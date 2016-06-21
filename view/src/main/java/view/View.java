@@ -40,15 +40,15 @@ public class View implements IView, Runnable {
 		if(!release){
 			switch (keyCode) {
 				case KeyEvent.VK_A:
-					return ControllerOrder.Niveau1;	
+					return ControllerOrder.Level1;	
 				case KeyEvent.VK_Z:
-					return ControllerOrder.Niveau2;
+					return ControllerOrder.Level2;
 				case KeyEvent.VK_E:
-					return ControllerOrder.Niveau3;
+					return ControllerOrder.Level3;
 				case KeyEvent.VK_R:
-					return ControllerOrder.Niveau4;
+					return ControllerOrder.Level4;
 				case KeyEvent.VK_T:
-					return ControllerOrder.Niveau5;
+					return ControllerOrder.Level5;
 				case KeyEvent.VK_M:
 					return ControllerOrder.Menu;
 				case KeyEvent.VK_ESCAPE:

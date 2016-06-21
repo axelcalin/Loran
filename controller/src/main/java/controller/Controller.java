@@ -60,32 +60,30 @@ public class Controller implements IController {
 	 */
 	public void orderPerform(final ControllerOrder controllerOrder) {
 		switch (controllerOrder) {
-			case Niveau1:
-				System.out.println("niveau 1");
+			case Level1:
+				System.out.println("Level 1");
 				this.model.setNextMap("n1");
 				break;
-			case Niveau2:
-				System.out.println("niveau 2");
+			case Level2:
+				System.out.println("Level 2");
 				this.model.setNextMap("n2");
 				break;
-			case Niveau3:
-				System.out.println("niveau 3");
+			case Level3:
+				System.out.println("Level 3");
 				this.model.setNextMap("n3");
 				break;
-			case Niveau4:
-				System.out.println("niveau 4");
+			case Level4:
+				System.out.println("Level 4");
 				this.model.setNextMap("n4");
 				break;
-			case Niveau5:
-				System.out.println("niveau 5");
+			case Level5:
+				System.out.println("Level 5");
 				this.model.setNextMap("n5");
 				break;
 			case Menu:
-				System.out.println("menu");
 				this.model.setNextMap("me");
 				break;
 			case EXIT:
-				System.out.println("exit");
 				this.game = false;
 				break;
 			case UP:
